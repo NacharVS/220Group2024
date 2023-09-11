@@ -10,8 +10,52 @@ namespace Kamalov220
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello world!");
-            Console.ReadKey(); 
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+            int c = Convert.ToInt32(Console.ReadLine());
+            if (a > b)
+            {
+                if (b > c)
+                {
+                    Console.WriteLine(b);
+                    Console.ReadKey();
+                }
+                else
+                {
+                    if (a > c)
+                    {
+                        Console.WriteLine(c);
+                        Console.ReadKey();
+                    }
+                    else
+                    {
+                        Console.WriteLine(a);
+                        Console.ReadKey();
+                    }
+                }
+            }
+            else
+            {
+                if (a > c)
+                {
+                    Console.WriteLine(a);
+                    Console.ReadKey();
+                }
+                else
+                {
+                    if (b > c)
+                    {
+                        Console.WriteLine(c);
+                        Console.ReadKey();
+                    }
+                    else
+                    {
+                        Console.WriteLine(b);
+                        
+                    }
+
+                }
+            }
         }
     }
 }
