@@ -2,7 +2,7 @@
 {
     internal class Archer : Unit
     {
-        public Archer() : base("Archer", 40, 40, 10, 3)
+        public Archer() : base("Archer", 40, 11)
         {
         }
     }

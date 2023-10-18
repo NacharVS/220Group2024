@@ -4,19 +4,20 @@
     {
         private readonly string _name;
         private int _health;
-        public int _maxHealth;
+        private int _maxHealth;
         private int _speed;
-        private int _defense;
-        public string Name => _name;
 
-        public Unit(string name, int health, int maxHealth, int speed, int defense)
+        public Unit(string name, int maxHealth, 
+            int speed)
         {
             _name = name;
-            _health = health;
+            _health = maxHealth;
             _maxHealth = maxHealth;
             _speed = speed;
-            _defense = defense;
         }
+
+        public string Name => _name;       
+        public int MaxHealth => _maxHealth;
 
         public int Speed
         {
@@ -38,30 +39,16 @@
                     _health = value; 
             }
         }
-        public int Defense
-        {
-            get { return _defense; }
-            set { _defense = value; }
-        }
+
         public void Moving()
         {
             Console.WriteLine($"{_name} is moving with {_speed} speed");
         }
 
-        public virtual void BaseInfo()
+        public virtual void ShowInfo()
         {
-            Console.WriteLine($"Name:{_name} CurrentHealth: {_health}" );
-            if ( this.Health <= 0 )
-            {
+            Console.WriteLine($"Name:{_name} Health: {_health}/{_maxHealth}" );
+        }
 
-            }
-        }
-        public void rage(Footman ft)
-        {
-            Console.WriteLine("Footman in Rage!!!");
-            int dmgup = ft.Damage / 2;
-            ft.Damage = ft.Damage + dmgup;
-        }
-        
     }
 }
