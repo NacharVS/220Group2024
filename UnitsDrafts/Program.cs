@@ -8,8 +8,7 @@ units.Add(new Peasant());
 units.Add(new Archer());
 units.Add(new Footman());
 units.Add(new Footman());
-units.Add(new Archer());
-units.Add(new Footman());
+
 
 if (units.Exists(x => x.Name == "Footman"))
 {
