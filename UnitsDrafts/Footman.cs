@@ -46,6 +46,6 @@
         {
             Console.WriteLine($"Name:{Name} Health: {Health}/{MaxHealth} Damage: {Damage} Defence: {Defence}");
         }
-
+        
     }
 }
