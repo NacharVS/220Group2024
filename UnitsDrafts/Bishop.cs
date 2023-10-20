@@ -8,6 +8,10 @@
         {
         }
 
+        public Bishop(string name, int maxHealth, int speed) : base(name, maxHealth, speed)
+        {
+        }
+
         public int Mana
         {
             get { return _mana; }
