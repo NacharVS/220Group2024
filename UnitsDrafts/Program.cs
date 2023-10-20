@@ -4,7 +4,6 @@ List<Unit> units = new List<Unit>();
 units.Add(new Footman());
 units.Add(new Peasant());
 units.Add(new Archer()); 
-units.Add(new Peasant());
 
 if (units.Exists(x => x.Name == "Footman"))
 {
