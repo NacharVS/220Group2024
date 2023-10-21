@@ -4,6 +4,7 @@
     {
         private int _damage;
         private int _defence;
+        private int _health;
 
         public override int Health 
         { 
@@ -17,14 +18,14 @@
         }
 
 
-        public Footman(string name, int maxHealth, int speed, int damage, int defence) 
-            : base(name, maxHealth, speed)
+        public Footman(string name, int health, int maxHealth, int speed, int damage, int defence) : base(name, health, maxHealth, defence)
         {
             _damage = damage;
             _defence = defence;
+            _health = health;
         }
 
-        public Footman() : base("Footman", 60, 10)
+        public Footman(double defence, double damage) : base("Footman", 60, 10, 3)
         {
             _damage = 13;
             _defence = 2;
