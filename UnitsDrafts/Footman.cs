@@ -5,6 +5,7 @@
         private int _damage;
         private int _defence;
         private int _health;
+        private Weapon _weapon;
 
         public override int Health 
         { 
@@ -29,6 +30,7 @@
         {
             _damage = 13;
             _defence = 2;
+            _weapon = new Axe(2, 7, 5);
         }
 
         public int Damage
