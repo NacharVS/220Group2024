@@ -1,9 +1,12 @@
-﻿namespace UnitsDrafts
+﻿using UnitsDrafts.Items;
+
+namespace UnitsDrafts
 {
     internal class Footman : Unit
     {
-        private int _damage;
+
         private int _defence;
+        private Weapon _weapon;
 
         public override int Health 
         { 
@@ -16,30 +19,22 @@
             set { _defence = value; }
         }
 
-
         public Footman(string name, int maxHealth, int speed, int damage, int defence) 
             : base(name, maxHealth, speed)
         {
-            _damage = damage;
+
             _defence = defence;
         }
 
         public Footman() : base("Footman", 60, 10)
         {
-            _damage = 13;
             _defence = 2;
+            _weapon = new Axe(2, 7, 5);
         }
-
-        public int Damage
-        {
-            get { return _damage; }
-            set { _damage = value; }
-        }
-
 
         public void InflictDamage(Unit unit)
         {
-            unit.Health = unit.Health - _damage;
+            unit.Health = unit.Health - _weapon.Hit();
         }
 
         public override void ShowInfo()
