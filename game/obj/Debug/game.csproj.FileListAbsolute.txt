@@ -1,0 +1,7 @@
+C:\Users\Tamer\source\repos\game\game\bin\Debug\game.exe.config
+C:\Users\Tamer\source\repos\game\game\bin\Debug\game.exe
+C:\Users\Tamer\source\repos\game\game\bin\Debug\game.pdb
+C:\Users\Tamer\source\repos\game\game\obj\Debug\game.csproj.AssemblyReference.cache
+C:\Users\Tamer\source\repos\game\game\obj\Debug\game.csproj.CoreCompileInputs.cache
+C:\Users\Tamer\source\repos\game\game\obj\Debug\game.exe
+C:\Users\Tamer\source\repos\game\game\obj\Debug\game.pdb
