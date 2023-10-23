@@ -1,0 +1,8 @@
+D:\с++\Игра\Игра\bin\Debug\Игра.exe.config
+D:\с++\Игра\Игра\bin\Debug\Игра.exe
+D:\с++\Игра\Игра\bin\Debug\Игра.pdb
+D:\с++\Игра\Игра\obj\Debug\Игра.csproj.AssemblyReference.cache
+D:\с++\Игра\Игра\obj\Debug\Игра.csproj.SuggestedBindingRedirects.cache
+D:\с++\Игра\Игра\obj\Debug\Игра.csproj.CoreCompileInputs.cache
+D:\с++\Игра\Игра\obj\Debug\Игра.exe
+D:\с++\Игра\Игра\obj\Debug\Игра.pdb
