@@ -12,19 +12,19 @@
             get => base.Health; 
             set => base.Health = value; 
         }
-        //new public double Defence
-        //{
-        //    get { return _defence; }
-        //    set
-        //    {
-        //        if (value < 0)
-        //        {
-        //            _defence = 0;
-        //        }
-        //        else
-        //            _defence = value;
-        //    }
-        //}
+        new public double Defence
+        {
+            get { return _defence; }
+            set
+            {
+                if (value < 0)
+                {
+                    _defence = 0;
+                }
+                else
+                    _defence = value;
+            }
+        }
 
 
         public Footman(string name, int health, int maxHealth, int speed, int damage, int defence) : base(name, health, maxHealth, defence)
