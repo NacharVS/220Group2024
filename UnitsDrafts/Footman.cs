@@ -2,21 +2,29 @@
 {
     internal class Footman : Unit
     {
-        private int _damage;
-        private int _defence;
-        private int _health;
-        private Weapon _weapon;
+        private double _damage;
+        private double _defence;
+        private double _health;
+        //private Weapon _weapon;
 
-        public override int Health 
+        public override double Health 
         { 
             get => base.Health; 
             set => base.Health = value; 
         }
-        public int Defence
-        {
-            get { return _defence; }
-            set { _defence = value; }
-        }
+        //new public double Defence
+        //{
+        //    get { return _defence; }
+        //    set
+        //    {
+        //        if (value < 0)
+        //        {
+        //            _defence = 0;
+        //        }
+        //        else
+        //            _defence = value;
+        //    }
+        //}
 
 
         public Footman(string name, int health, int maxHealth, int speed, int damage, int defence) : base(name, health, maxHealth, defence)
@@ -26,22 +34,24 @@
             _health = health;
         }
 
-        public Footman(double defence, double damage) : base("Footman", 60, 10, 3)
+        public Footman(double defence, double damage) : base("Footman", 60, 60, 20)
         {
-            _damage = 13;
-            _defence = 2;
-            _weapon = new Axe(2, 7, 5);
+            _damage = damage;
+            _defence = defence;
         }
 
-        public int Damage
+        new public double Damage
         {
             get { return _damage; }
             set { _damage = value; }
         }
 
 
-        public void InflictDamage(Unit unit)
+        public void FootmanDamage(Unit unit)
         {
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine($"Footman ударил {unit.Name} и снёс {this.Damage}");
+            Console.WriteLine("-------------------------------");
             unit.Health = unit.Health - _damage;
         }
 

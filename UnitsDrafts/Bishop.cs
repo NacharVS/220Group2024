@@ -7,7 +7,7 @@ namespace UnitsDrafts
         private int _mana = 0;
         private int _maxMana = 60;
 
-        public Bishop(int mana) : base("Bishop", 0, 30, 0)
+        public Bishop(int mana) : base("Bishop", 30, 30, 0)
         {
             _mana = mana;
         }
@@ -26,7 +26,9 @@ namespace UnitsDrafts
 
         public void HealSomebody(Unit unit)
         {
-
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine($"Bishop захилил {unit.Name} на 2 хп.");
+            Console.WriteLine("-------------------------------");
             unit.Health += 2;
 
             mana -= 1;

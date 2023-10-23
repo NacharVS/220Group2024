@@ -21,15 +21,21 @@
 
 using UnitsDrafts;
 
-Footman ft = new Footman(2, 5);
-Archer archer = new Archer(3, 4);
+Footman ft = new Footman(5, 5);
+Archer archer = new Archer(5, 4);
 Bishop bs = new Bishop(20);
-ft.InflictDamage(archer);
+ft.FootmanDamage(archer);
+archer.ShowInfo();
 ft.ShowInfo();
 archer.ShowInfo();
 bs.HealSomebody(archer);
 archer.ShowInfo();
 bs.ShowInfo();
+archer.ArcherDamage(ft);
+ft.ShowInfo();
+bs.HealSomebody(ft);
+ft.ShowInfo();
+
 
 
 
