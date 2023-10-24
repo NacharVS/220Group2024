@@ -7,8 +7,7 @@
         private int _maxHealth;
         private int _speed;
 
-        public Unit(string name, int maxHealth, 
-            int speed)
+        public Unit(string name, int maxHealth, int speed)
         {
             _name = name;
             _health = maxHealth;
@@ -19,11 +18,7 @@
         public string Name => _name;       
         public int MaxHealth => _maxHealth;
 
-        public int Speed
-        {
-            get { return _speed; }
-            set { _speed = value; }
-        }
+        public int Speed => _speed;
 
 
         public virtual int Health
@@ -31,9 +26,10 @@
             get { return _health; }
             set 
             { 
-                if(value < 0)
+                if(value <= 0)
                 {
                     _health = 0;
+                    Console.WriteLine("Персонаж умер");
                 }
                 else
                     _health = value; 

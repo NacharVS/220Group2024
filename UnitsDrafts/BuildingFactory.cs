@@ -7,9 +7,13 @@
             return new Barracs();
         }
 
-        public static Tower CreateTower()
+        public static Townhall CreateTownhall()
         {
-            return new Tower();
+            return new Townhall();
+        }
+        public static WatchingTower CreateWatchingTower()
+        {
+            return new WatchingTower();
         }
     }
 }

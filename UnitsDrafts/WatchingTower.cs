@@ -1,19 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace UnitsDrafts
 {
     internal class WatchingTower
     {
         List<Unit> UnitsInTower = new List<Unit>();
+
         public Archer AddArcher()
         {
-            UnitsInTower.Add(new Archer());
-            return new Archer();
+            if (UnitsInTower.Count < 3)
+            {
+                UnitsInTower.Add(new Archer());
+                return new Archer();
+                Statistics.ArchersCount++;
+            }
+            else
+            {
+                return null;
+                Console.WriteLine("Недостаточно места");
+            }
+        }
+
+        public void ArcherList() 
+        {
+            foreach (var unit in UnitsInTower) { Console.WriteLine(unit.Name); }
+        }
+        public void UnitsCount()
+        {
+            Console.WriteLine($"В башне {UnitsInTower.Count}");
+            Console.WriteLine($"Свободных мест {3 - UnitsInTower.Count}");
         }
     }
 }

@@ -17,8 +17,7 @@
         }
 
 
-        public Footman(string name, int maxHealth, int speed, int damage, int defence) 
-            : base(name, maxHealth, speed)
+        public Footman(string name, int maxHealth, int speed, int damage, int defence) : base(name, maxHealth, speed)
         {
             _damage = damage;
             _defence = defence;

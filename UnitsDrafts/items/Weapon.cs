@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace UnitsDrafts.items
 {
     internal abstract class Weapon
     {
+
+
         protected Weapon(int minDamage, int maxDamage, int attackSpeed)
         {
             MinDamage = minDamage;
@@ -21,7 +18,6 @@ namespace UnitsDrafts.items
         public int AttackSpeed { get; set; }
 
         public abstract int Hit();
-
 
     }
 }
