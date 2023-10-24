@@ -1,4 +1,5 @@
 ﻿using UnitsDrafts;
+using UnitsDrafts.items;
 
 List<Unit> units = new List<Unit>();
 units.Add(new Footman());
@@ -13,6 +14,9 @@ if (units.Exists(x => x.Name == "Footman"))
     founded?.ShowInfo();
     units[1].ShowInfo();
 }
+
+
+
 
 
 
