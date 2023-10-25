@@ -14,5 +14,10 @@
             Statistics.ArchersCount++;
             return new Archer();
         }
+        public Archer CrateArcher()
+        {
+            Statistics.ArchersCount++;
+            return new Archer();
+        }
     }
 }

@@ -7,7 +7,7 @@
             return new Barracs();
         }
 
-        public static WathingTower CreateTowers()
+        public static WathingTower CreateWathingTower()
         {
             return new WathingTower();
         }
