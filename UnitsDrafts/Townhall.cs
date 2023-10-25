@@ -8,16 +8,20 @@ namespace UnitsDrafts
 {
     internal class Townhall : TownHallBase
     {
-        private static int ThDamage = 0;
-        Random random = new Random();
+        private double _damage;
+        private static int ThDefence = 0;
         public Townhall() : base("TownHall", 100)
         {
 
         }
+        public double Damage
+        {
+            get { return _damage; }
+            set { _damage = value; }
+        }
         public static void TownHallDamage(Unit unit)
         {
-            int Count = 0;
-            Console.WriteLine("Введите количество лучников крестьян в ратуше(до 5)");
+            Console.WriteLine("Введите количество крестьян в ратуше(до 5)");
             int Peasants = Convert.ToInt32(Console.ReadLine());
             List<Peasant> peasants = new List<Peasant>(5);
             if ( Peasants == 1)
@@ -56,15 +60,12 @@ namespace UnitsDrafts
             }
             if (peasants.Exists(x => x.Name == "Peasant"))
             {
-                foreach (var archer in peasants)
+                ThDefence = 0;
+                for (int i = 0; i < peasants.Count; i++)
                 {
-                    for (Count = Peasants; peasants.Count > 0; Count--)
-                    {
-                        ThDamage += (int)archer.Damage;
-
-                    }
-                    unit.Health -= ThDamage;
-                    Console.WriteLine($"Башня нанесла {unit.Name} {ThDamage} урона");
+                    ThDefence += (int)peasants[i].Damage;
+                    unit.Health -= ThDefence;
+                    Console.WriteLine($"Ратуша получила  {ThDefence} урон(-a) от {unit.Name} -а");
                 }
             }
         }

@@ -48,7 +48,7 @@
             return _damage *= 1.5;
         }
 
-        public double Damage
+        public virtual double Damage
         {
             get { return _damage; }
             set { _damage = value; }
