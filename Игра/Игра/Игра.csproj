@@ -44,12 +44,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Archer.cs" />
+    <Compile Include="Axe.cs" />
+    <Compile Include="Barracs.cs" />
+    <Compile Include="BuildingFactory.cs" />
     <Compile Include="Medic.cs" />
     <Compile Include="Peasant.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Pudge.cs" />
+    <Compile Include="Statistics.cs" />
     <Compile Include="Unit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WatchingTower.cs" />
+    <Compile Include="WatchingTowerBase.cs" />
+    <Compile Include="Weapon.cs" />
+    <Compile Include="WeaponBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

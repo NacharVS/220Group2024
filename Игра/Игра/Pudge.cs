@@ -10,13 +10,17 @@ namespace game.Core
     internal class Pudge : Unit
     {
 
-        public Pudge(double damage, double defence) : base("Pudge", 100, 100, 5)
+        public Pudge(string name, int health, int maxHealth, double damage, double defence) : base("Pudge", 100, 100, 5)
         {
             Damage = damage;
             Defence = defence;
         }
 
-
+        public Pudge() : base("Pudge", 50, 50, 8)
+        {
+            Damage = 15;
+            Defence = 30;
+        }
 
 
 

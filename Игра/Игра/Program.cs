@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using game.Core;
+using Игра;
 
 namespace game
 {
@@ -11,16 +12,20 @@ namespace game
     {
         static void Main(string[] args)
         {
-            Archer ar1 = new Archer(30);
-            Pudge pudge = new Pudge(30, 100);
-            Peasent ps1 = new Peasent();
-            Medic medic = new Medic();
+            List<Unit> units = new List<Unit>();
+            units.Add(new Pudge());
+            units.Add(new Archer());
+            Archer archer = new Archer();
+            Pudge pudge = new Pudge();
 
+            if (units.Exists(x => x.Name == "Pudge"))
+            {
+                var a = units.Find(x => x.Name == "Pudge");
+                
+            }
+            WatchingTower.WatchingTowerDamage(pudge);
             pudge.BaseInfo();
-            ar1.TakeDamage(pudge);
-
-            pudge.BaseInfo();
-            ar1.TakeDamage(pudge);
+            
 
 
 

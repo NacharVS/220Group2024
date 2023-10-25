@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace game.Core
 {
-    abstract class Unit
+    public class Unit
     {
         private string _name;
         private double _health;
@@ -42,7 +42,7 @@ namespace game.Core
             set { _damage = value; }
         }
 
-        public virtual double Health
+        public double Health
         {
             get { return _health; }
             set
@@ -106,6 +106,7 @@ namespace game.Core
                 unit.Health -= this.Damage;
             }
         }
+        
 
 
 
