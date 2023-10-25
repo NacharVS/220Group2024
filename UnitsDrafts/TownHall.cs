@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace UnitsDrafts
 {
-    internal class Bishop
+    internal class TownHall : Unit 
     {
+        public TownHall() : base("Townhall", 100, 100, 0, 0, 0)
+        { }
     }
 }
