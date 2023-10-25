@@ -4,18 +4,16 @@ namespace UnitsDrafts
     internal class WatchingTower
     {
         List<Unit> UnitsInTower = new List<Unit>();
-
-        public Archer AddArcher()
+        int TowerArcherCount = 0;
+        public void AddArcher(Archer archer)
         {
             if (UnitsInTower.Count < 3)
             {
-                UnitsInTower.Add(new Archer());
-                return new Archer();
-                Statistics.ArchersCount++;
+                    UnitsInTower.Add(archer);
+                    Statistics.ArchersCount++;
             }
             else
             {
-                return null;
                 Console.WriteLine("Недостаточно места");
             }
         }
