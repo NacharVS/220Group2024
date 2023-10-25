@@ -36,7 +36,6 @@
             set { _alive = value; }
         }
 
-
         public virtual int Health
         {
             get { return _health; }

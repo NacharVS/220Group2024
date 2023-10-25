@@ -16,7 +16,7 @@ namespace UnitsDrafts
         public int _maxhealth = 20;
         public WatchingTower(List<Archer> Units, int Level)
         {
-            if (Level == 1 ||  Level == 2) 
+            if (Level == 1 || Level == 2) 
             {
                 level = Level;
             }
