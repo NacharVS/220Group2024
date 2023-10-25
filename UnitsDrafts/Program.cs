@@ -1,5 +1,6 @@
 ﻿using UnitsDrafts;
 
+
 Barracks barracks = new Barracks();
 Footman ft1 = barracks.CreateFootman();
 Footman ft2 = barracks.CreateFootman();
@@ -33,3 +34,18 @@ ft1.InflictDamage(ft2);
 ft2.BaseInfo();
 ft2.InflictDamage(ft1);
 ft1.BaseInfo();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,7 +2,7 @@
 {
     internal class Archer : Unit
     {
-        public Archer() : base("Archer", 40, 40, 15, 10, 3)
+        public Archer() : base("Archer", 40, 11)
         {
         }
         public void InflictDamage(Unit unit)

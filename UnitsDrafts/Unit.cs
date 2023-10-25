@@ -11,7 +11,7 @@
         public string Name => _name;
         private bool _alive = true;
 
-        public Unit(string name, int health, int maxHealth, int damage, int speed, int defense, bool _alive=true)
+        public Unit(string name, int health, int maxHealth, int damage, int speed, int defense, bool _alive = true)
         {
             _name = name;
             _health = health;
@@ -40,14 +40,14 @@
         public virtual int Health
         {
             get { return _health; }
-            set 
-            { 
-                if(value < 0)
+            set
+            {
+                if (value < 0)
                 {
                     _health = 0;
                 }
                 else
-                    _health = value; 
+                    _health = value;
             }
         }
         public int Defense
@@ -65,8 +65,8 @@
 
         public virtual void BaseInfo()
         {
-            Console.WriteLine($"Name:{_name} CurrentHealth: {Health}" );
-            if ( this.Health <= 0 )
+            Console.WriteLine($"Name:{_name} CurrentHealth: {Health}");
+            if (this.Health <= 0)
             {
                 Alive = false;
                 Console.WriteLine($"{this.Name} dead!");
@@ -82,6 +82,6 @@
 
             }
         }
-        
+
     }
 }

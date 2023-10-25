@@ -1,11 +1,11 @@
-﻿using System.Xml.Linq;
+﻿using UnitsDrafts.Items;
 
 namespace UnitsDrafts
 {
     internal class Footman : Unit
     {
         private int _damage;
-        public Footman(string name, int health, int maxHealth, int damage, int speed, int defense, bool _alive = true) : base("Footman", 60, 60, 10,  9, 7, true)
+        public Footman(string name, int health, int maxHealth, int damage, int speed, int defense, bool _alive = true) : base("Footman", 60, 60, 10, 9, 7, true)
         {
             _damage = damage;
         }
