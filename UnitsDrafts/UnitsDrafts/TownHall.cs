@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace UnitsDrafts
 {
-    internal class Peasant : Unit
+    internal class TownHall : Unit 
     {
-        public Peasant() : base("Peasant", 30, 5)
-        {
-        }
+        public TownHall() : base("Townhall", 100, 100, 0, 0, 0)
+        { }
     }
 }
