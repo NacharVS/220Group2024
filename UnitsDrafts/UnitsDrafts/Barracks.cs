@@ -11,14 +11,12 @@ namespace UnitsDrafts
         Random random = new Random();
         public Footman CreateFootman()
         {
-            Statistics.FootmansCount++;
             int hp = random.Next(50, 60);
             return new Footman("Name", hp, hp, random.Next(7, 12), random.Next(5, 15), random.Next(1, 4), true);
         }
 
         public Archer CreateArcher()
         {
-            Statistics.ArchersCount++;
             return new Archer();
         }
         public Cleric CreateCleric()
