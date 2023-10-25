@@ -8,14 +8,14 @@ namespace UnitsDrafts
         {
             Random random = new Random();
             Statistics.FootmansCount++;
-            return new Footman("Name", random.Next(50, 60), random.Next(5, 10), random.Next(5, 15), random.Next(1, 4), random.Next(1, 4));
+            return new Footman("Name", random.Next(50, 60), random.Next(5, 10), random.Next(5, 15), random.Next(10, 20), random.Next(10, 30));
         }
 
         public Archer CreateArcher()
         {
             Random random = new Random();
             Statistics.ArchersCount++;
-            return new Archer(2, 3);
+            return new Archer(random.Next(5, 10), random.Next(5, 15));
         }
     }
 }

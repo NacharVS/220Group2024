@@ -4,7 +4,7 @@
     {
         public static void CreateBarracs()
         {
-
+            Barracs barracs = new Barracs();
         }
     }
 }
