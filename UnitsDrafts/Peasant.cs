@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace UnitsDrafts
 {
-    internal class Peasant : Unit
+    internal class Peasent : Unit
     {
-        public Peasant() : base("Peasant", 30, 5)
+        public Peasent() : base("Peasent", 60, 60, 10)
         {
+
         }
+
     }
 }

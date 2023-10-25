@@ -1,17 +1,41 @@
 ﻿using UnitsDrafts;
 
-List<Unit> units = new List<Unit>();
-units.Add(new Footman());
-units.Add(new Peasant());
-units.Add(new Archer()); 
-units.Add(new Peasant());
-
-if (units.Exists(x => x.Name == "Footman"))
 {
-    var founded = units.Find(x => x.Name == "Footman");
-    var index = units.FindIndex(1 , 4 , x => x.Name == "Footman");
-    founded?.ShowInfo();
-    units[1].ShowInfo();
+    internal class Program
+{
+    static void Main(string[] args)
+    {
+        List<Unit> units = new List<Unit>();
+        units.Add(new Pudge());
+        units.Add(new Archer());
+        Archer archer = new Archer();
+        WatchingTower tower1 = new WatchingTower();
+        Pudge pudge = new Pudge();
+
+        if (units.Exists(x => x.Name == "Pudge"))
+        {
+            var a = units.Find(x => x.Name == "Pudge");
+
+        }
+        tower1.WatchingTowerDamage(pudge);
+        pudge.BaseInfo();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+}
+}
 }
 
 

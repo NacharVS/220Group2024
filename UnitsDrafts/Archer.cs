@@ -2,8 +2,16 @@
 {
     internal class Archer : Unit
     {
-        public Archer() : base("Archer", 40, 11)
+
+        public Archer(double damage) : base("Archer", 50, 50, 12)
         {
+            Damage = damage;
         }
+        public Archer() : base("Archer", 50, 50, 12)
+        {
+            Damage = 20;
+        }
+
+
     }
 }

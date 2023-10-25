@@ -1,10 +1,10 @@
 ﻿namespace UnitsDrafts
 {
-    internal static class BuildingFactory
+    internal class BuildingFactory
     {
         public static void CreateBarracs()
         {
-
+            Barracs barracs = new Barracs();
         }
     }
 }
