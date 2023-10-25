@@ -1,6 +1,6 @@
 ﻿using UnitsDrafts;
 
-{
+
     internal class Program
 {
     static void Main(string[] args)
@@ -19,36 +19,5 @@
         }
         tower1.WatchingTowerDamage(pudge);
         pudge.BaseInfo();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
