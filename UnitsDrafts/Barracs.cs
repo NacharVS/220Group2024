@@ -1,7 +1,5 @@
 ﻿namespace UnitsDrafts
-{
-    internal class Barracs
-    {
+{ 
         internal class Barracs
         {
             Random random = new Random();
@@ -18,5 +16,4 @@
                 return new Archer(random.Next(15, 30));
             }
         }
-    }
 }
