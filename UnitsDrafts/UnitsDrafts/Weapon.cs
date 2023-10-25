@@ -11,9 +11,5 @@ namespace UnitsDrafts
         public int MinDamage { get; set; } 
         public int MaxDamage { get; set; }
         public int AttackSpeed { get; set; }
-        //public abstract int Hit()
-        //{
-          //  return 0;
-        //}
     }
 }
