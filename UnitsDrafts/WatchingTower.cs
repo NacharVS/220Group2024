@@ -8,6 +8,7 @@ namespace UnitsDrafts
         Random random = new Random();
         public WatchingTower() : base("WatchingTower", 50)
         {
+
         }
 
         public static void WatchingTowerDamage(Unit unit)
@@ -55,7 +56,6 @@ namespace UnitsDrafts
                     unit.Health -= TowerDamage;
                     Console.WriteLine($"Башня нанесла {unit.Name} {TowerDamage} урона");
                 }
-
             }
         }
     }

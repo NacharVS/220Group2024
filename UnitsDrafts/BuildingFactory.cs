@@ -5,6 +5,8 @@
         public static void CreateBarracs()
         {
             Barracs barracs = new Barracs();
+            Townhall th = new Townhall();
+
         }
     }
 }
