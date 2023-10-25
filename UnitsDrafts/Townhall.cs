@@ -34,6 +34,7 @@ namespace UnitsDrafts
             {
                 peasants.Add(new Peasant());
             }
+            //e
             else if ( Peasants == 2)
             {
                 peasants.Add(new Peasant());
