@@ -37,7 +37,7 @@
         }
 
 
-        public virtual int Health
+        public int Health
         {
             get { return _health; }
             set 
