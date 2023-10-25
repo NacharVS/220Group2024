@@ -9,13 +9,13 @@ namespace Игра
 {
     internal class WatchingTower : WatchingTowerBase
     {
-        private static int TowerDamage = 0;
+        private int TowerDamage = 0;
         Random random = new Random();
         public WatchingTower() : base("WatchingTower", 50)
         {
         }
         
-        public static void WatchingTowerDamage(Unit unit)
+        public void WatchingTowerDamage(Unit unit)
         {
             
             Console.WriteLine("Введите количество лучников на башне:");
@@ -52,16 +52,10 @@ namespace Игра
             {
                 foreach (var archer in archers)
                 {
-                    for (int Count = 0; archers.Count < Archers; Count++)
-                    {
-                        TowerDamage += (int)archer.Damage;
-
-                        unit.Health -= TowerDamage;
-                         Console.WriteLine($"Башня нанесла {unit.Name} {TowerDamage} урона");
-
-                    }
-                   
+                        unit.Health -= archer.Damage;
+                        Console.WriteLine($"Башня нанесла {unit.Name} {archer.Damage} урона");
                         
+
                 }
 
             }

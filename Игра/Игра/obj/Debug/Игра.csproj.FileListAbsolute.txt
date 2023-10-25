@@ -6,3 +6,11 @@ D:\с++\Игра\Игра\obj\Debug\Игра.csproj.SuggestedBindingRedirects.ca
 D:\с++\Игра\Игра\obj\Debug\Игра.csproj.CoreCompileInputs.cache
 D:\с++\Игра\Игра\obj\Debug\Игра.exe
 D:\с++\Игра\Игра\obj\Debug\Игра.pdb
+C:\Users\79393\Source\Repos\220Group2024\Игра\Игра\obj\Debug\Игра.csproj.AssemblyReference.cache
+C:\Users\79393\Source\Repos\220Group2024\Игра\Игра\obj\Debug\Игра.csproj.SuggestedBindingRedirects.cache
+C:\Users\79393\Source\Repos\220Group2024\Игра\Игра\obj\Debug\Игра.csproj.CoreCompileInputs.cache
+C:\Users\79393\Source\Repos\220Group2024\Игра\Игра\obj\Debug\Игра.exe
+C:\Users\79393\Source\Repos\220Group2024\Игра\Игра\obj\Debug\Игра.pdb
+C:\Users\79393\Source\Repos\220Group2024\Игра\Игра\bin\Debug\Игра.exe.config
+C:\Users\79393\Source\Repos\220Group2024\Игра\Игра\bin\Debug\Игра.exe
+C:\Users\79393\Source\Repos\220Group2024\Игра\Игра\bin\Debug\Игра.pdb

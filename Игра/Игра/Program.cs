@@ -16,6 +16,7 @@ namespace game
             units.Add(new Pudge());
             units.Add(new Archer());
             Archer archer = new Archer();
+            WatchingTower tower1 = new WatchingTower();
             Pudge pudge = new Pudge();
 
             if (units.Exists(x => x.Name == "Pudge"))
@@ -23,7 +24,7 @@ namespace game
                 var a = units.Find(x => x.Name == "Pudge");
                 
             }
-            WatchingTower.WatchingTowerDamage(pudge);
+            tower1.WatchingTowerDamage(pudge);
             pudge.BaseInfo();
             
 
