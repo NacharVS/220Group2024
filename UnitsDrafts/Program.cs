@@ -29,11 +29,13 @@ namespace game
             }
 
 
-            //WatchingTower.WatchingTowerDamage(footman);
-            //footman.ShowInfo();
+            
 
 
             Townhall.TownHallDamage(footman);
+            footman.ShowInfo();
+
+            WatchingTower.WatchingTowerDamage(footman);
             footman.ShowInfo();
 
 

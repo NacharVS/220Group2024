@@ -13,7 +13,6 @@ namespace UnitsDrafts
 
         public static void WatchingTowerDamage(Unit unit)
         {
-            int Count = 0;
             Console.WriteLine("Введите количество лучников на башне");
             int Archers = Convert.ToInt32(Console.ReadLine());
             List<Archer> archers = new List<Archer>(3);
@@ -46,16 +45,15 @@ namespace UnitsDrafts
 
             if (archers.Exists(x => x.Name == "Archer"))
             {
-                foreach (var archer in archers)
-                {
-                    for (Count = Archers; archers.Count > 0; Count--)
+                
+                    TowerDamage = 0;
+                    for (int i = 0; i < archers.Count; i++)
                     {
-                        TowerDamage += (int)archer.Damage;
-
+                        TowerDamage += (int)archers[i].Damage;
                     }
                     unit.Health -= TowerDamage;
                     Console.WriteLine($"Башня нанесла {unit.Name} {TowerDamage} урона");
-                }
+                
             }
         }
     }
