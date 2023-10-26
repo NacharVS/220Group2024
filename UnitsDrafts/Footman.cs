@@ -1,50 +1,86 @@
-﻿namespace UnitsDrafts
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace Работа
 {
     internal class Footman : Unit
     {
-        private int _damage;
-        private int _defence;
+        private double _damage;
+        private double _defence;
+        private double _maxDefence;
 
-        public override int Health 
-        { 
-            get => base.Health; 
-            set => base.Health = value; 
-        }
-        public int Defence
-        {
-            get { return _defence; }
-            set { _defence = value; }
-        }
-
-
-        public Footman(string name, int maxHealth, int speed, int damage, int defence) 
-            : base(name, maxHealth, speed)
+        public Footman(double damage, double defence) : base("Footman", 60, 9, "War")
         {
             _damage = damage;
             _defence = defence;
         }
 
-        public Footman() : base("Footman", 60, 10)
+        public Footman() : base("Footman", 60, 9, "War")
         {
             _damage = 13;
             _defence = 2;
         }
 
-        public int Damage
+        public double Damage
         {
             get { return _damage; }
             set { _damage = value; }
         }
 
-
-        public void InflictDamage(Unit unit)
+        public double Defence
         {
-            unit.Health = unit.Health - _damage;
+            get { return _defence; }
+            set
+            {
+                if (value < 0)
+                {
+                    _defence = 0;
+                }
+
+
+                else if (value > _defence)
+                {
+                    _defence = _maxDefence;
+                }
+                else
+                    _defence = value;
+
+            }
         }
 
-        public override void ShowInfo()
+
+        public void Rage()
         {
-            Console.WriteLine($"Name:{Name} Health: {Health}/{MaxHealth} Damage: {Damage} Defence: {Defence}");
+            if (Health < MaxHealth * 0.4)
+            {
+                Damage += Damage * 0.5;
+            }
+            else
+                Damage = Damage;
+
+        }
+        public override void BaseInfo()
+        {
+            Console.WriteLine($"Имя:{Name} Состояние здоровья: {Health}/{MaxHealth}  Урон: {Damage} Защита: {Defence}");
+        }
+
+        public void InflictDamage(Unit unit, Footman footman)
+        {
+            Rage();
+            if (footman.Defence > 0)
+            {
+                footman.Defence--;
+
+            }
+            else
+
+                footman.Health -= Damage;
+            unit.BaseInfo();
+            unit.Death();
         }
 
     }

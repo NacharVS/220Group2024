@@ -4,12 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UnitsDrafts
+namespace Работа
 {
     internal class Peasant : Unit
     {
-        public Peasant() : base("Peasant", 30, 5)
+        public Peasant() : base("Peasant", 30, 5, "Field")
         {
+        }
+        public override void BaseInfo()
+        {
+            base.BaseInfo();
         }
     }
 }

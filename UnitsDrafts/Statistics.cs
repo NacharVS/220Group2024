@@ -1,13 +1,16 @@
-﻿namespace UnitsDrafts
+﻿using System;
+
+namespace UnitsDrafts
 {
     internal static class Statistics
     {
         public static int FootmansCount { get; set; } = 0;
         public static int ArchersCount { get; set; } = 0;
+        public static int PeasantCount { get; set; } = 0;
 
         public static void ShowStatistics()
         {
-            Console.WriteLine($"{FootmansCount} {ArchersCount}");
+            Console.WriteLine($"{FootmansCount} лакеев, {ArchersCount} лучников, {PeasantCount} крестьян");
         }
     }
 }

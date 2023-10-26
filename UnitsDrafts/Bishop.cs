@@ -1,29 +1,45 @@
-﻿namespace UnitsDrafts
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace Работа
 {
     internal class Bishop : Unit
     {
         private int _mana;
 
-        public Bishop() : base("Bishop", 40, 7)
+        public Bishop(int mana) : base("Churchman", 60, 9, "Church")
         {
-        }
-
-        public Bishop(string name, int maxHealth, int speed) : base(name, maxHealth, speed)
-        {
+            _mana = mana;
         }
 
         public int Mana
         {
             get { return _mana; }
-            set { _mana = value; }
+
+            set
+            {
+                if (value < 0)
+                {
+                    _mana = 0;
+                }
+                else
+                    _mana = value;
+            }
         }
 
-        public void HealSomebody(Unit unit)
+        public void Revival(Unit unit)
         {
-
+            unit.Health += 2;
+            Mana -= 1;
         }
 
-
-
+        public override void BaseInfo()
+        {
+            Console.WriteLine($"Имя:{Name} Состояние здоровья: {Health} Количество маны: {Mana}");
+        }
     }
 }
