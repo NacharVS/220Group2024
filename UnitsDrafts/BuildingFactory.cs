@@ -14,8 +14,8 @@
 
         public static void CreateTownHall() 
         {
-            Townhall th = new Townhall();
-            Console.WriteLine("Ратуша создана");
+            //Townhall th = new Townhall();
+            //Console.WriteLine("Ратуша создана");
         }
 
         public static void CreateWatchingTower() 
