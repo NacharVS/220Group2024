@@ -2,7 +2,7 @@
 
 namespace UnitsDrafts
 {
-    internal class WatchingTower : WatchingTowerBase
+    internal class WatchingTower : BuildingFactory
     {
         private static int TowerDamage = 0;
         Random random = new Random();
@@ -10,7 +10,6 @@ namespace UnitsDrafts
         {
 
         }
-
         public static void WatchingTowerDamage(Unit unit)
         {
             Console.WriteLine("Введите количество лучников на башне");
@@ -52,7 +51,7 @@ namespace UnitsDrafts
                         TowerDamage += (int)archers[i].Damage;
                     }
                     unit.Health -= TowerDamage;
-                    Console.WriteLine($"Башня нанесла {unit.Name} {TowerDamage} урона");
+                    Console.WriteLine($"Смотровая башня нанесла {unit.Name} {TowerDamage} урона");
                 
             }
         }
