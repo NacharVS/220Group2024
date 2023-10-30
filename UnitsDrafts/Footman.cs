@@ -1,33 +1,13 @@
-﻿namespace UnitsDrafts
+﻿using System.Xml.Linq;
+
+namespace UnitsDrafts
 {
     internal class Footman : Unit
     {
         private int _damage;
-        private int _defence;
-
-        public override int Health 
-        { 
-            get => base.Health; 
-            set => base.Health = value; 
-        }
-        public int Defence
-        {
-            get { return _defence; }
-            set { _defence = value; }
-        }
-
-
-        public Footman(string name, int maxHealth, int speed, int damage, int defence) 
-            : base(name, maxHealth, speed)
+        public Footman(string name, int health, int maxHealth, int damage, int speed, int defense, bool _alive = true) : base("Footman", 60, 60, 10,  9, 7, true)
         {
             _damage = damage;
-            _defence = defence;
-        }
-
-        public Footman() : base("Footman", 60, 10)
-        {
-            _damage = 13;
-            _defence = 2;
         }
 
         public int Damage
@@ -36,15 +16,24 @@
             set { _damage = value; }
         }
 
-
         public void InflictDamage(Unit unit)
         {
-            unit.Health = unit.Health - _damage;
+            if (Alive == true)
+            {
+                unit.Health -= (Damage - unit.Defense);
+            }
         }
-
-        public override void ShowInfo()
+        public override void BaseInfo()
         {
-            Console.WriteLine($"Name:{Name} Health: {Health}/{MaxHealth} Damage: {Damage} Defence: {Defence}");
+            if (Alive == true)
+            {
+                double ragehealth = this._maxHealth * 0.4;
+                if (this.Health < ragehealth)
+                {
+                    rage(this);
+                }
+                Console.WriteLine($"Name:{Name} CurrentHealth: {Health}/{_maxHealth} Damage: {Damage} Defense: {Defense}");
+            }
         }
 
     }
