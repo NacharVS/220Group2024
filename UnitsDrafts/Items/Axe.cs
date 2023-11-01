@@ -8,5 +8,6 @@ namespace UnitsDrafts.Items
 {
     internal class Axe
     {
+        ConsoleCancelEventArgs
     }
 }
