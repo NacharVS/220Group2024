@@ -8,6 +8,6 @@ namespace UnitsDrafts.Items
 {
     internal class Axe
     {
-        Console.
+      
     }
 }
