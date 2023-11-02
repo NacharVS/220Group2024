@@ -14,7 +14,7 @@ namespace UnitsDrafts
         private string _name;
         private double _health;
 
-        public Townhall(string name, double health) : base("TownHall", 100)
+        public Townhall(string name, double health) : base("TownHall", 100, 100, 50)
         {
             _name = name;
             _health = health;
@@ -24,6 +24,7 @@ namespace UnitsDrafts
             get { return _damage; }
             set { _damage = value; }
         }
+        
         public static void TownHallDamage(Unit unit)
         {
             CreateTownHall();

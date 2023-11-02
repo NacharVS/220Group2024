@@ -21,6 +21,7 @@ namespace game
             Archer ar = new Archer();
             Footman f1 = new Footman();
             Bishop bs = new Bishop(20);
+            WatchingTower wt = new WatchingTower();
 
             if (units.Exists(x => x.Name == "Pudge"))
             {
@@ -36,7 +37,6 @@ namespace game
             footman.ShowInfo();
 
             WatchingTower.WatchingTowerDamage(footman);
-            footman.ShowInfo();
 
 
 

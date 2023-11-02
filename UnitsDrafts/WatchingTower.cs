@@ -1,4 +1,6 @@
-﻿using UnitsDrafts;
+﻿using System.Security.Cryptography.X509Certificates;
+using System.Xml.Linq;
+using UnitsDrafts;
 
 namespace UnitsDrafts
 {
@@ -6,10 +8,11 @@ namespace UnitsDrafts
     {
         private static int TowerDamage = 0;
         Random random = new Random();
-        public WatchingTower() : base("WatchingTower", 50)
+        public WatchingTower() : base("WatchingTower", 50, 50, 25)
         {
 
         }
+        
         public static void WatchingTowerDamage(Unit unit)
         {
             Console.WriteLine("Введите количество лучников на башне");
@@ -44,16 +47,19 @@ namespace UnitsDrafts
 
             if (archers.Exists(x => x.Name == "Archer"))
             {
-                
-                    TowerDamage = 0;
-                    for (int i = 0; i < archers.Count; i++)
-                    {
-                        TowerDamage += (int)archers[i].Damage;
-                    }
-                    unit.Health -= TowerDamage;
-                    Console.WriteLine($"Смотровая башня нанесла {unit.Name} {TowerDamage} урона");
-                
+
+                TowerDamage = 0;
+                for (int i = 0; i < archers.Count; i++)
+                {
+                    TowerDamage += (int)archers[i].Damage;
+                }
+                unit.Health -= TowerDamage;
+                Console.WriteLine($"Смотровая башня нанесла {unit.Name} {TowerDamage} урона");
+
             }
+       
+
         }
+    
     }
 }
