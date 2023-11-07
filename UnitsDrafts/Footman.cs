@@ -38,6 +38,10 @@
 
         public void InflictDamage(Unit unit)
         {
+            if (Health <= 0.4 * MaxHealth)
+            {
+                unit.Health = Convert.ToInt32(unit.Health - _damage * 1.5);
+            }
             unit.Health = unit.Health - _damage;
         }
 

@@ -4,7 +4,7 @@ namespace UnitsDrafts.items
 {
     internal class Axe : Weapon
     {
-        public Axe() : base(2, 9, 5) 
+        public Axe() : base("axe", 2, 9, 5, 1, 5) 
         {
 
         }

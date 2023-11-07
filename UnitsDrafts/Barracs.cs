@@ -1,4 +1,6 @@
-﻿namespace UnitsDrafts
+﻿using UnitsDrafts.items;
+
+namespace UnitsDrafts
 {
     internal class Barracs 
     {
@@ -13,6 +15,50 @@
         {
             Statistics.ArchersCount++;
             return new Archer();
+        }
+        public void UpgradeWeapon(Weapon weapon)
+        {
+            if (weapon.Name == "axe")
+            {
+                if (weapon.Level == weapon.MaxLevel)
+                {
+                    Console.WriteLine("Max level reached");
+                }
+                else
+                {
+                    weapon.Level += 1;
+                    weapon.MaxDamage += 2;
+                    weapon.MinDamage += 2;
+                    weapon.AttackSpeed += 2;
+                }
+            }
+            if (weapon.Name == "bow")
+            {
+                if (weapon.Level == weapon.MaxLevel)
+                {
+                    Console.WriteLine("Max level reached");
+                }
+                else
+                {
+                    weapon.Level += 1;
+                    weapon.MaxDamage += 4;
+                    weapon.MinDamage += 4;
+                    weapon.AttackSpeed += 1;
+                }
+            }
+            if (weapon.Name == "staff")
+            {
+                if (weapon.Level == weapon.MaxLevel)
+                {
+                    Console.WriteLine("Max level reached");
+                }
+                else
+                {
+                    weapon.Level += 1;
+                    weapon.MaxDamage += 1;
+                    weapon.MinDamage += 1;
+                }
+            }
         }
     }
 }

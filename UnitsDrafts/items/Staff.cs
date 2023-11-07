@@ -4,7 +4,7 @@ namespace UnitsDrafts.items
 {
     internal class Staff : Weapon
     {
-        public Staff() : base(1, 5, 4)
+        public Staff() : base("staff", 1, 5, 4, 1, 5)
         {
         }
         public void Heal(Unit unit)

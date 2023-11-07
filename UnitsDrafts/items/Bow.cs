@@ -3,7 +3,7 @@ namespace UnitsDrafts.items
 {
     internal class Bow : Weapon
     {
-        public Bow() : base(3, 12, 3)
+        public Bow() : base("bow", 3, 12, 3, 1, 5)
         {
         }
         public void TakeDamage(Unit unit)
