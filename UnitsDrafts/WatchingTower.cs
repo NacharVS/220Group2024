@@ -16,7 +16,7 @@ namespace UnitsDrafts
         public int _maxhealth = 20;
         public WatchingTower(List<Archer> Units, int Level)
         {
-            if (Level == 1 || Level == 2)
+            if (Level == 1 ||  Level == 2) 
             {
                 level = Level;
             }
@@ -26,9 +26,9 @@ namespace UnitsDrafts
             }
             int unitsCount = 0;
             foreach (Archer creatures in Units)
-            {
+            { 
                 if (creatures != null)
-                {
+                { 
                     unitsCount++;
                 }
             }
@@ -49,9 +49,9 @@ namespace UnitsDrafts
             set { _damage = value; }
         }
         public int Health
-        {
+        { 
             get { return _health; }
-            set { _health = value; }
+            set {  _health = value; }
         }
         public void ShowInfo()
         {

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace UnitsDrafts
 {
-    internal class Bishop
+    internal abstract class Axe : Weapon
     {
+        public Axe() { }
     }
 }

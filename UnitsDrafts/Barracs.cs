@@ -1,37 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace UnitsDrafts
+﻿namespace UnitsDrafts
 {
-    internal class Barracks
+    internal class Barracs 
     {
-        Random random = new Random();
         public Footman CreateFootman()
         {
+            Random random = new Random();
             Statistics.FootmansCount++;
-            int hp = random.Next(50, 60);
-            return new Footman("Name", hp, hp, random.Next(7, 12), random.Next(5, 15), random.Next(1, 4), true);
+            return  new Footman("Name", random.Next(50,60), random.Next(5, 10), random.Next(5, 15), random.Next(1, 4));
         }
 
         public Archer CreateArcher()
         {
             Statistics.ArchersCount++;
             return new Archer();
-        }
-        public Cleric CreateCleric()
-        {
-            return new Cleric(random.Next(45, 55), random.Next(55, 65));
-        }
-        public Peasant CreatePeasant()
-        {
-            return new Peasant();
-        }
-        public Bishop CreateBishop()
-        {
-            return new Bishop();
         }
     }
 }
