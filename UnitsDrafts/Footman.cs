@@ -6,7 +6,7 @@
         private double _defence;
         private double _health;
         private double _maxHealth;
-        //private Weapon _weapon;
+
 
         public Footman(string name, int health, int maxHealth, int speed, int damage, int defence) : base(name, health, maxHealth, defence)
         {
