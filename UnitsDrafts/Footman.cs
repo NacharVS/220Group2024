@@ -1,45 +1,39 @@
-﻿using UnitsDrafts.Items;
+﻿using System.Xml.Linq;
 
 namespace UnitsDrafts
 {
     internal class Footman : Unit
     {
-
-        private int _defence;
-        private Weapon _weapon;
-
-        public override int Health 
-        { 
-            get => base.Health; 
-            set => base.Health = value; 
-        }
-        public int Defence
+        private int _damage;
+        public Footman(string name, int health, int maxHealth, int damage, int speed, int defense, bool _alive = true) : base("Footman", 60, 60, 10,  9, 7, true)
         {
-            get { return _defence; }
-            set { _defence = value; }
+            _damage = damage;
         }
 
-        public Footman(string name, int maxHealth, int speed, int damage, int defence) 
-            : base(name, maxHealth, speed)
+        public int Damage
         {
-
-            _defence = defence;
-        }
-
-        public Footman() : base("Footman", 60, 10)
-        {
-            _defence = 2;
-            _weapon = new Axe(2, 7, 5);
+            get { return _damage; }
+            set { _damage = value; }
         }
 
         public void InflictDamage(Unit unit)
         {
-            unit.Health = unit.Health - _weapon.Hit();
+            if (Alive == true)
+            {
+                unit.Health -= (Damage - unit.Defense);
+            }
         }
-
-        public override void ShowInfo()
+        public override void BaseInfo()
         {
-            Console.WriteLine($"Name:{Name} Health: {Health}/{MaxHealth} Damage: {Damage} Defence: {Defence}");
+            if (Alive == true)
+            {
+                double ragehealth = this._maxHealth * 0.4;
+                if (this.Health < ragehealth)
+                {
+                    rage(this);
+                }
+                Console.WriteLine($"Name:{Name} CurrentHealth: {Health}/{_maxHealth} Damage: {Damage} Defense: {Defense}");
+            }
         }
 
     }
