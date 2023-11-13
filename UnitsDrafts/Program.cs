@@ -5,7 +5,7 @@ Footman ft2 = new Footman();
 Bishop bishop = new Bishop();   
 
 ft1.infDamage = Method1;
-ft1.infDamage = Method2;
+ft1.infDamage += Method2;
 ft1.infDamage += bishop.HealSomebody;
 ft1.InflictDamage(ft2);
 
