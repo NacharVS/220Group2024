@@ -3,7 +3,7 @@ namespace UnitsDrafts.Items
 {
     internal abstract class Weapon
     {
-        protected Weapon(int minDamage, int maxDamage, int attackSpeed)
+        public Weapon(int minDamage, int maxDamage, int attackSpeed)
         {
             MinDamage = minDamage;
             MaxDamage = maxDamage;
@@ -16,6 +16,6 @@ namespace UnitsDrafts.Items
         public int AttackSpeed { get; set; }
 
         public abstract int Hit();
-
+    }
 
 }

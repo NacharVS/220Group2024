@@ -4,14 +4,15 @@ namespace UnitsDrafts
 {
     internal class Footman : Unit
     {
-
+        public delegate void InflictDamageDelegate(Unit unit);
+        public InflictDamageDelegate infDamage;
         private int _defence;
         private Weapon _weapon;
 
-        public override int Health 
-        { 
-            get => base.Health; 
-            set => base.Health = value; 
+        public override int Health
+        {
+            get => base.Health;
+            set => base.Health = value;
         }
         public int Defence
         {
@@ -19,7 +20,7 @@ namespace UnitsDrafts
             set { _defence = value; }
         }
 
-        public Footman(string name, int maxHealth, int speed, int damage, int defence) 
+        public Footman(string name, int maxHealth, int speed, int damage, int defence)
             : base(name, maxHealth, speed)
         {
 
@@ -34,13 +35,15 @@ namespace UnitsDrafts
 
         public void InflictDamage(Unit unit)
         {
-            unit.Health = unit.Health - _weapon.Hit();
+            infDamage(unit);
         }
-
         public override void ShowInfo()
         {
-            Console.WriteLine($"Name:{Name} Health: {Health}/{MaxHealth} Damage: {Damage} Defence: {Defence}");
-        }
+            {
+                Console.WriteLine($"Name:{Name} Health: {Health}/{MaxHealth} Damage: {_weapon.MaxDamage} Defence: {Defence}");
+            }
 
+        }
     }
+
 }
