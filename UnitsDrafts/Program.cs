@@ -1,19 +1,24 @@
 ﻿using UnitsDrafts;
-using UnitsDrafts.items;
+Footman ft1 = new Footman();
+Footman ft2 = new Footman();
+Bishop bishop = new Bishop();
 
-List<Unit> units = new List<Unit>();
-units.Add(new Footman());
-units.Add(new Peasant());
-units.Add(new Archer()); 
-units.Add(new Peasant());
+ft1.infDamage = Method1;
+ft1.infDamage = Method2;
+ft1.infDamage += bishop.HealSomebody;
+ft1.InflictDamage(ft2);
 
-if (units.Exists(x => x.Name == "Footman"))
+static void Method1(Unit unit)
 {
-    var founded = units.Find(x => x.Name == "Footman");
-    var index = units.FindIndex(1 , 4 , x => x.Name == "Footman");
-    founded?.ShowInfo();
-    units[1].ShowInfo();
+    Console.WriteLine($"{unit.Name} took headshot");
 }
+
+static void Method2(Unit unit)
+{
+    if (unit.Health < unit.MaxHealth / 2)
+        Console.WriteLine($"{unit.Name} took armBraker");
+}
+
 
 
 

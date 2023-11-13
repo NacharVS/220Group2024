@@ -2,6 +2,8 @@
 {
     internal class Footman : Unit
     {
+        public delegate void InflictDamageDelegate(Unit unit);
+        public InflictDamageDelegate infDamage;
         private int _damage;
         private int _defence;
 
