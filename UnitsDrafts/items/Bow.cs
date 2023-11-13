@@ -15,7 +15,7 @@ namespace UnitsDrafts.items
 
         public override int Hit()
         {
-            
+            return 0;
         }
     }
 }
