@@ -37,7 +37,7 @@ namespace Работа
             Mana -= 1;
         }
 
-        public override void BaseInfo()
+        public override void BaseInfo(Unit unit)
         {
             Console.WriteLine($"Имя:{Name} Состояние здоровья: {Health} Количество маны: {Mana}");
         }

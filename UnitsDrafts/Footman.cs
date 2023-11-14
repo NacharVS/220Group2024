@@ -63,7 +63,7 @@ namespace Работа
                 Damage = Damage;
 
         }
-        public override void BaseInfo()
+        public override void BaseInfo(Unit unit)
         {
             Console.WriteLine($"Имя:{Name} Состояние здоровья: {Health}/{MaxHealth}  Урон: {Damage} Защита: {Defence}");
         }
@@ -79,7 +79,7 @@ namespace Работа
             else
 
                 footman.Health -= Damage;
-            unit.BaseInfo();
+            unit.BaseInfo(unit);
             unit.Death();
         }
 

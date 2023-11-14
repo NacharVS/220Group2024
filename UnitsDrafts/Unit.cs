@@ -81,7 +81,7 @@ namespace Работа
             Console.WriteLine($"У {_name} скорость: {_speed}");
         }
 
-        public virtual void BaseInfo()
+        public virtual void BaseInfo(Unit unit)
         {
             Console.WriteLine($"Имя:{_name} Состояние здоровья: {_health}");
         }
@@ -92,6 +92,11 @@ namespace Работа
             {
                 Console.WriteLine("Герой умер, атаковать нельзя");
             }
+        }
+
+        public void Mehtod(Unit unit)
+        {
+            Methods(unit);
         }
     }
 }
