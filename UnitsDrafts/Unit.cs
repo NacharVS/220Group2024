@@ -8,6 +8,8 @@ namespace Работа
 {
     internal class Unit
     {
+        public delegate void MethodsDelegate(Unit unit);
+        public MethodsDelegate Methods;
         private string _name;
         private double _health;
         private double _maxHealth;
