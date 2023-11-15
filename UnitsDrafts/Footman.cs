@@ -4,7 +4,7 @@
     {
         private int _damage;
         private int _defence;
-
+        //qq
         public override int Health 
         { 
             get => base.Health; 
