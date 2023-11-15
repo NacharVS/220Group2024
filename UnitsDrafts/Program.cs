@@ -35,6 +35,6 @@ static void Method1(Unit unit)
 
 static void Method2(Unit unit)
 {
-    if (unit.Health < unit._maxHealth / 2)
+    if (unit.Health < unit.MaxHealth / 2)
         Console.WriteLine($"{unit.Name} took armBraker");
 }

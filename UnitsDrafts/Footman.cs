@@ -8,7 +8,7 @@ using UnitsDrafts.Items;
 
 namespace UnitsDrafts
 {
-    internal class Footman
+    internal class Footman : Unit
     {
         public delegate void InflictDamageDelegate(Unit unit);
         public InflictDamageDelegate infDamage;

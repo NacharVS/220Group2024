@@ -16,7 +16,11 @@
             _maxHealth = maxHealth;
             _defence = 0;
         }
-
+        public int MaxHealth
+        { 
+            get { return _maxHealth; }
+            set { _maxHealth = value; }
+        } 
         public double Defence
         {
             get { return _defence; }
