@@ -8,7 +8,7 @@ namespace Работа
 {
     internal class Unit
     {
-        public delegate void MethodsDelegate(Unit unit);
+        public delegate void MethodsDelegate();
         public MethodsDelegate Methods;
         private string _name;
         private double _health;
@@ -81,7 +81,7 @@ namespace Работа
             Console.WriteLine($"У {_name} скорость: {_speed}");
         }
 
-        public virtual void BaseInfo(Unit unit)
+        public virtual void BaseInfo()
         {
             Console.WriteLine($"Имя:{_name} Состояние здоровья: {_health}");
         }
@@ -94,9 +94,9 @@ namespace Работа
             }
         }
 
-        public void Mehtod(Unit unit)
+        public void Mehtod()
         {
-            Methods(unit);
+            Methods();
         }
     }
 }

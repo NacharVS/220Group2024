@@ -11,9 +11,9 @@ namespace Работа
         public Peasant() : base("Peasant", 30, 5, "Field")
         {
         }
-        public override void BaseInfo(Unit unit)
+        public override void BaseInfo()
         {
-            base.BaseInfo(unit);
+            base.BaseInfo();
         }
     }
 }
