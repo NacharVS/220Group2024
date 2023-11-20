@@ -2,6 +2,7 @@
 {
     internal class Unit
     {
+        public Action action;
         private readonly string _name;
         private int _health;
         private int _maxHealth;
@@ -48,6 +49,7 @@
         public virtual void ShowInfo()
         {
             Console.WriteLine($"Name:{_name} Health: {_health}/{_maxHealth}" );
+            action();
         }
 
     }

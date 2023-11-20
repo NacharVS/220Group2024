@@ -7,10 +7,10 @@
         private int _damage;
         private int _defence;
 
-        public override int Health 
-        { 
-            get => base.Health; 
-            set => base.Health = value; 
+        public override int Health
+        {
+            get => base.Health;
+            set => base.Health = value;
         }
         public int Defence
         {
@@ -19,7 +19,7 @@
         }
 
 
-        public Footman(string name, int maxHealth, int speed, int damage, int defence) 
+        public Footman(string name, int maxHealth, int speed, int damage, int defence)
             : base(name, maxHealth, speed)
         {
             _damage = damage;
@@ -41,8 +41,16 @@
 
         public void InflictDamage(Unit unit)
         {
-            unit.Health = unit.Health - _damage;
+            infDamage(unit);
+         
         }
+
+        public void Method1(Unit unit)
+        {
+            unit.Health = unit.Health - _damage;
+            Console.WriteLine("Took damage");
+        }
+
 
         public override void ShowInfo()
         {
