@@ -2,8 +2,11 @@
 {
     internal class Footman : Unit
     {
-        private int _damage;
+     public Action action;
+        public delegate void InflictDamageDelegate(Unit unit);
+        public InflictDamageDelegate infDamage;
         private int _defence;
+        private Weapon _weapon;
 
         public override int Health 
         { 
