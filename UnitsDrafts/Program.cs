@@ -2,11 +2,13 @@
 
 Footman ft1 = new Footman();
 Footman ft2 = new Footman();
-Bishop bishop = new Bishop();   
 
-ft1.infDamage = Method1;
-ft1.infDamage += Method2;
-ft1.infDamage += bishop.HealSomebody;
+ft1.infDamage = delegate (Unit unit)
+{
+    unit.Health -= 10;
+    unit.ShowInfo();
+};
+
 ft1.InflictDamage(ft2);
 
 static void Method1(Unit unit)
