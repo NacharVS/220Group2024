@@ -2,14 +2,15 @@
 
 Footman ft1 = new Footman();
 Footman ft2 = new Footman();
+ft2.action = () => Console.WriteLine("Invoked action delegate!");
 
-ft1.infDamage = delegate (Unit unit)
+ft1.infDamage = (Unit unit) =>
 {
     unit.Health -= 10;
     unit.ShowInfo();
 };
-
 ft1.InflictDamage(ft2);
+
 
 static void Method1(Unit unit)
 {

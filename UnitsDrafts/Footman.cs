@@ -4,6 +4,8 @@ namespace UnitsDrafts
 {
     internal class Footman : Unit
     {
+
+        public Action action;
         public delegate void InflictDamageDelegate(Unit unit);
         public InflictDamageDelegate infDamage;
         private int _defence;
@@ -39,10 +41,8 @@ namespace UnitsDrafts
         }
         public override void ShowInfo()
         {
-            {
-                Console.WriteLine($"Name:{Name} Health: {Health}/{MaxHealth} Damage: {_weapon.MaxDamage} Defence: {Defence}");
-            }
-
+            Console.WriteLine($"Name:{Name} Health: {Health}/{MaxHealth} Damage: {_weapon.MaxDamage} Defence: {Defence}");
+            action();
         }
     }
 
