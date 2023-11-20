@@ -23,7 +23,6 @@ namespace Работа
             ft1.Methods += ft1.BaseInfo;
             ft1.Methods += ft1.BaseInfo;
             ft1.Methods();
-            
 
 
             //peasant.BaseInfo();
