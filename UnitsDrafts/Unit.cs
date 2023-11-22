@@ -3,7 +3,6 @@
     internal class Unit
     {
         public delegate void HealthChangedDelegate(int health, int changedValue);
-
         public Action action;
         private readonly string _name;
         private int _health;
@@ -39,7 +38,19 @@
                     _health = 0;
                 }
                 else
-                    _health = value; 
+                {
+                    var diff = _health - value;
+                    if (diff < 0)
+                    {
+                        _health = value;
+                        HealthIncreasedEvent?.Invoke(_health, diff);
+                    }
+                    else
+                    {
+                        _health = value;
+                        HealthDecreasedEvent?.Invoke(_health, diff);
+                    }
+                }
             }
         }
 
