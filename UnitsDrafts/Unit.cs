@@ -2,6 +2,8 @@
 {
     internal class Unit
     {
+        public delegate void HealthChangedDelegate(int health, int changedValue);
+
         public Action action;
         private readonly string _name;
         private int _health;
