@@ -2,8 +2,8 @@
 {
     internal class Bishop : Unit
     {
-        public delegate void HealSomebodyDelegate(Unit unit);
-        public HealSomebodyDelegate HealDelegate;
+        //public delegate void HealSomebodyDelegate(Unit unit);
+        //public HealSomebodyDelegate HealDelegate;
         private int _mana;
 
         public Bishop() : base("Bishop", 40, 7)
@@ -20,19 +20,19 @@
             set { _mana = value; }
         }
 
-        public void HealSomebody(Unit unit)
-        {
-            HealDelegate(unit);
-        }
-        public void HealMethod1(Unit unit)
-        {
-            Console.WriteLine("Heal somebody");
-        }
+        //public void HealSomebody(Unit unit)
+        //{
+        //    HealDelegate(unit);
+        //}
+        //public void HealMethod1(Unit unit)
+        //{
+        //    Console.WriteLine("Heal somebody");
+        //}
 
-        public void HealMethod2(Unit unit)
-        {
-            Console.WriteLine("Heal archer");
-        }
+        //public void HealMethod2(Unit unit)
+        //{
+        //    Console.WriteLine("Heal archer");
+        //}
 
 
 

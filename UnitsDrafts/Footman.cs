@@ -4,6 +4,8 @@
     {
         public delegate void InflictDamageDelegate(Unit unit);
         public InflictDamageDelegate infDamage;
+        public delegate void HealSomebodyDelegate(Unit unit);
+        public HealSomebodyDelegate HealDelegate;
         private int _damage;
         private int _defence;
 
@@ -55,6 +57,19 @@
         public override void ShowInfo()
         {
             Console.WriteLine($"Name:{Name} Health: {Health}/{MaxHealth} Damage: {Damage} Defence: {Defence}");
+        }
+        public void HealSomebody(Unit unit)
+        {
+            HealDelegate(unit);
+        }
+        public void HealMethod1(Unit unit)
+        {
+            Console.WriteLine("Heal somebody");
+        }
+
+        public void HealMethod2(Unit unit)
+        {
+            Console.WriteLine("Heal archer");
         }
 
     }

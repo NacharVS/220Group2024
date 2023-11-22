@@ -16,9 +16,8 @@ ft2.HealthIncreasedEvent += (int health, int diff) =>
 ft1.infDamage = (Unit unit) =>
 {
     unit.Health -= 10;
-    unit.Health -= 10;
-    unit.Health -= 10;
 };
+
 
 
 ft1.infDamage = (Unit unit) => 
@@ -29,14 +28,23 @@ ft1.infDamage = (Unit unit) =>
 
 ft1.infDamage(ft2);
 
+ft2.HealDelegate = (Unit unit) =>
+{
+    unit.Health += 10;
+    unit.ShowInfo();
+    unit.Health += 10;
+    unit.ShowInfo();
+};
+
+ft1.HealDelegate(ft2);
 
 
 
-ft1.infDamage = ft1.Method1;
-ft1.InflictDamage(bish1);
+//ft1.infDamage = ft1.Method1;
+//ft1.InflictDamage(bish1);
 
-bish1.HealDelegate = bish1.HealMethod1;
-bish1.HealSomebody(ft1);
+//bish1.HealDelegate = bish1.HealMethod1;
+//bish1.HealSomebody(ft1);
 
 //static void Method1(Unit unit)
 //{
