@@ -9,6 +9,8 @@ namespace Работа
 {
     internal class Footman : Unit
     {
+        public delegate void FootmanDelegate();
+        public FootmanDelegate footmanDelegate;
         private double _damage;
         private double _defence;
         private double _maxDefence;
@@ -81,6 +83,10 @@ namespace Работа
                 footman.Health -= Damage;
             unit.BaseInfo();
             unit.Death();
+        }
+        public void FootmanMethod(double damage)
+        {
+            footmanDelegate();
         }
 
     }

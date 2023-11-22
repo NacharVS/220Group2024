@@ -25,6 +25,8 @@ namespace Работа
             ft1.Methods();
 
 
+
+
             //peasant.BaseInfo();
 
             //Console.WriteLine("ft1 наносит удар 30 peasant");
