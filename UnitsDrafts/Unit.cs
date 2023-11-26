@@ -4,6 +4,9 @@
     {
         public delegate void HealthChangedDelegate(int health, int changedValue);
 
+        public delegate void InnerDelegate(int speed);
+        public InnerDelegate InDelegate;
+
         private readonly string _name;
         private int _health;
         private int _maxHealth;
@@ -53,6 +56,11 @@
                     }
                 }
             }
+        }
+
+        public void InnerDelegateVoid()
+        {
+            InDelegate(_speed);
         }
 
         public void Moving()

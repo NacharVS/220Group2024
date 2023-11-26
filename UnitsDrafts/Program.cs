@@ -22,6 +22,14 @@ ft1.infDamage = (Unit unit) =>
 ft1.InflictDamage(ft2);
 
 
+Footman ft3 = new Footman();
+ft3.InDelegate = (speed) =>
+{
+    Console.WriteLine(speed);
+};
+ft3.InnerDelegateVoid();
+
+
 static void Method1(Unit unit)
 {
     Console.WriteLine($"{unit.Name} took headshot");
