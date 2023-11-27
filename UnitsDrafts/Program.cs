@@ -1,7 +1,8 @@
 ﻿using UnitsDrafts;
+
 Footman ft1 = new Footman();
 Footman ft2 = new Footman();
-Bishop bish1 = new Bishop();
+
 ft2.action = () => Console.WriteLine("Invoked action delegate!");
 
 ft2.HealthDecreasedEvent += (Unit sender, UnitEventArg e) =>
