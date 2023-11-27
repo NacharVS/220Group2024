@@ -2,7 +2,7 @@
 {
     internal class Unit
     {
-        public delegate void HealthChangedDelegate(int health, int changedValue);
+        public delegate void HealthChangedDelegate(Unit sender, UnitEventArg e);
 
         private readonly string _name;
         private int _health;
@@ -44,12 +44,12 @@
                     if (diff < 0)
                     {
                         _health = value;
-                        HealthIncreasedEvent?.Invoke(_health, diff);
+                        HealthIncreasedEvent?.Invoke(this, new UnitEventArg("Health increased by:", diff));
                     }
                     else
                     {
                         _health = value;
-                        HealthDecreasedEvent?.Invoke(_health, diff);
+                        HealthDecreasedEvent?.Invoke(this, new UnitEventArg("Health decreased by:", diff));
                     }
                 }
             }
