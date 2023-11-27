@@ -3,7 +3,7 @@
     internal class Unit
     {
         public delegate void HealthChangedDelegate(Unit sender, UnitEventArg e);
-        public Action action;
+       
         private readonly string _name;
         private int _health;
         private int _maxHealth;
