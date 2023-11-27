@@ -10,6 +10,7 @@ namespace UnitsDrafts
 {
     internal class Footman : Unit
     {
+        public Action action;
         public delegate void InflictDamageDelegate(Unit unit);
         public InflictDamageDelegate infDamage;
         private int _defence;
