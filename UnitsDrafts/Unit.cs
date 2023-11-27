@@ -2,111 +2,72 @@
 {
     public class Unit
     {
-        private string _name;
-        private double _health;
-        private int _speed;
+        public delegate void HealthChangedDelegate(Unit sender, UnitEventArg e);
+
+        private readonly string _name;
+        private int _health;
         private int _maxHealth;
-        private double _damage;
-        private double _defence;
-        public Unit(string name, int health, int maxHealth, int speed)
+        private int _speed;
+
+        public Unit(string name, int maxHealth,
+            int speed)
         {
             _name = name;
-            _health = health;
-            _speed = speed;
+            _health = maxHealth;
             _maxHealth = maxHealth;
-            _defence = 0;
-        }
-        public int MaxHealth
-        { 
-            get { return _maxHealth; }
-            set { _maxHealth = value; }
-        } 
-        public double Defence
-        {
-            get { return _defence; }
-            set { _defence = value; }
-        }
-        public string Name
-        {
-            get { return _name; }
-            set
-            {
-                _name = value;
-            }
-        }
-        public double Damage
-        {
-            get { return (double)_damage; }
-            set { _damage = value; }
+            _speed = speed;
+
         }
 
-        public double Health
+        public string Name => _name;
+        public int MaxHealth => _maxHealth;
+
+        public int Speed
+        {
+            get { return _speed; }
+            set { _speed = value; }
+        }
+
+
+        public virtual int Health
         {
             get { return _health; }
             set
             {
-
                 if (value < 0)
                 {
                     _health = 0;
-                    Console.WriteLine(_name + " упал и умер :)");
                 }
                 else
                 {
-
-                    _health = value;
-                }
-                if (value > _maxHealth)
-                {
-                    _health = _maxHealth;
+                    var diff = _health - value;
+                    if (diff < 0)
+                    {
+                        _health = value;
+                        HealthIncreasedEvent?.Invoke(this, new UnitEventArg("Health increased by:", diff));
+                    }
+                    else
+                    {
+                        _health = value;
+                        HealthDecreasedEvent?.Invoke(this, new UnitEventArg("Health decreased by:", diff));
+                    }
                 }
             }
-
         }
 
-        public double Rage()
+        public void Moving()
         {
-            return _damage *= 1.5;
+            Console.WriteLine($"{_name} is moving with {_speed} speed");
         }
 
-        public void BaseInfo()
+        public virtual void ShowInfo()
         {
-            Console.WriteLine("---------");
-            Console.WriteLine("Имя:" + Name);
-            Console.WriteLine("ХП:" + Health);
-            Console.WriteLine("Щит:" + Defence);
-            Console.WriteLine("---------");
-        }
-        public void TakeDamage(Unit unit)
-        {
-            Console.WriteLine(this.Name + " вшатал по " + unit.Name + "-у");
-            if (Health < _maxHealth / 3)
-            {
-                Rage();
-            }
-            if (unit.Defence > 0)
-            {
-                double ostatok_defenca = unit.Defence;
-                if (ostatok_defenca >= this.Damage)
-                {
-                    unit.Defence -= this.Damage;
-                    unit.Health -= this.Damage * 0.25;
-                }
-                else
-                {
+            Console.WriteLine($"Name:{_name} Health: {_health}/{_maxHealth}");
 
-                    unit.Defence = 0;
-                    unit.Health -= (this.Damage - ostatok_defenca) + (ostatok_defenca * 0.25);
-                }
-            }
-            else
-            {
-                unit.Health -= this.Damage;
-            }
         }
 
-
-
+        public event HealthChangedDelegate HealthDecreasedEvent;
+        public event HealthChangedDelegate HealthIncreasedEvent;
 
 
     }
