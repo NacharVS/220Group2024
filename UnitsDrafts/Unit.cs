@@ -43,12 +43,12 @@
                     if (diff < 0)
                     {
                         _health = value;
-                        HealthIncreasedEvent?.Invoke(_health, diff);
+                        HealthIncreasedEvent?.Invoke(this, new UnitEventArg("Health increased by:", diff));
                     }
                     else
                     {
                         _health = value;
-                        HealthDecreasedEvent?.Invoke(_health, diff);
+                        HealthDecreasedEvent?.Invoke(this, new UnitEventArg("Health increased by:", diff));
                     }
                 }
             }
