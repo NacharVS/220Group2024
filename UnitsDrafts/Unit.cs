@@ -62,7 +62,7 @@
         public virtual void ShowInfo()
         {
             Console.WriteLine($"Name:{_name} Health: {_health}/{_maxHealth}" );
-            action();
+            
         }
         public event HealthChangedDelegate HealthDecreasedEvent;
         public event HealthChangedDelegate HealthIncreasedEvent;
