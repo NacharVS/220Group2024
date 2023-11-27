@@ -4,39 +4,44 @@ Footman ft2 = new Footman();
 Bishop bish1 = new Bishop();
 ft2.action = () => Console.WriteLine("Invoked action delegate!");
 
-ft2.HealthDecreasedEvent += (int health, int diff) =>
+ft2.HealthDecreasedEvent += (Unit sender, UnitEventArg e) =>
 {
-    Console.WriteLine($"Unit took {diff} damage, current health {health}");
+    Console.WriteLine($"{sender.Name} {e.Message} {e.HealthDifferce} current health: {sender.Health}");
 };
 
-ft2.HealthIncreasedEvent += (int health, int diff) =>
+ft2.HealthIncreasedEvent += (Unit sender, UnitEventArg e) =>
 {
-    Console.WriteLine($"Unit took {diff} healing, current health {health}");
+    Console.WriteLine($"{sender.Name} {e.Message} {e.HealthDifferce}");
 };
+
 ft1.infDamage = (Unit unit) =>
 {
     unit.Health -= 10;
-};
-
-
-
-ft1.infDamage = (Unit unit) => 
-{
     unit.Health -= 10;
-    unit.ShowInfo();
+    unit.Health -= 10;
 };
+ft1.InflictDamage(ft2);
 
-ft1.infDamage(ft2);
 
-ft2.HealDelegate = (Unit unit) =>
-{
-    unit.Health += 10;
-    unit.ShowInfo();
-    unit.Health += 10;
-    unit.ShowInfo();
-};
 
-ft1.HealDelegate(ft2);
+
+//ft1.infDamage = (Unit unit) => 
+//{
+//    unit.Health -= 10;
+//    unit.ShowInfo();
+//};
+
+//ft1.infDamage(ft2);
+
+//ft2.HealDelegate = (Unit unit) =>
+//{
+//    unit.Health += 10;
+//    unit.ShowInfo();
+//    unit.Health += 10;
+//    unit.ShowInfo();
+//};
+
+//ft1.HealDelegate(ft2);
 
 
 
