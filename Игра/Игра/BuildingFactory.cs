@@ -8,9 +8,9 @@ namespace Игра
 {
     internal class BuildingFactory
     {
-        public static void CreateBarracs()
-        {
-            Barracs barracs = new Barracs();
+        public static Barracs CreateBarracs()
+        { 
+            return new Barracs();
         }
     }
 }
