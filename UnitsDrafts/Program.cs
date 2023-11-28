@@ -13,6 +13,7 @@ ft2.HealthIncreasedEvent += (int health, int diff) =>
 {
     Console.WriteLine($"Unit took {diff} healing, current health {health}");
 };
+
 ft1.infDamage = (Unit unit) =>
 {
     unit.Health -= 10;
@@ -29,6 +30,18 @@ ft3.InDelegate = (speed) =>
 };
 ft3.InnerDelegateVoid();
 
+Barracs barrac = new Barracs();
+barrac.StatisticsArcherEvent += (int count) =>
+{
+    Console.WriteLine($"{count} Archers in Barrac");
+};
+
+barrac.StatisticsFootmanEvent += (int count) =>
+{
+    Console.WriteLine($"{count} Footmans in Barrac");
+};
+barrac.CreateArcher();
+barrac.CreateFootman();
 
 static void Method1(Unit unit)
 {
