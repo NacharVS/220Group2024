@@ -1,4 +1,5 @@
 ﻿namespace UnitsDrafts
+
 {
     internal static class BuildingFactory
     {

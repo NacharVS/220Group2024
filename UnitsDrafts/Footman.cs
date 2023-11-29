@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace Работа
+namespace UnitsDrafts
 {
     internal class Footman : Unit
     {
-        public delegate void FootmanDelegate();
+        public delegate void FootmanDelegate(double damage, double defence);
         public FootmanDelegate footmanDelegate;
         private double _damage;
         private double _defence;
@@ -84,9 +84,9 @@ namespace Работа
             unit.BaseInfo();
             unit.Death();
         }
-        public void FootmanMethod(double damage)
+        public void FootmanMethod(double damage, double defence)
         {
-            footmanDelegate();
+            footmanDelegate(damage, defence);
         }
 
     }

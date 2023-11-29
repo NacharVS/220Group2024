@@ -5,14 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 using UnitsDrafts;
 
-namespace Работа
+namespace UnitsDrafts
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-                Footman ft1 = new Footman(30, 20);
-                Footman ft2 = new Footman(10, 5);
+            Footman ft1 = new Footman(30, 20);
+            Footman ft2 = new Footman(10, 5);
+
+            Barracs barracs = new Barracs();
+
+            barracs.countEvent += (int count, string message) =>
+            {
+                Console.WriteLine($"кол во лучников {Statistics.ArchersCount}");
+            };
+            barracs.CreateArcher();
+            Console.ReadKey();
             //Peasant peasant = new Peasant();
             //Bishop churchman = new Bishop(60);
             //Archer archer1 = new Archer();
@@ -23,7 +32,7 @@ namespace Работа
             ft1.Methods += ft1.BaseInfo;
             ft1.Methods += ft1.BaseInfo;
             ft1.Methods();
-
+            Console.ReadKey();
 
 
 
