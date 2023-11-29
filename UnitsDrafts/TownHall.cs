@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace UnitsDrafts
 {
-    internal class Bishop
+    internal class TownHall : Unit
     {
+        public TownHall(string name, int MaxHeatlh, int speed) : base("TownHall", 150, 0)
+        {
+
+        }
     }
 }
