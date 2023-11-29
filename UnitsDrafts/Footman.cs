@@ -1,14 +1,20 @@
-﻿namespace UnitsDrafts
+﻿using UnitsDrafts.items;
+
+namespace UnitsDrafts
 {
     internal class Footman : Unit
     {
-        private int _damage;
-        private int _defence;
 
-        public override int Health 
-        { 
-            get => base.Health; 
-            set => base.Health = value; 
+        public Action action;
+        public delegate void InflictDamageDelegate(Unit unit);
+        public InflictDamageDelegate infDamage;
+        private int _defence;
+        private Weapon _weapon;
+
+        public override int Health
+        {
+            get => base.Health;
+            set => base.Health = value;
         }
         public int Defence
         {
@@ -16,39 +22,28 @@
             set { _defence = value; }
         }
 
-
-        public Footman(string name, int maxHealth, int speed, int damage, int defence) : base(name, maxHealth, speed)
+        public Footman(string name, int maxHealth, int speed, int damage, int defence)
+            : base(name, maxHealth, speed)
         {
-            _damage = damage;
+
             _defence = defence;
         }
 
         public Footman() : base("Footman", 60, 10)
         {
-            _damage = 13;
             _defence = 2;
+            _weapon = new Axe();
         }
-
-        public int Damage
-        {
-            get { return _damage; }
-            set { _damage = value; }
-        }
-
 
         public void InflictDamage(Unit unit)
         {
-            if (Health <= 0.4 * MaxHealth)
-            {
-                unit.Health = Convert.ToInt32(unit.Health - _damage * 1.5);
-            }
-            unit.Health = unit.Health - _damage;
+            infDamage(unit);
         }
-
         public override void ShowInfo()
         {
-            Console.WriteLine($"Name:{Name} Health: {Health}/{MaxHealth} Damage: {Damage} Defence: {Defence}");
+            Console.WriteLine($"Name:{Name} Health: {Health}/{MaxHealth} Damage: {_weapon.MaxDamage} Defence: {Defence}");
+            action();
         }
-
     }
+
 }

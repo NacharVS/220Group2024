@@ -61,5 +61,7 @@ namespace UnitsDrafts
                 }
             }
         }
+        public event StatisticsDelegate StatisticsArcherEvent;
+        public event StatisticsDelegate StatisticsFootmanEvent;
     }
 }
