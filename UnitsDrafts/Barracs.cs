@@ -1,13 +1,14 @@
-﻿namespace UnitsDrafts
+﻿using UnitsDrafts.items;
+
+namespace UnitsDrafts
 {
     internal class Barracs 
     {
-        Random random = new Random();
         public Footman CreateFootman()
         {
+            Random random = new Random();
             Statistics.FootmansCount++;
-            int hp = random.Next(50, 60);
-            return new Footman("Name", hp, hp, random.Next(7, 12), random.Next(5, 15), random.Next(1, 4), true);
+            return  new Footman("Footman", random.Next(50,60), random.Next(5, 10), random.Next(5, 15), random.Next(1, 4));
         }
 
         public Archer CreateArcher()
@@ -15,17 +16,49 @@
             Statistics.ArchersCount++;
             return new Archer();
         }
-        public Cleric CreateCleric()
+        public void UpgradeWeapon(Weapon weapon)
         {
-            return new Cleric(random.Next(45, 55), random.Next(55, 65));
-        }
-        public Peasant CreatePeasant()
-        {
-            return new Peasant();
-        }
-        public Bishop CreateBishop()
-        {
-            return new Bishop();
+            if (weapon.Name == "axe")
+            {
+                if (weapon.Level == weapon.MaxLevel)
+                {
+                    Console.WriteLine("Max level reached");
+                }
+                else
+                {
+                    weapon.Level += 1;
+                    weapon.MaxDamage += 2;
+                    weapon.MinDamage += 2;
+                    weapon.AttackSpeed += 2;
+                }
+            }
+            if (weapon.Name == "bow")
+            {
+                if (weapon.Level == weapon.MaxLevel)
+                {
+                    Console.WriteLine("Max level reached");
+                }
+                else
+                {
+                    weapon.Level += 1;
+                    weapon.MaxDamage += 4;
+                    weapon.MinDamage += 4;
+                    weapon.AttackSpeed += 1;
+                }
+            }
+            if (weapon.Name == "staff")
+            {
+                if (weapon.Level == weapon.MaxLevel)
+                {
+                    Console.WriteLine("Max level reached");
+                }
+                else
+                {
+                    weapon.Level += 1;
+                    weapon.MaxDamage += 1;
+                    weapon.MinDamage += 1;
+                }
+            }
         }
     }
 }

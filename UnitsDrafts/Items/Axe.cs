@@ -1,14 +1,29 @@
-﻿namespace UnitsDrafts.Items
+﻿
+
+namespace UnitsDrafts.items
 {
     internal class Axe : Weapon
     {
-        public Axe(int minDamage, int maxDamage, int attackSpeed) : base(minDamage, maxDamage, attackSpeed)
+        public Axe() : base("axe", 2, 9, 5, 1, 5) 
         {
+
+        }
+        public void TakeDamage(Unit unit)
+        {
+            int CritChance = new Random().Next(1, 100);
+            if (CritChance <= 20)
+            {
+                unit.Health -= 3 * Hit();
+            }
+            else
+            {
+                unit.Health -= Hit();
+            }
         }
 
         public override int Hit()
         {
-            return new Random().Next(MinDamage, MaxDamage);
+             return new Random().Next(MinDamage, MaxDamage);
         }
     }
 }

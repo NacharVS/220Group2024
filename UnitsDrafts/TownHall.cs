@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace UnitsDrafts
 {
-    internal class TownHall : Unit 
+    internal class Townhall
     {
-        public TownHall() : base("Townhall", 100, 100, 0, 0, 0)
-        { }
+        public Peasant CreatePeasant()
+        {
+            return new Peasant();
+            Statistics.PeasantCount++;
+        }
     }
 }

@@ -2,14 +2,18 @@
 {
     internal static class BuildingFactory
     {
-        public BuildingFactory() { }
-        public WatchingTower BuildTower(List<Archer> Units, int Level)
+        public static Barracs CreateBarracs()
         {
-            return new WatchingTower(Units, Level);
+            return new Barracs();
         }
-        public TownHall BuildTH()
+
+        public static Townhall CreateTownhall()
         {
-            return new TownHall();
+            return new Townhall();
+        }
+        public static WatchingTower CreateWatchingTower()
+        {
+            return new WatchingTower();
         }
     }
 }
