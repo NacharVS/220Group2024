@@ -3,15 +3,14 @@
     internal class Archer : Unit
     {
 
-        public Archer(double damage) : base("Archer", 50, 50, 12)
+        public Archer() : base("Archer", 50, 50, "Tower")
         {
-            Damage = damage;
+            
         }
-        public Archer() : base("Archer", 50, 50, 12)
+        public override  void GoToService()
         {
-            Damage = 20;
+            Console.WriteLine($"{Name} пошел на службу в {Service}");
         }
-
 
     }
 }

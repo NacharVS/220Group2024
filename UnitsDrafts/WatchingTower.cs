@@ -6,58 +6,32 @@ using System.Threading.Tasks;
 
 namespace UnitsDrafts
 {
-    internal class WatchingTower : WatchingTowerBase
+    internal class WatchingTower
     {
-        private int TowerDamage = 0;
-        Random random = new Random();
-        public WatchingTower() : base("WatchingTower", 50)
+        List<Unit> ArchersInTower = new List<Unit>();
+        int TowerArcherCount = 0;
+        public void AddArcher(Archer archer)
         {
+            if (ArchersInTower.Count <= 3)
+            {
+                ArchersInTower.Add(archer);
+                Statistics.ArchersCount++;
+            }
+            else
+            {
+                Console.WriteLine("Башня заполнена");
+            }
         }
 
-        public void WatchingTowerDamage(Unit unit)
+        public void ArcherListName()
         {
-
-            Console.WriteLine("Введите количество лучников на башне:");
-            int Archers = Convert.ToInt32(Console.ReadLine());
-            List<Archer> archers = new List<Archer>(3);
-            if (Archers == 2)
-            {
-                archers.Add(new Archer());
-                archers.Add(new Archer());
-
-            }
-            if (Archers == 3)
-            {
-                archers.Add(new Archer());
-                archers.Add(new Archer());
-                archers.Add(new Archer());
-
-            }
-            else if (Archers == 1)
-            {
-                archers.Add(new Archer());
-
-            }
-            else if (Archers > 3)
-            {
-                Console.WriteLine("Башня расчитана только на 3 лучников, введите меньшее количество");
-
-            }
-
-
-
-
-            if (archers.Exists(x => x.Name == "Archer"))
-            {
-                foreach (var archer in archers)
-                {
-                    unit.Health -= archer.Damage;
-                    Console.WriteLine($"Башня нанесла {unit.Name} {archer.Damage} урона");
-
-
-                }
-
-            }
+            foreach (var archer in ArchersInTower)
+                Console.WriteLine(archer.Name);
+        }
+        public void UnitsCount()
+        {
+            Console.WriteLine($"В башне {ArchersInTower.Count} лучников");
+            Console.WriteLine($"Свободных мест {3 - ArchersInTower.Count}");
         }
     }
 }

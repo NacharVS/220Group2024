@@ -8,9 +8,12 @@ namespace UnitsDrafts
 {
     internal class Peasent : Unit
     {
-        public Peasent() : base("Peasent", 60, 60, 10)
+        public Peasant() : base("Peasant", 30, 5, "Field")
         {
-
+        }
+        public override void BaseInfo()
+        {
+            base.BaseInfo();
         }
 
     }

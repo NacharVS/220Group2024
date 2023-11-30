@@ -5,51 +5,99 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using UnitsDrafts.Items;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace UnitsDrafts
 {
     internal class Footman : Unit
     {
-        public Action action;
-        public delegate void InflictDamageDelegate(Unit unit);
-        public InflictDamageDelegate infDamage;
+        public delegate void FootmanDelegate(double damage, double defence);
+        public FootmanDelegate footmanDelegate;
+        private double _damage;
         private int _defence;
-        private Weapon _weapon;
-
-        public override int Health
-        {
-            get => base.Health;
-            set => base.Health = value;
-        }
+        private double _maxDefence;
         public int Defence
         {
             get { return _defence; }
             set { _defence = value; }
         }
 
-        public Footman(string name, int maxHealth, int speed, int damage, int defence)
-            : base(name, maxHealth, speed)
+        public Footman(double damage, double defence)
+            : base("Footman", 60, 10, "War")
         {
-
+            _damage = damage;
             _defence = defence;
         }
 
-        public Footman() : base("Footman", 60, 10)
+        public Footman() : base("Footman", 60, 10, "War")
         {
+            _damage = 12;
             _defence = 2;
-            _weapon = new Axe(2, 7, 5);
+            
         }
-
-        public void InflictDamage(Unit unit)
+        public double Damage
         {
-            infDamage(unit);
+            get { return _damage; }
+            set { _damage = value; }
+        }
+        public double Defence
+        {
+            get { return _defence; }
+            set
+            {
+                if (value < 0)
+                {
+                    _defence = 0;
+                }
+
+
+                else if (value > _defence)
+                {
+                    _defence = _maxDefence;
+                }
+                else
+                    _defence = value;
+
+            }
+        }
+        public void Rage()
+        {
+            if (Health < MaxHealth * 0.4)
+            {
+                Damage += Damage * 0.5;
+            }
+            else
+                Damage = Damage;
+
+        }
+        public override void BaseInfo()
+        {
+            Console.WriteLine($"Имя:{Name} Состояние здоровья: {Health}/{MaxHealth}  Урон: {Damage} Защита: {Defence}");
+        }
+        public void InflictDamage(Unit unit, Footman footman)
+        {
+            Rage();
+            if (footman.Defence > 0)
+            {
+                footman.Defence--;
+
+            }
+            else
+            {
+                footman.Health -= Damage;
+                unit.BaseInfo();
+                unit.Death();
+            }
         }
         public override void ShowInfo()
         {
             {
                 Console.WriteLine($"Name:{Name} Health: {Health}/{MaxHealth} Damage: {_weapon.MaxDamage} Defence: {Defence}");
             }
-
+            public void FootmanMethod(double damage, double defence)
+            {
+                footmanDelegate(damage, defence);
+            }
         }
     }
 

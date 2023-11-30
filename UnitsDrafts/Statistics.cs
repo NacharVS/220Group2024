@@ -2,12 +2,13 @@
 {
     internal static class Statistics
     {
-        public static int PudgeCount { get; set; } = 0;
+        public static int FootmansCount { get; set; } = 0;
         public static int ArchersCount { get; set; } = 0;
+        public static int PeasantCount { get; set; } = 0;
 
         public static void ShowStatistics()
         {
-            Console.WriteLine($"{PudgeCount} {ArchersCount}");
+            Console.WriteLine($"{FootmansCount} лакеев, {ArchersCount} лучников, {PeasantCount} крестьян");
         }
     }
 }

@@ -2,28 +2,35 @@
 {
     internal class Bishop : Unit
     {
-        private const int _healing = 10;
-        private int _mana = 6;
+        private int _mana;
 
-        public Bishop() : base("Medic", 30, 30, 20) { }
-
+        public Bishop(int mana) : base("Medic", 30, 30, "Church")
+        {
+            _mana = mana;
+        }
+        public int Mana
+        {
+            get { return _mana; }
+            set
+            {
+                if (value < 0)
+                {
+                    _mana = 0;
+                }
+                else
+                {
+                    _mana = value;
+                }
+            }
+        } 
         public void Healing(Unit unit)
         {
-            if (_mana >= 2)
-            {
-                unit.Health += _healing;
-                _mana -= 2;
-                Console.WriteLine(this.Name + " захилял " + unit.Name + " на " + _healing + "хп");
-                Console.WriteLine("Остаток маны:" + _mana);
-            }
-            else
-            {
-                Console.WriteLine("Мана закончилась, так что иди отсюда");
-            }
-
+            unit.Health += 2;
+            Mana -= 1;
         }
-
-
-
+        public override void BaseInfo()
+        {
+            Console.WriteLine($"Имя: {Name} Состояние здоровья: {Health} Количество маны: {Mana}");
+        }
     }
 }

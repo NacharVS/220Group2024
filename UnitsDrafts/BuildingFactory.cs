@@ -2,9 +2,18 @@
 {
     internal class BuildingFactory
     {
-        public static void CreateBarracs()
+        public static Barracs CreateBarracs()
         {
-            Barracs barracs = new Barracs();
+            return new Barracs();
         }
+         public static TownHall CreateTownHall()
+         {
+            return new TownHall();
+         }
+        public static WatchingTower CreateWatchingTower()
+        {
+            return new WatchingTower();
+        }
+
     }
 }

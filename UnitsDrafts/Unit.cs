@@ -1,26 +1,29 @@
 ﻿namespace UnitsDrafts
 {
-    public class Unit
+    internal class Unit
     {
-        public delegate void HealthChangedDelegate(Unit sender, UnitEventArg e);
-
-        private readonly string _name;
-        private int _health;
-        private int _maxHealth;
+        public delegate void MethodsDelegate();
+        public MethodsDelegate Methods;
+        private string _name;
+        private double _health;
+        private double _maxHealth;
         private int _speed;
+        private string _service;
 
-        public Unit(string name, int maxHealth,
-            int speed)
+        public Unit(string name, double maxHealth, int speed, string service)
         {
             _name = name;
             _health = maxHealth;
             _maxHealth = maxHealth;
             _speed = speed;
-
+            _service = service;
         }
 
-        public string Name => _name;
-        public int MaxHealth => _maxHealth;
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
 
         public int Speed
         {
@@ -28,8 +31,14 @@
             set { _speed = value; }
         }
 
+        public string Service
+        {
+            get { return _service; }
+            set { _service = value; }
+        }
 
-        public virtual int Health
+
+        public virtual double Health
         {
             get { return _health; }
             set
@@ -38,37 +47,50 @@
                 {
                     _health = 0;
                 }
-                else
+
+
+                else if (value > _maxHealth)
                 {
-                    var diff = _health - value;
-                    if (diff < 0)
-                    {
-                        _health = value;
-                        HealthIncreasedEvent?.Invoke(this, new UnitEventArg("Health increased by:", diff));
-                    }
-                    else
-                    {
-                        _health = value;
-                        HealthDecreasedEvent?.Invoke(this, new UnitEventArg("Health decreased by:", diff));
-                    }
+                    _health = _maxHealth;
                 }
+                else
+                    _health = value;
+
             }
         }
+        public double MaxHealth
+        {
+            get { return _maxHealth; }
+
+        }
+
+        public virtual void GoToService()
+        {
+            Console.WriteLine($"{Name} пошел на службу в {Service}");
+        }
+
 
         public void Moving()
         {
-            Console.WriteLine($"{_name} is moving with {_speed} speed");
+            Console.WriteLine($"У {_name} скорость: {_speed}");
         }
 
-        public virtual void ShowInfo()
+        public virtual void BaseInfo()
         {
-            Console.WriteLine($"Name:{_name} Health: {_health}/{_maxHealth}");
-
+            Console.WriteLine($"Имя:{_name} Состояние здоровья: {_health}");
         }
 
-        public event HealthChangedDelegate HealthDecreasedEvent;
-        public event HealthChangedDelegate HealthIncreasedEvent;
+        public void Death()
+        {
+            if (_health == 0)
+            {
+                Console.WriteLine("Герой умер, атаковать нельзя");
+            }
+        }
 
-
+        public void Mehtod()
+        {
+            Methods();
+        }
     }
 }
