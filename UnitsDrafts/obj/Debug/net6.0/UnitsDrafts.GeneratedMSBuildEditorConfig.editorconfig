@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = UnitsDrafts
-build_property.ProjectDir = C:\Users\202227\Desktop\UnitsDrafts\
+build_property.ProjectDir = C:\Users\Ramil\source\repos\220Group2024\UnitsDrafts\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

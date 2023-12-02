@@ -6,12 +6,12 @@ ft2.action = () => Console.WriteLine("Invoked action delegate!");
 
 ft2.HealthDecreasedEvent += (int health, int diff) =>
 {
-    Console.WriteLine($"Unit took {diff} damage, current health {health}");
+    Console.WriteLine($"Unit tooks {diff} damage, current health {health}");
 };
 
 ft2.HealthIncreasedEvent += (int health, int diff) =>
 {
-    Console.WriteLine($"Unit took {diff} healing, current health {health}");
+    Console.WriteLine($"Unit tooks {diff} healing, current health {health}");
 };
 
 ft1.infDamage = (Unit unit) =>
