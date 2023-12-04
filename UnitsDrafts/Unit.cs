@@ -1,6 +1,6 @@
 ﻿namespace UnitsDrafts
 {
-    internal class Unit
+    public class Unit
     {
         public delegate void HealthChangedDelegate(Unit sender, UnitEventArg e);
 

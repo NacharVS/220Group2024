@@ -2,7 +2,7 @@
 
 namespace UnitsDrafts
 {
-    internal class Footman : Unit
+    public class Footman : Unit
     {
 
         public Action action;

@@ -1,6 +1,6 @@
 ﻿namespace UnitsDrafts
 {
-    internal class UnitEventArg
+    public  class UnitEventArg
     {
         public UnitEventArg(string message, int healthDifferce)
         {
