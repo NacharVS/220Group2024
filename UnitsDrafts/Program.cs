@@ -54,7 +54,7 @@ static void WeaponInfo(WeaponDamage weapon)
             Console.WriteLine($"{WeaponDamage.LongWarBow} - {(int)WeaponDamage.LongWarBow}");
             break;
         default:
-            Console.WriteLine("OtherWeapon");
+            Console.WriteLine("OtherWeapons");
             break;
 
     }
