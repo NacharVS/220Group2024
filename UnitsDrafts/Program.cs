@@ -1,25 +1,47 @@
 ﻿using UnitsDrafts;
 
 Footman ft1 = new Footman();
-Footman ft2 = new Footman();
-ft2.action = () => Console.WriteLine("Invoked action delegate!");
+int a = 0;
+int b = 1;
+var gg = (name: "Tom", age:55);
 
-ft2.HealthDecreasedEvent += (Unit sender, UnitEventArg e) =>
-{
-    Console.WriteLine($"{sender.Name} {e.Message} {e.HealthDifferce} current health: {sender.Health}");
-};
+Console.WriteLine(gg);
 
-ft2.HealthIncreasedEvent += (Unit sender, UnitEventArg e) =>
+Console.WriteLine($"a - {a} b - {b}");
+
+static ((int,int), string) Method33()
 {
-    Console.WriteLine($"{sender.Name} {e.Message} {e.HealthDifferce}");
-};
-ft1.infDamage = (Unit unit) =>
+    return ((4, 6), "qq");
+}
+
+static void WeaponInfo(WeaponDamage weapon)
 {
-    unit.Health -= 10;
-    unit.Health -= 10;
-    unit.Health -= 10;
-};
-ft1.InflictDamage(ft2);
+    switch (weapon)
+    {
+        case WeaponDamage.Lance: Console.WriteLine($"{WeaponDamage.Lance} - {(int)WeaponDamage.Lance}");
+            break;
+        case WeaponDamage.LongSword: Console.WriteLine($"{WeaponDamage.LongSword} - {(int)WeaponDamage.LongSword}");
+            break;
+            default: Console.WriteLine("OtherWeapon");
+            break;
+
+    }
+}
+
+
+
+
+enum WeaponDamage
+{
+    LongSword = 10,
+    ShortSword = 7,
+    SmallAxe = 8,
+    TwoHandedAxe = 15,
+    Spear = 6,
+    Lance = 22,
+    ShortBow,
+    LongWarBow
+}
 
 
 
