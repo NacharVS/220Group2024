@@ -1,17 +1,24 @@
 ﻿using OtherExamples;
+using System.Collections;
 using UnitsDrafts;
 
-GenegicArray<Unit> units = new GenegicArray<Unit>();
-units.AddProducts(new Footman());
-units.AddProducts(new Footman());
+Users a = new Users();
 
+List<string> array2 = new() { "qq", "dd", "dffdf", "fdf" };
 
-var list = units.GetArray();
-foreach (var unit in list)
-{
-    Console.WriteLine(unit.Name);
-}
+Perebor(a.coll);
 
 
 
 Console.WriteLine("Hello, World!");
+
+
+static void Perebor(IEnumerator enumerator)
+{
+    while (enumerator.MoveNext())
+    {
+        Console.WriteLine(enumerator.Current);
+    }
+}
+
+// Создать метод для поиски и возвращения значения из массива любого типа

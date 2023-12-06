@@ -1,13 +1,6 @@
 ﻿using UnitsDrafts;
 
-Footman ft1 = new Footman();
-int a = 0;
-int b = 1;
-var gg = (name: "Tom", age:55);
 
-Console.WriteLine(gg);
-
-Console.WriteLine($"a - {a} b - {b}");
 
 static ((int,int), string) Method33()
 {
