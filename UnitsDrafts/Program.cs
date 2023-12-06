@@ -43,23 +43,19 @@ barrac.StatisticsFootmanEvent += (int count) =>
 barrac.CreateArcher();
 barrac.CreateFootman();
 
-static void Method1(Unit unit)
+static void WeaponInfo(WeaponDamage weapon)
 {
-    Console.WriteLine($"{unit.Name} took headshot");
+    switch (weapon)
+    {
+        case WeaponDamage.Spear:
+            Console.WriteLine($"{WeaponDamage.Spear} - {(int)WeaponDamage.Spear}");
+            break;
+        case WeaponDamage.LongWarBow:
+            Console.WriteLine($"{WeaponDamage.LongWarBow} - {(int)WeaponDamage.LongWarBow}");
+            break;
+        default:
+            Console.WriteLine("OtherWeapon");
+            break;
+
+    }
 }
-
-static void Method2(Unit unit)
-{
-    if(unit.Health < unit.MaxHealth / 2)
-        Console.WriteLine($"{unit.Name} took armBraker");
-}
-
-
-
-
-
-
-
-
-
-
