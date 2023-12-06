@@ -10,6 +10,7 @@ namespace UnitsDrafts
     {
         public Peasant() : base("Peasant", 30, 5)
         {
+            Console.WriteLine($"{this.Name} {30} {20} {20}");
         }
     }
 }

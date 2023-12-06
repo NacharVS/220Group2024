@@ -4,7 +4,7 @@
     {
         private int _mana;
 
-        public Bishop() : base("Bishop", 40, 7)
+        public Bishop() : base("Bishop", 50, 7)
         {
         }
 
