@@ -2,23 +2,15 @@
 using System.Collections;
 using UnitsDrafts;
 
-Users a = new Users();
-
-List<string> array2 = new() { "qq", "dd", "dffdf", "fdf" };
-
-Perebor(a.coll);
-
+Pistol pp = new Pistol();
+Rifle rr = new Rifle();
+Machinegun mm = new Machinegun();
+Perebor(mm);
 
 
-Console.WriteLine("Hello, World!");
-
-
-static void Perebor(IEnumerator enumerator)
+static void Perebor(IBurstShoot weapon)
 {
-    while (enumerator.MoveNext())
-    {
-        Console.WriteLine(enumerator.Current);
-    }
+    weapon.BurstShoot();
 }
 
 // Создать метод для поиски и возвращения значения из массива любого типа
