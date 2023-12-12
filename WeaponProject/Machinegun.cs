@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace WeaponProject
 {
-    internal class Machinegun
+    internal class Machinegun : IBurstShoot, IWeapon
     {
         public int MinDamage => 3;
 
         public int MaxDamage => 9;
+
+        public int CritDamage => new Random().Next(10, 13);
+
 
         public void BurstShoot()
         {
@@ -21,6 +24,11 @@ namespace WeaponProject
         }
 
         public void Shoot()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpgradeWeapon(IWeapon weapon)
         {
             throw new NotImplementedException();
         }

@@ -9,8 +9,10 @@ namespace WeaponProject
     internal interface IWeapon
     {
         public int MinDamage { get; }
-        public int MaxDamage { get; }
+        public int MaxDamage { get;}
+        public int CritDamage { get; }
 
         public void Shoot();
+        public void UpgradeWeapon(IWeapon weapon);
     }
 }
