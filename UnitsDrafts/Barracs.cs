@@ -4,6 +4,7 @@ namespace UnitsDrafts
 {
     internal class Barracs 
     {
+        public delegate void StatisticsDelegate(int count);
         public Footman CreateFootman()
         {
             Random random = new Random();
@@ -60,5 +61,7 @@ namespace UnitsDrafts
                 }
             }
         }
+        public event StatisticsDelegate StatisticsArcherEvent;
+        public event StatisticsDelegate StatisticsFootmanEvent;
     }
 }
