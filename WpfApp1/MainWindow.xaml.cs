@@ -145,7 +145,7 @@ namespace WpfApp1
 
         private void Button_Click_minus(object sender, RoutedEventArgs e)
         {
-            tablo.Content =
+            int e1 = (int)tablo.Content;
             tablo.Content = "0";
         }
 
