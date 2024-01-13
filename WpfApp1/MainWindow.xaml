@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="500" Width="500">
+    <Grid RenderTransformOrigin="0.5,0.5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="187*"/>
+            <ColumnDefinition Width="68*"/>
+            <ColumnDefinition Width="245*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="one" Content="1" HorizontalAlignment="Left" Height="47" Margin="82,130,0,0" VerticalAlignment="Top" Width="62" RenderTransformOrigin="0.5,0.5" Click="_1_Click"/>
+        <Button x:Name="_2" Content="2" HorizontalAlignment="Center" Height="47" Margin="0,130,0,0" VerticalAlignment="Top" Width="62" RenderTransformOrigin="1.541,0.581" Grid.Column="1"/>
+        <Button x:Name="_3" Content="3" HorizontalAlignment="Left" Height="47" Margin="46,130,0,0" VerticalAlignment="Top" Width="62" RenderTransformOrigin="1.958,0.529" Grid.Column="2"/>
+        <Button x:Name="_4" Content="4" HorizontalAlignment="Left" Height="47" Margin="84,197,0,0" VerticalAlignment="Top" Width="62" RenderTransformOrigin="0.527,0.889"/>
+        <Button x:Name="_5" Content="5" HorizontalAlignment="Center" Height="48" VerticalAlignment="Top" Width="62" Grid.Column="1" Margin="0,197,0,0"/>
+        <Button x:Name="_6" Content="6" HorizontalAlignment="Left" Height="48" VerticalAlignment="Top" Width="62" Grid.Column="2" Margin="46,197,0,0"/>
+        <Button x:Name="_7" Content="7" HorizontalAlignment="Left" Height="48" Margin="84,261,0,0" VerticalAlignment="Top" Width="62"/>
+        <Button x:Name="_8" Content="8" HorizontalAlignment="Center" Height="48" Margin="0,261,0,0" VerticalAlignment="Top" Width="62" Grid.Column="1"/>
+        <Button x:Name="_9" Content="9" HorizontalAlignment="Left" Height="48" Margin="46,261,0,0" VerticalAlignment="Top" Width="62" RenderTransformOrigin="1.441,1.428" Grid.Column="2"/>
+        <Button x:Name="__3" Content="+" HorizontalAlignment="Left" Height="48" Margin="159,129,0,0" VerticalAlignment="Top" Width="58" RenderTransformOrigin="2.555,0.427" Grid.Column="2"/>
+        <Button x:Name="__2" Content="-" HorizontalAlignment="Left" Height="48" Margin="159,197,0,0" VerticalAlignment="Top" Width="58" RenderTransformOrigin="2.555,0.427" Grid.Column="2"/>
+        <Button x:Name="__" Content="*" HorizontalAlignment="Left" Height="48" Margin="159,261,0,0" VerticalAlignment="Top" Width="58" RenderTransformOrigin="2.555,0.427" Grid.Column="2"/>
+        <Button Content=":" HorizontalAlignment="Left" Height="48" Margin="159,326,0,0" VerticalAlignment="Top" Width="58" RenderTransformOrigin="2.555,0.427" Grid.Column="2" Click="Button_Click_1"/>
+        <Button x:Name="_0" Content="0" Height="48" Margin="84,326,41,0" VerticalAlignment="Top"/>
+        <Button x:Name="__1" Content="=" HorizontalAlignment="Left" Height="48" Margin="50,326,0,0" VerticalAlignment="Top" Width="58" RenderTransformOrigin="2.555,0.427" Grid.Column="2"/>
+        <Button x:Name="C" Content="C" HorizontalAlignment="Center" Height="48" Margin="0,326,0,0" VerticalAlignment="Top" Width="62" Grid.Column="1"/>
+        <Button x:Name="Delete" Grid.Column="2" Content="Delete" HorizontalAlignment="Left" Height="48" Margin="50,390,0,0" VerticalAlignment="Top" Width="167"/>
+        <Label x:Name="panel" Content="" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="49" Margin="84,54,0,0" VerticalAlignment="Top" Width="388" FontSize="36"/>
     </Grid>
 </Window>

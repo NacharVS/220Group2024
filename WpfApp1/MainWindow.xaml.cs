@@ -24,5 +24,20 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void _1_Click(object sender, RoutedEventArgs e)
+        {
+            panel.Content = 3;
+        }
     }
 }
