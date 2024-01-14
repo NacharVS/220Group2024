@@ -21,7 +21,7 @@
             <ColumnDefinition Width="150"/>
         </Grid.ColumnDefinitions>
         <TextBlock x:Name="text_label" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" FontSize="72" Text="0" FontFamily="Cascadia Code" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="590" Padding="35,5,0,0" Grid.IsSharedSizeScope="True"/>
-        <Button x:Name="one" Width="100" Content="1" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" FontSize="72" FontFamily="Cascadia Code">
+        <Button x:Name="One" Width="100" Content="1" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" FontSize="72" FontFamily="Cascadia Code" Click="One_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
@@ -34,7 +34,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="two" Width="100" Content="2" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" FontSize="72" FontFamily="Cascadia Code">
+        <Button x:Name="two" Width="100" Content="2" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" FontSize="72" FontFamily="Cascadia Code" Click="two_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -46,7 +46,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="two_Копировать" Width="100" Content="3" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Grid.Row="1" FontSize="72" FontFamily="Cascadia Code">
+        <Button x:Name="three" Width="100" Content="3" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Grid.Row="1" FontSize="72" FontFamily="Cascadia Code" Click="three_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -58,7 +58,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="division" Width="100" Content=":" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="1" FontSize="72" FontFamily="Cascadia Code">
+        <Button x:Name="division" Width="100" Content="/" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="1" FontSize="72" FontFamily="Cascadia Code" Click="division_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -70,7 +70,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="addition" Width="100" Content="+" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="4" FontSize="72" FontFamily="Cascadia Code">
+        <Button x:Name="addition" Width="100" Content="+" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="4" FontSize="72" FontFamily="Cascadia Code" Click="addition_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -82,7 +82,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="subtraction" Width="100" Content="-" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="3" FontSize="72" FontFamily="Cascadia Code">
+        <Button x:Name="subtraction" Width="100" Content="-" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="3" FontSize="72" FontFamily="Cascadia Code" Click="subtraction_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -94,7 +94,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="multiplication" Width="100" Content="*" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="2" FontSize="72" FontFamily="Cascadia Code">
+        <Button x:Name="multiplication" Width="100" Content="*" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="2" FontSize="72" FontFamily="Cascadia Code" Click="multiplication_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -106,7 +106,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="equals" Width="100" Content="=" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Grid.Row="4" FontSize="72" FontFamily="Cascadia Code">
+        <Button x:Name="equals" Width="100" Content="=" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Grid.Row="4" FontSize="72" FontFamily="Cascadia Code" Click="equals_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -118,7 +118,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="four" Width="100" Content="4" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" FontSize="72" FontFamily="Cascadia Code">
+        <Button x:Name="four" Width="100" Content="4" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" FontSize="72" FontFamily="Cascadia Code" Click="four_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -130,7 +130,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="five" Width="100" Content="5" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" FontSize="72" FontFamily="Cascadia Code">
+        <Button x:Name="five" Width="100" Content="5" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" FontSize="72" FontFamily="Cascadia Code" Click="five_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -142,7 +142,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="six" Width="100" Content="6" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Grid.Row="2" FontSize="72" FontFamily="Cascadia Code">
+        <Button x:Name="six" Width="100" Content="6" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Grid.Row="2" FontSize="72" FontFamily="Cascadia Code" Click="six_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -154,7 +154,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="seven" Width="100" Content="7" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" FontSize="72" FontFamily="Cascadia Code" Click="seven_Click">
+        <Button x:Name="seven" Width="100" Content="7" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" FontSize="72" FontFamily="Cascadia Code" Click="seven_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -166,7 +166,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="eight" Width="100" Content="8" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3" FontSize="72" FontFamily="Cascadia Code" Click="seven_Click">
+        <Button x:Name="eight" Width="100" Content="8" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3" FontSize="72" FontFamily="Cascadia Code" Click="eight_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -178,7 +178,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="zero" Width="100" Content="0" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="4" FontSize="72" FontFamily="Cascadia Code" Click="seven_Click">
+        <Button x:Name="zero" Width="100" Content="0" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="4" FontSize="72" FontFamily="Cascadia Code" Click="zero_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -190,7 +190,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="nine" Width="100" Content="9" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Grid.Row="3" FontSize="72" FontFamily="Cascadia Code">
+        <Button x:Name="nine" Width="100" Content="9" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Grid.Row="3" FontSize="72" FontFamily="Cascadia Code" Click="nine_Click">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
@@ -202,7 +202,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="C" Width="100" Content="C" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4" FontSize="72" FontFamily="Cascadia Code" Click="seven_Click">
+        <Button x:Name="C" Width="100" Content="C" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4" FontSize="72" FontFamily="Cascadia Code" Click="C_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
