@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:WpfApp1"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="RoundButton" TargetType="Button">
+            <Setter Property="Background" Value="Gray"/>
+        </Style>
     </Application.Resources>
 </Application>

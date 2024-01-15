@@ -24,6 +24,8 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+        int e1 = 0;
+        string action;
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -140,28 +142,63 @@ namespace WpfApp1
 
         private void Button_Click_ravno(object sender, RoutedEventArgs e)
         {
-
+            if (action == "minus")
+            {
+                int e2 = Convert.ToInt32(tablo.Content.ToString());
+                tablo.Content = e1 - e2;
+            }
+            if (action == "plus")
+            {
+                int e2 = Convert.ToInt32(tablo.Content.ToString());
+                tablo.Content = e1 + e2;
+            }
+            if (action == "umn")
+            {
+                int e2 = Convert.ToInt32(tablo.Content.ToString());
+                tablo.Content = e1 * e2;
+            }
+            if (action == "del")
+            {
+                int e2 = Convert.ToInt32(tablo.Content.ToString());
+                tablo.Content = e1 / e2;
+            }
         }
-
+        
         private void Button_Click_minus(object sender, RoutedEventArgs e)
         {
-            int e1 = (int)tablo.Content;
+            e1 = Convert.ToInt32(tablo.Content.ToString());
             tablo.Content = "0";
+            action = null;
+            action = "minus";
         }
 
         private void Button_Click_plus(object sender, RoutedEventArgs e)
         {
-
+            e1 = Convert.ToInt32(tablo.Content.ToString());
+            tablo.Content = "0";
+            action = null;
+            action = "plus";
         }
 
         private void Button_Click_umn(object sender, RoutedEventArgs e)
         {
-
+            e1 = Convert.ToInt32(tablo.Content.ToString());
+            tablo.Content = "0";
+            action = null;
+            action = "umn";
         }
 
         private void Button_Click_del(object sender, RoutedEventArgs e)
         {
+            e1 = Convert.ToInt32(tablo.Content.ToString());
+            tablo.Content = "0";
+            action = null;
+            action = "del";
+        }
 
+        private void Button_Click_sbros(object sender, RoutedEventArgs e)
+        {
+            tablo.Content = "0";
         }
     }
 }

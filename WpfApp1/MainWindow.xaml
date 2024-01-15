@@ -16,13 +16,14 @@
         <Button x:Name="btn7" Content="7" HorizontalAlignment="Left" Margin="274,300,0,0" VerticalAlignment="Top" Height="40" Width="40" Click="Button_Click_7"/>
         <Button x:Name="btn8" Content="8" HorizontalAlignment="Left" Margin="333,300,0,0" VerticalAlignment="Top" Height="40" Width="40" Click="Button_Click_8"/>
         <Button x:Name="btn9" Content="9" HorizontalAlignment="Left" Margin="392,300,0,0" VerticalAlignment="Top" Height="40" Width="40" Click="Button_Click_9"/>
-        <Button x:Name="btn0" Content="0" HorizontalAlignment="Left" Height="40" Margin="274,356,0,0" VerticalAlignment="Top" Width="99" Click="Button_Click_0"/>
+        <Button x:Name="btn0" Content="0" HorizontalAlignment="Left" Height="40" Margin="333,356,0,0" VerticalAlignment="Top" Width="40" Click="Button_Click_0"/>
         <Button x:Name="btn_ravno" Content="=" HorizontalAlignment="Left" Margin="392,356,0,0" VerticalAlignment="Top" Height="40" Width="40" Click="Button_Click_ravno"/>
         <Button x:Name="btn_del" Content="/" HorizontalAlignment="Left" Margin="450,183,0,0" VerticalAlignment="Top" Height="40" Width="40" Click="Button_Click_del"/>
         <Button x:Name="btn_umn" Content="*" HorizontalAlignment="Left" Margin="450,242,0,0" VerticalAlignment="Top" Height="40" Width="40" Click="Button_Click_umn"/>
         <Button x:Name="btn_plus" Content="+" HorizontalAlignment="Left" Margin="450,300,0,0" VerticalAlignment="Top" Height="40" Width="40" Click="Button_Click_plus"/>
         <Button x:Name="btn_minus" Content="-" HorizontalAlignment="Left" Margin="450,356,0,0" VerticalAlignment="Top" Height="40" Width="40" Click="Button_Click_minus"/>
-        <Label x:Name="tablo" Content="0" HorizontalAlignment="Left" Height="40" Margin="274,127,0,0" VerticalAlignment="Top" Width="216" FontSize="24"/>
+        <Label x:Name="tablo" Content="0" HorizontalAlignment="Left" Height="40" Margin="274,127,0,0" VerticalAlignment="Top" Width="216" FontSize="24" UseLayoutRounding="False"/>
+        <Button x:Name="btnC" Content="C" HorizontalAlignment="Left" Margin="274,356,0,0" VerticalAlignment="Top" Height="40" Width="40" Click="Button_Click_sbros"/>
 
     </Grid>
 </Window>
