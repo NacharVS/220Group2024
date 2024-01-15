@@ -20,19 +20,77 @@ namespace WpfBase
     /// </summary>
     public partial class MainWindow : Window
     {
+        public string action;
+        public string number1;
+        public bool clear;
         public MainWindow()
         {
+            clear = false;
             InitializeComponent();
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            if (clear)
+            {
+                clear = false;
+                vvod.Text = "0";
+            }
+            Button button = (Button)sender;
+            if (vvod.Text == "0")
+            {
+                vvod.Text = (string)button.Content;
+            }
+            else
+            {
+                vvod.Text += (string)button.Content;
+            }
+                    
         }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void btn_action_Click(object sender, RoutedEventArgs e)
         {
-
+            Button btn = (Button)sender;
+            action = (string)btn.Content;
+            number1 = vvod.Text;
+            clear = true;
         }
+
+        private void btn_ravno_Click(object sender, RoutedEventArgs e)
+        {
+           double dNumber1, dNumber2, result;
+            result = 0;
+            dNumber1 = Convert.ToDouble(number1);
+           dNumber2 = Convert.ToDouble(vvod.Text);
+            if (action == "+")
+            {
+                result = dNumber1 + dNumber2;
+            }
+            if (action == "-")
+            {
+                result = dNumber1 - dNumber2;
+            }
+            if (action == "*")
+            {
+                result = dNumber1 * dNumber2;
+            }
+            if (action == "/")
+            {
+                if (dNumber2 == 0)
+                {
+                    vvod.Text = "На 0 делить нельзя";
+                }
+                else
+                {
+                    result = dNumber1 / dNumber2;
+                }               
+            }
+                action = "=";
+                clear = true;
+                vvod.Text = result.ToString();
+        }
+        private void btn_C_Click(object sender, RoutedEventArgs e)
+        {
+            vvod.Text = "0";
+        }
+
     }
 }

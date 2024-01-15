@@ -5,24 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfBase"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="800">
+        Title="Калькулятор" Height="550" Width="800">
     <Grid RenderTransformOrigin="0.567,0.553">
-        <Button x:Name="btn_7" Content="7" HorizontalAlignment="Left" Margin="184,189,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20"/>
-        <Button x:Name="btn_8" Content="8" HorizontalAlignment="Left" Margin="248,189,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20"/>
-        <Button x:Name="btn_9" Content="9" HorizontalAlignment="Left" Margin="313,189,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20"/>
-        <Button x:Name="btn_4" Content="4" HorizontalAlignment="Left" Margin="184,266,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20"/>
-        <Button x:Name="btn_5" Content="5" HorizontalAlignment="Left" Margin="248,266,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20"/>
-        <Button x:Name="btn_6" Content="6" HorizontalAlignment="Left" Margin="313,266,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20"/>
-        <Button x:Name="btn_2" Content="2" HorizontalAlignment="Left" Margin="248,342,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20"/>
-        <Button x:Name="btn_1" Content="1" HorizontalAlignment="Left" Margin="184,342,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20"/>
-        <Button x:Name="btn_3" Content="3" HorizontalAlignment="Left" Margin="313,342,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20"/>
-        <Button x:Name="btn_0" Content="0" HorizontalAlignment="Left" Margin="184,415,0,0" VerticalAlignment="Top" Height="55" Width="44" Click="Button_Click" FontSize="20"/>
-        <Button x:Name="btn_ravno" Content="=" HorizontalAlignment="Left" Margin="248,415,0,0" VerticalAlignment="Top" Height="55" Width="109" FontSize="20"/>
-        <Button x:Name="btn_plus" Content="+" HorizontalAlignment="Center" Margin="0,415,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20"/>
-        <Button x:Name="btn_minus" Content="-" HorizontalAlignment="Center" Margin="0,342,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20"/>
-        <Button x:Name="btn_umnogenie" Content="*" HorizontalAlignment="Center" Margin="0,266,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20"/>
-        <Button x:Name="btn_delenie" Content="/" HorizontalAlignment="Center" Margin="0,189,0,0" VerticalAlignment="Top" Height="55" Width="44" Click="Button_Click" FontSize="20"/>
-        <TextBox x:Name="vvod" HorizontalAlignment="Left" Height="48" Margin="184,120,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="238" TextChanged="TextBox_TextChanged" FontSize="36" TextAlignment="Right"/>
-
+        <Button x:Name="btn_7" Content="7" HorizontalAlignment="Left" Margin="184,189,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20" BorderThickness="1,1,1,1" Click="Button_Click"/>
+        <Button x:Name="btn_8" Content="8" HorizontalAlignment="Left" Margin="248,189,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20" BorderThickness="1,1,1,1" Click="Button_Click"/>
+        <Button x:Name="btn_9" Content="9" HorizontalAlignment="Left" Margin="313,189,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20" BorderThickness="1,1,1,1" Click="Button_Click"/>
+        <Button x:Name="btn_4" Content="4" HorizontalAlignment="Left" Margin="184,266,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20" BorderThickness="1,1,1,1" Click="Button_Click"/>
+        <Button x:Name="btn_5" Content="5" HorizontalAlignment="Left" Margin="248,266,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20" BorderThickness="1,1,1,1" Click="Button_Click"/>
+        <Button x:Name="btn_6" Content="6" HorizontalAlignment="Left" Margin="313,266,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20" BorderThickness="1,1,1,1" Click="Button_Click"/>
+        <Button x:Name="btn_2" Content="2" HorizontalAlignment="Left" Margin="248,342,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20" BorderThickness="1,1,1,1" Click="Button_Click"/>
+        <Button x:Name="btn_1" Content="1" HorizontalAlignment="Left" Margin="184,342,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20" BorderThickness="1,1,1,1" Click="Button_Click"/>
+        <Button x:Name="btn_3" Content="3" HorizontalAlignment="Left" Margin="313,342,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20" BorderThickness="1,1,1,1" Click="Button_Click"/>
+        <Button x:Name="btn_0" Content="0" HorizontalAlignment="Left" Margin="184,415,0,0" VerticalAlignment="Top" Height="55" Width="44" Click="Button_Click" FontSize="20" BorderThickness="1,1,1,1"/>
+        <Button x:Name="btn_ravno" Content="=" HorizontalAlignment="Left" Margin="248,415,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20" BorderThickness="1,1,1,1" Click="btn_ravno_Click"/>
+        <Button x:Name="btn_plus" Content="+" HorizontalAlignment="Center" Margin="0,415,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20" BorderThickness="1,1,1,1" Click="btn_action_Click"/>
+        <Button x:Name="btn_minus" Content="-" HorizontalAlignment="Center" Margin="0,342,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20" BorderThickness="1,1,1,1" Click="btn_action_Click"/>
+        <Button x:Name="btn_umnogenie" Content="*" HorizontalAlignment="Center" Margin="0,266,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20" BorderThickness="1,1,1,1" Click="btn_action_Click"/>
+        <Button x:Name="btn_delenie" Content="/" HorizontalAlignment="Center" Margin="0,189,0,0" VerticalAlignment="Top" Height="55" Width="44" Click="btn_action_Click" FontSize="20" BorderThickness="1,1,1,1"/>
+        <Button x:Name="btn_C" Content="С" HorizontalAlignment="Left" Margin="313,415,0,0" VerticalAlignment="Top" Height="55" Width="44" FontSize="20" BorderThickness="1,1,1,1" Click="btn_C_Click"/>
+        <TextBox x:Name="vvod" HorizontalAlignment="Left" Margin="184,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="238" Height="49" TextAlignment="Right" FontSize="36" BorderBrush="Black" BorderThickness="2,2,2,2" Text="0"/>
     </Grid>
 </Window>
