@@ -1,0 +1,32 @@
+﻿<Window x:Class="WPFBase.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFBase"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720
+        " Width="800">
+    <Grid>
+        <Button x:Name="plus_btn" Content="+" Margin="213,128,509,499" Click="plus_btn_Click"/>
+        <Label x:Name="res" Content="" Margin="190,28,236,616" Background="#FFC7C7C7"/>
+        <Button x:Name="one_btn" Content="1" Margin="296,128,426,499" Click="one_btn_Click"/>
+        <Button x:Name="two_btn" Content="2" Margin="379,128,343,499" Click="Button_Click"/>
+        <Button x:Name="three_btn" Content="3" Margin="462,128,260,499" Click="three_btn_Click"/>
+        <Button x:Name="minus_btn" Content="-" Margin="213,210,509,417" Click="minus_btn_Click"/>
+        <Button x:Name="four_btn" Content="4" Margin="296,210,426,417" Click="four_btn_Click"/>
+        <Button x:Name="five_btn" Content="5" Margin="379,210,343,417" Click="Button_Click_1"/>
+        <Button x:Name="six_btn" Content="6" Margin="462,210,260,417" Click="six_btn_Click"/>
+        <Button x:Name="div_btn" Content="/" Margin="213,292,509,335" Click="div_btn_Click"/>
+        <Button x:Name="seven_btn" Content="7" Margin="296,292,426,335" Click="seven_btn_Click"/>
+        <Button x:Name="eight_btn" Content="8" Margin="379,292,343,335" Click="eight_btn_Click"/>
+        <Button x:Name="nine_btn" Content="9" Margin="462,292,260,335" Click="nine_btn_Click"/>
+        <Button x:Name="mult_btn" Content="*" Margin="213,374,509,253" Click="mult_btn_Click"/>
+        <Button x:Name="clear_btn" Content="С" Margin="213,512,260,144" Click="clear_btn_Click"/>
+        <Button x:Name="zero_btn" Content="0" Margin="379,374,343,253" Click="zero_btn_Click"/>
+        <Button x:Name="backsp_ptn" Content="&lt;-" Margin="462,374,260,253" Click="backsp_ptn_Click"/>
+        <Button x:Name="enter_btn" Content="Enter&#xD;&#xA;" Margin="213,456,260,197" Click="enter_btn_Click"/>
+        <Button Content="," Margin="296,374,426,253" Click="Button_Click_2"/>
+
+    </Grid>
+</Window>
