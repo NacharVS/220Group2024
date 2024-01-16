@@ -59,6 +59,6 @@ namespace Calculator
                 textBlock.Text = str;
                 number += str;
             }
-   
-    }   }
+        }
+    }   
 }
