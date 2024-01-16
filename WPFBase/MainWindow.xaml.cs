@@ -13,52 +13,110 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Net.Http;
 
 namespace Calculator
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
-        string number;
-        public MainWindow()
-        {
-            InitializeComponent();
+        double operand1 = 0;
+        double operand2 = 0;
+        string operatori = "";
 
-            foreach(UIElement el in MainRoot.Children)
-            {
-                if(el is Button)
-                {
-                    ((Button)el).Click += Button_Click;
-                }
-            }
-        }
-        private string previousValue = "";
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string str = (string)((Button)e.OriginalSource).Content;
+            Button button = (Button)sender;
+            string content = button.Content.ToString();
 
-            if (str == "AC")
+            if (content == ".")
             {
-                textBlock.Text = "";
-                number = ""; // Сбрасываем исходное число
-            }
-            else if (str == "=")
-            {
-                string value = new DataTable().Compute(number, null).ToString(); // Вычисляем значение, используя предыдущее значение и текущее
-                textBlock.Text = value;
-                number = value; // Присваиваем number вычисленное значение
-            }
-            else if (str == "+" || str == "/" || str == "*" || str == "-") // Используйте || для проверки нескольких условий
-            {
-                textBlock.Text = str;
+                if (!textBlock.Text.Contains("."))
+                {
+                    textBlock.Text += content;
+                }
             }
             else
             {
-                textBlock.Text = str;
-                number += str;
+                textBlock.Text += content;
             }
         }
-    }   
+
+
+        private void Operator_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            operatori = button.Content.ToString();
+            operand1 = double.Parse(textBlock.Text);
+            textBlock.Text = "";
+        }
+        //private void AppendNumber(string number)
+        //{
+        //    if (textBlock = "+"  "-" "*"  "/")
+        //    {
+        //        textBlock.Text = number;
+        //    }
+        //    else
+        //    {
+        //        textBlock.Text += number;
+        //    }
+        //}
+
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    string str = (string)((Button)e.OriginalSource).Content;
+
+        //    if (str == "AC")
+        //    {
+        //        textBlock.Text = "";
+        //        operatori = ""; // Сбрасываем исходное число
+        //    }
+        //    else if (str == "=")
+        //    {
+        //        string value = new DataTable().Compute(operatori, null).ToString(); // Вычисляем значение, используя предыдущее значение и текущее
+        //        textBlock.Text = value;
+        //        operatori = value; // Присваиваем number вычисленное значение
+        //    }
+        //    else if (str == "+"  str == "/"  str == "*"  str == "-") // Используйте || для проверки нескольких условий
+        //    {
+        //        textBlock.Text = str;
+        //    }
+        //    else
+        //    {
+        //        textBlock.Text = str;
+        //        operatori += str;
+        //    }
+
+        //}
+
+        private void Equals_Click(object sender, RoutedEventArgs e)
+        {
+            operand2 = double.Parse(textBlock.Text);
+
+            switch (operatori)
+            {
+                case "+":
+                    textBlock.Text = (operand1 + operand2).ToString();
+                    break;
+                case "-":
+                    textBlock.Text = (operand1 - operand2).ToString();
+                    break;
+                case "*":
+                    textBlock.Text = (operand1 * operand2).ToString();
+                    break;
+                case "/":
+                    textBlock.Text = (operand1 / operand2).ToString();
+                    break;
+            }
+        }
+
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            textBlock.Text = "";
+            operand1 = 0;
+            operand2 = 0;
+            operatori = "";
+        }
+    }
 }
