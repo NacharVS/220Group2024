@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfAppCulc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppCulc"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="580">
+    <Grid>
+        <Button Content="7" HorizontalAlignment="Left" Height="50" Margin="110,167,0,0" VerticalAlignment="Top" Width="59" Click="Button_ClickNum" Background="#FFCF5959" FontSize="18"/>
+        <Button Content="8" HorizontalAlignment="Left" Height="50" Margin="212,167,0,0" VerticalAlignment="Top" Width="59" Click="Button_ClickNum" Background="#FFCF5959" FontSize="18"/>
+        <Button Content="9" HorizontalAlignment="Left" Height="50" Margin="313,167,0,0" VerticalAlignment="Top" Width="59" Click="Button_ClickNum" Background="#FFCF5959" FontSize="18"/>
+        <Button Content="4" HorizontalAlignment="Left" Height="50" Margin="110,245,0,0" VerticalAlignment="Top" Width="59" Click="Button_ClickNum" Background="#FFCF5959" FontSize="18"/>
+        <Button Content="5" HorizontalAlignment="Left" Height="50" Margin="212,245,0,0" VerticalAlignment="Top" Width="59" Click="Button_ClickNum" Background="#FFCF5959" FontSize="18"/>
+        <Button Content="6" HorizontalAlignment="Left" Height="50" Margin="313,245,0,0" VerticalAlignment="Top" Width="59" Click="Button_ClickNum" Background="#FFCF5959" FontSize="18"/>
+        <Button Content="1" HorizontalAlignment="Left" Height="50" Margin="110,325,0,0" VerticalAlignment="Top" Width="59" Click="Button_ClickNum" Background="#FFCF5959" FontSize="18"/>
+        <Button Content="2" HorizontalAlignment="Left" Height="50" Margin="212,325,0,0" VerticalAlignment="Top" Width="59" Click="Button_ClickNum" Background="#FFCF5959" FontSize="18"/>
+        <Button Content="3" HorizontalAlignment="Left" Height="50" Margin="313,325,0,0" VerticalAlignment="Top" Width="59" Click="Button_ClickNum" Background="#FFCF5959" FontSize="18"/>
+        <Label Content="0" x:Name="Window"  HorizontalAlignment="Left" Height="90" Margin="110,48,0,0" VerticalAlignment="Top" Width="351" Background="#FF1D6F2E" FontSize="24" FontFamily="Comic Sans MS">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Button Content="+" HorizontalAlignment="Left" Height="50" Margin="411,167,0,0" VerticalAlignment="Top" Width="59" Click="Button_ClickAlg" Background="#FF3ACE98" FontSize="18"/>
+        <Button Content="-" HorizontalAlignment="Left" Height="50" Margin="411,245,0,0" VerticalAlignment="Top" Width="59" Click="Button_ClickAlg" Background="#FF3ACE98" FontSize="18"/>
+        <Button Content="*" HorizontalAlignment="Left" Height="50" Margin="411,325,0,0" VerticalAlignment="Top" Width="59" Click="Button_ClickAlg" FontSize="18" Background="#FF3ACE98"/>
+        <Button Content="/" HorizontalAlignment="Left" Height="50" Margin="411,407,0,0" VerticalAlignment="Top" Width="59" Click="Button_ClickAlg" FontSize="18" Background="#FF3ACE98"/>
+        <Button Content="0" HorizontalAlignment="Left" Height="50" Margin="110,407,0,0" VerticalAlignment="Top" Width="59" Click="Button_ClickZero" Background="#FFCF5959" FontSize="18"/>
+        <Button Content="АС" HorizontalAlignment="Left" Height="50" Margin="313,407,0,0" VerticalAlignment="Top" Width="59" Click="Button_ClickAlg" FontSize="18" Background="#FF3ACE98"/>
+        <Button Content="=" HorizontalAlignment="Left" Height="50" Margin="212,407,0,0" VerticalAlignment="Top" Width="59" Click="ButtonRavno_Click" FontSize="18" Background="#FF3ACE98"/>
+
+    </Grid>
+</Window>
