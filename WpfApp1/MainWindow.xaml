@@ -7,23 +7,23 @@
         mc:Ignorable="d"
         Title="Калькулятор" Height="698" Width="531">
     <Grid x:Name="MainRoot" Background="AntiqueWhite"  Margin="0,0,0,-6">
-        <Button Content="1" HorizontalAlignment="Left" Margin="38,205,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_1" FontSize="30"/>
-        <Button Content="8" HorizontalAlignment="Left" Margin="143,392,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_8" RenderTransformOrigin="0.504,0.522" FontSize="30"/>
-        <Button Content="7" HorizontalAlignment="Left" Margin="38,392,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_7" FontSize="30"/>
-        <Button Content="6" HorizontalAlignment="Left" Margin="266,299,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_6" FontSize="30"/>
-        <Button Content="5" HorizontalAlignment="Left" Margin="143,299,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_5" FontSize="30"/>
-        <Button Content="4" HorizontalAlignment="Left" Margin="38,299,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_4" FontSize="30"/>
-        <Button Content="3" HorizontalAlignment="Left" Margin="266,205,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_3" FontSize="30"/>
-        <Button Content="2" HorizontalAlignment="Left" Margin="143,205,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_2" FontSize="30"/>
-        <Button Content="9" HorizontalAlignment="Left" Margin="266,392,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_9" FontSize="30"/>
-        <Button Content="/" HorizontalAlignment="Left" Margin="389,486,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_10" FontSize="30"/>
-        <Button Content="=" HorizontalAlignment="Left" Margin="143,486,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_11" RenderTransformOrigin="0.508,0.511" FontSize="30"/>
-        <Button Content="0" HorizontalAlignment="Left" Margin="38,486,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_0" FontSize="30"/>
-        <Button Content="*" HorizontalAlignment="Left" Margin="389,392,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_12" FontSize="30"/>
-        <Button Content="-" HorizontalAlignment="Left" Margin="389,299,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_13" FontSize="30"/>
-        <Button Content="+" HorizontalAlignment="Left" Margin="389,205,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_14" FontSize="30"/>
-        <Label x:Name="textLable" Background="AliceBlue"  Content="0" HorizontalAlignment="Left" Height="78" Margin="38,71,0,0" VerticalAlignment="Top" Width="421" FontSize="30" UseLayoutRounding="False"/>
-        <Button Content="AC" HorizontalAlignment="Left" Margin="266,486,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_15" RenderTransformOrigin="0.508,0.511" FontSize="30"/>
+        <Button x:Name="Button_1" Content="1" HorizontalAlignment="Left" Margin="38,205,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_1" FontSize="30"/>
+        <Button x:Name="Button_8" Content="8" HorizontalAlignment="Left" Margin="143,392,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_8" RenderTransformOrigin="0.504,0.522" FontSize="30"/>
+        <Button x:Name="Button_7" Content="7" HorizontalAlignment="Left" Margin="38,392,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_7" FontSize="30"/>
+        <Button x:Name="Button_6" Content="6" HorizontalAlignment="Left" Margin="266,299,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_6" FontSize="30"/>
+        <Button x:Name="Button_5" Content="5" HorizontalAlignment="Left" Margin="143,299,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_5" FontSize="30"/>
+        <Button x:Name="Button_4" Content="4" HorizontalAlignment="Left" Margin="38,299,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_4" FontSize="30"/>
+        <Button x:Name="Button_3" Content="3" HorizontalAlignment="Left" Margin="266,205,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_3" FontSize="30"/>
+        <Button x:Name="Button_2" Content="2" HorizontalAlignment="Left" Margin="143,205,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_2" FontSize="30"/>
+        <Button x:Name="Button_9" Content="9" HorizontalAlignment="Left" Margin="266,392,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_9" FontSize="30"/>
+        <Button x:Name="Button_division" Content="/" HorizontalAlignment="Left" Margin="389,486,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_10" FontSize="30"/>
+        <Button x:Name="Button_equals" Content="=" HorizontalAlignment="Left" Margin="143,486,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_11" RenderTransformOrigin="0.508,0.511" FontSize="30"/>
+        <Button x:Name="Button_0" Content="0" HorizontalAlignment="Left" Margin="38,486,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_0" FontSize="30"/>
+        <Button x:Name="Button_multiplication" Content="*" HorizontalAlignment="Left" Margin="389,392,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_12" FontSize="30"/>
+        <Button x:Name="Button_minus" Content="-" HorizontalAlignment="Left" Margin="389,299,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_13" FontSize="30"/>
+        <Button x:Name="Button_plus" Content="+" HorizontalAlignment="Left" Margin="389,205,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_14" FontSize="30"/>
+        <Label x:Name="lab" Background="AliceBlue"  Content="0" HorizontalAlignment="Left" Height="78" Margin="38,71,0,0" VerticalAlignment="Top" Width="421" FontSize="30" UseLayoutRounding="False"/>
+        <Button x:Name="Button_clear" Content="AC" HorizontalAlignment="Left" Margin="266,486,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_15" RenderTransformOrigin="0.508,0.511" FontSize="30"/>
 
-    </Grid>
+    </Grid> 
 </Window>
