@@ -30,11 +30,6 @@ namespace WpfApp1
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
-            if (lab.Content == "0")
-            {
-                lab.Content = (string)btn.Content;
-            }
-            else
             lab.Content += (string)btn.Content;
         }
 
