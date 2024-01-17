@@ -7,6 +7,7 @@ static ((int,int), string) Method33()
     return ((4, 6), "qq");
 }
 
+
 static void WeaponInfo(WeaponDamage weapon)
 {
     switch (weapon)
