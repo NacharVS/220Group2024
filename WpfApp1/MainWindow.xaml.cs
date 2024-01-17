@@ -20,7 +20,7 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        int Bufer;
+        int Buffer;
         string Action;
         public MainWindow()
         {
@@ -136,27 +136,62 @@ namespace WpfApp1
 
         private void Button_Click_14(object sender, RoutedEventArgs e)
         {
-
+            Buffer = Convert.ToInt32(lab.Content);
+            Action = "Plus";
+            lab.Content = "0";
         }
 
         private void Button_Click_11(object sender, RoutedEventArgs e)
         {
+           if(Action == "Plus")
+            {
+               lab.Content = Buffer + Convert.ToInt32(lab.Content);
+                Action = null;
+                Buffer = 0;
+            }
+
+            if (Action == "Minus")
+            {
+                lab.Content = Buffer - Convert.ToInt32(lab.Content);
+                Action = null;
+                Buffer = 0;
+            }
+
+            if (Action == "Multiplication")
+            {
+                lab.Content = Buffer * Convert.ToInt32(lab.Content);
+                Action = null;
+                Buffer = 0;
+            }
+
+            if (Action == "division")
+            {
+                lab.Content = Buffer / Convert.ToInt32(lab.Content);
+                Action = null;
+                Buffer = 0;
+            }
 
         }
 
         private void Button_Click_13(object sender, RoutedEventArgs e)
         {
-
+            Buffer = Convert.ToInt32(lab.Content);
+            Action = "Minus";
+            lab.Content = "0";
         }
 
         private void Button_Click_12(object sender, RoutedEventArgs e)
         {
-
+            Buffer = Convert.ToInt32(lab.Content);
+            Action = "Multiplication";
+            lab.Content = "0";
         }
 
         private void Button_Click_10(object sender, RoutedEventArgs e)
         {
-
+            Buffer = Convert.ToInt32(lab.Content);
+            Action = "division";
+            lab.Content = "0";
         }
 
         private void Button_Click_15(object sender, RoutedEventArgs e)
