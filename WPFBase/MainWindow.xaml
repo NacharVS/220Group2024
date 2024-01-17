@@ -21,22 +21,22 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" x:Name="textBlock" FontSize="36"/>
-        <Button Grid.Column="0" Grid.Row="2" Margin="0,66,0,0" Grid.RowSpan="2" FontFamily="SimSun" FontSize="20" FontWeight="Bold" FontStyle="Italic">7</Button>
-        <Button Grid.Column="0" Grid.Row="2" FontFamily="SimSun" FontSize="20" FontWeight="Bold" FontStyle="Italic">4</Button>
-        <Button Margin="0,0,0,66" Grid.RowSpan="2" Grid.Row="1" FontFamily="SimSun" FontSize="20" FontWeight="Bold" FontStyle="Italic">1</Button>
-        <Button Grid.Column="1" Grid.Row="2" Margin="0,66,0,0" Grid.RowSpan="2" FontFamily="SimSun" FontSize="20" FontWeight="Bold" FontStyle="Italic">8</Button>
-        <Button Grid.Column="1" Grid.Row="2" FontFamily="SimSun" FontSize="20" FontWeight="Bold" FontStyle="Italic">5</Button>
-        <Button Margin="0,0,0,66" Grid.RowSpan="2" Grid.Column="1" Grid.Row="1" FontFamily="SimSun" FontSize="20" FontWeight="Bold" FontStyle="Italic">2</Button>
-        <Button Grid.Column="2" Grid.Row="2" Margin="0,66,0,0" Grid.RowSpan="2" FontFamily="SimSun" FontSize="20" FontWeight="Bold" FontStyle="Italic">9</Button>
-        <Button Grid.Column="2" Grid.Row="2" FontFamily="SimSun" FontSize="20" FontWeight="Bold" FontStyle="Italic">6</Button>
-        <Button RenderTransformOrigin="-1.921,-0.321" Margin="0,0,0,66" Grid.Column="2" Grid.RowSpan="2" Grid.Row="1" FontFamily="SimSun" FontSize="20" FontWeight="Bold" FontStyle="Italic">3</Button>
-        <Button Grid.Column="1" Grid.Row="3" Margin="0,67,0,0" Grid.RowSpan="2" FontFamily="SimSun" FontSize="20" FontWeight="Bold" FontStyle="Italic">0</Button>
-        <Button Grid.Row="3" Margin="0,67,0,0" Grid.RowSpan="2" FontFamily="SimSun" FontWeight="Bold" FontSize="20" Grid.Column="2">=</Button>
-        <Button Grid.Row="3" Margin="0,67,0,2" FontFamily="SimSun" FontSize="20" FontWeight="Bold" Grid.RowSpan="2">AC</Button>
-        <Button Grid.Column="3" Grid.Row="3" Margin="0,67,0,0" Grid.RowSpan="2" FontFamily="SimSun" FontWeight="Bold" FontSize="20">/</Button>
-        <Button Grid.Column="3" Grid.Row="2" Margin="0,66,0,0" Grid.RowSpan="2" FontFamily="SimSun" FontSize="20" FontWeight="Bold">*</Button>
-        <Button Grid.Column="3" Grid.Row="2" FontFamily="SimSun" FontSize="20" FontWeight="Bold">-</Button>
-        <Button Grid.Column="3" Grid.Row="1" Margin="0,0,0,66" Grid.RowSpan="2" FontFamily="SimSun" FontSize="20" FontWeight="Bold">+</Button>
+        <Button Grid.Column="0" Grid.Row="2" Margin="0,66,0,0" Grid.RowSpan="2" FontFamily="SimSun" FontSize="20" FontWeight="Bold" FontStyle="Italic" Click="Button_Click">7</Button>
+        <Button Grid.Column="0" Grid.Row="2" FontFamily="SimSun" FontSize="20" FontWeight="Bold" FontStyle="Italic" Click="Button_Click">4</Button>
+        <Button Margin="0,0,0,66" Grid.RowSpan="2" Grid.Row="1" FontFamily="SimSun" FontSize="20" FontWeight="Bold" FontStyle="Italic" Click="Button_Click">1</Button>
+        <Button Grid.Column="1" Grid.Row="2" Margin="0,66,0,0" Grid.RowSpan="2" FontFamily="SimSun" FontSize="20" FontWeight="Bold" FontStyle="Italic" Click="Button_Click">8</Button>
+        <Button Grid.Column="1" Grid.Row="2" FontFamily="SimSun" FontSize="20" FontWeight="Bold" FontStyle="Italic" Click="Button_Click">5</Button>
+        <Button Margin="0,0,0,66" Grid.RowSpan="2" Grid.Column="1" Grid.Row="1" FontFamily="SimSun" FontSize="20" FontWeight="Bold" FontStyle="Italic" Click="Button_Click">2</Button>
+        <Button Grid.Column="2" Grid.Row="2" Margin="0,66,0,0" Grid.RowSpan="2" FontFamily="SimSun" FontSize="20" FontWeight="Bold" FontStyle="Italic" Click="Button_Click">9</Button>
+        <Button Grid.Column="2" Grid.Row="2" FontFamily="SimSun" FontSize="20" FontWeight="Bold" FontStyle="Italic" Click="Button_Click">6</Button>
+        <Button RenderTransformOrigin="-1.921,-0.321" Margin="0,0,0,66" Grid.Column="2" Grid.RowSpan="2" Grid.Row="1" FontFamily="SimSun" FontSize="20" FontWeight="Bold" FontStyle="Italic" Click="Button_Click">3</Button>
+        <Button Grid.Column="1" Grid.Row="3" Margin="0,67,0,0" Grid.RowSpan="2" FontFamily="SimSun" FontSize="20" FontWeight="Bold" FontStyle="Italic" Click="Button_Click">0</Button>
+        <Button Grid.Row="3" Margin="0,67,0,0" Grid.RowSpan="2" FontFamily="SimSun" FontWeight="Bold" FontSize="20" Grid.Column="2" Click="Button_Click">=</Button>
+        <Button Grid.Row="3" Margin="0,67,0,2" FontFamily="SimSun" FontSize="20" FontWeight="Bold" Grid.RowSpan="2" Click="Button_Click">AC</Button>
+        <Button Grid.Column="3" Grid.Row="3" Margin="0,67,0,0" Grid.RowSpan="2" FontFamily="SimSun" FontWeight="Bold" FontSize="20" Click="Button_Click">/</Button>
+        <Button Grid.Column="3" Grid.Row="2" Margin="0,66,0,0" Grid.RowSpan="2" FontFamily="SimSun" FontSize="20" FontWeight="Bold" Click="Button_Click">*</Button>
+        <Button Grid.Column="3" Grid.Row="2" FontFamily="SimSun" FontSize="20" FontWeight="Bold" Click="Button_Click">-</Button>
+        <Button Grid.Column="3" Grid.Row="1" Margin="0,0,0,66" Grid.RowSpan="2" FontFamily="SimSun" FontSize="20" FontWeight="Bold" Click="Button_Click">+</Button>
 
     </Grid>
 </Window>
