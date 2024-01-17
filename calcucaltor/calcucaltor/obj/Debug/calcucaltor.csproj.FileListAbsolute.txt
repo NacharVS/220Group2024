@@ -1,0 +1,15 @@
+C:\Users\mrtro\source\repos\calcucaltor\calcucaltor\bin\Debug\calcucaltor.exe.config
+C:\Users\mrtro\source\repos\calcucaltor\calcucaltor\bin\Debug\calcucaltor.exe
+C:\Users\mrtro\source\repos\calcucaltor\calcucaltor\bin\Debug\calcucaltor.pdb
+C:\Users\mrtro\source\repos\calcucaltor\calcucaltor\obj\Debug\calcucaltor.csproj.AssemblyReference.cache
+C:\Users\mrtro\source\repos\calcucaltor\calcucaltor\obj\Debug\MainWindow.g.cs
+C:\Users\mrtro\source\repos\calcucaltor\calcucaltor\obj\Debug\App.g.cs
+C:\Users\mrtro\source\repos\calcucaltor\calcucaltor\obj\Debug\calcucaltor_MarkupCompile.cache
+C:\Users\mrtro\source\repos\calcucaltor\calcucaltor\obj\Debug\calcucaltor_MarkupCompile.lref
+C:\Users\mrtro\source\repos\calcucaltor\calcucaltor\obj\Debug\MainWindow.baml
+C:\Users\mrtro\source\repos\calcucaltor\calcucaltor\obj\Debug\calcucaltor.g.resources
+C:\Users\mrtro\source\repos\calcucaltor\calcucaltor\obj\Debug\calcucaltor.Properties.Resources.resources
+C:\Users\mrtro\source\repos\calcucaltor\calcucaltor\obj\Debug\calcucaltor.csproj.GenerateResource.cache
+C:\Users\mrtro\source\repos\calcucaltor\calcucaltor\obj\Debug\calcucaltor.csproj.CoreCompileInputs.cache
+C:\Users\mrtro\source\repos\calcucaltor\calcucaltor\obj\Debug\calcucaltor.exe
+C:\Users\mrtro\source\repos\calcucaltor\calcucaltor\obj\Debug\calcucaltor.pdb
