@@ -46,7 +46,7 @@ namespace WpfAppCulc
 
         private void Button_ClickAlg(object sender, RoutedEventArgs e)
         {
-            num2 = Convert.ToInt64(Window.Content);
+            num1 = Convert.ToInt64(Window.Content);
             Window.Content = null;
             var alg = sender as Button;
 
