@@ -14,7 +14,7 @@ namespace WpfApp2
             Surname = surname;
             Age = age;
             Email = email;
-        } 
+        }  
 
         public string Name { get; set; }
         public string Email { get; set; }
