@@ -22,7 +22,7 @@
         <Button x:Name="Button_multiplication" Content="*" HorizontalAlignment="Left" Margin="389,392,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_12" FontSize="30"/>
         <Button x:Name="Button_minus" Content="-" HorizontalAlignment="Left" Margin="389,299,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_13" FontSize="30"/>
         <Button x:Name="Button_plus" Content="+" HorizontalAlignment="Left" Margin="389,205,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_14" FontSize="30"/>
-        <Label x:Name="lab" Background="AliceBlue"  Content="0" HorizontalAlignment="Left" Height="78" Margin="38,71,0,0" VerticalAlignment="Top" Width="421" FontSize="30" UseLayoutRounding="False"/>
+        <Label x:Name="lab" Background="AliceBlue" HorizontalContentAlignment="Right" Content="0" HorizontalAlignment="Left" Height="78" Margin="38,71,0,0" VerticalAlignment="Top" Width="421" FontSize="30" UseLayoutRounding="False"/>
         <Button x:Name="Button_clear" Content="AC" HorizontalAlignment="Left" Margin="266,486,0,0" VerticalAlignment="Top" Height="70" Width="70" Click="Button_Click_15" RenderTransformOrigin="0.508,0.511" FontSize="30"/>
 
     </Grid> 

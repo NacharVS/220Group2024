@@ -138,7 +138,7 @@ namespace WpfApp1
         {
             Buffer = Convert.ToInt32(lab.Content);
             Action = "Plus";
-            lab.Content = "0";
+           
         }
 
         private void Button_Click_11(object sender, RoutedEventArgs e)
@@ -177,26 +177,24 @@ namespace WpfApp1
         {
             Buffer = Convert.ToInt32(lab.Content);
             Action = "Minus";
-            lab.Content = "0";
         }
 
         private void Button_Click_12(object sender, RoutedEventArgs e)
         {
             Buffer = Convert.ToInt32(lab.Content);
             Action = "Multiplication";
-            lab.Content = "0";
         }
 
         private void Button_Click_10(object sender, RoutedEventArgs e)
         {
             Buffer = Convert.ToInt32(lab.Content);
             Action = "division";
-            lab.Content = "0";
         }
 
         private void Button_Click_15(object sender, RoutedEventArgs e)
         {
-
+            Buffer = 0;
+            lab.Content = "0";
         }
     }
 }
