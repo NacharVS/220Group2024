@@ -168,7 +168,7 @@ namespace WpfApp1
             {
                 lab.Content = Buffer / Convert.ToInt32(lab.Content);
                 Action = null;
-                Buffer = 0;
+            
             }
 
         }
