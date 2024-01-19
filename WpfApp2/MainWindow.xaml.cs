@@ -20,9 +20,35 @@ namespace WpfApp2
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<User> users;
         public MainWindow()
         {
             InitializeComponent();
+            users = new List<User>();
+
+        }
+
+        private void AddBtn_Click(object sender, RoutedEventArgs e)
+        {
+            users.Add(new User(UserNameTB.Text, SurnameTB.Text, AgeTB.Text, EmailTB.Text ));
+            ListBoxRefresh();
+            UserNameTB.Clear();
+            SurnameTB.Clear();
+            AgeTB.Clear();
+            EmailTB.Clear();
+        }
+
+        private void ListBoxRefresh()
+        {
+            foreach (var item in users)
+            {
+                AddPeopleListBox.Items.Add(item.Name);
+            }
+        }
+
+        private void AddPeopleListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
