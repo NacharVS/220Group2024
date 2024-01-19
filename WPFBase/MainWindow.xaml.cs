@@ -14,7 +14,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Net.Http;
-using System.Reflection.Emit;
 
 namespace Calculator
 {
@@ -28,31 +27,19 @@ namespace Calculator
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Button button = sender as Button;
-            string text = button.Content.ToString();
-            if (textBlock.Text == "0")
+            Button button = (Button)sender;
+            string content = button.Content.ToString();
+
+            if (content == ".")
             {
-                textBlock.Text = "";
+                if (!textBlock.Text.Contains("."))
+                {
+                    textBlock.Text += content;
+                }
             }
-            if (double.TryParse(text, out _))
+            else
             {
-                textBlock.Text += text;
-            }
-            else if (text == "+" || text == "-" || text == "*" || text == "/")
-            {
-                operand1 = double.Parse(textBlock.Text);
-                operatori = text;
-                textBlock.Text = "";
-            }
-            else if (text == "=")
-            {
-                Equals_Click();
-            }
-            else if (text == "AC")
-            {
-                operand1 = 0;
-                operatori = "";
-                textBlock.Text = "0";
+                textBlock.Text += content;
             }
         }
 
@@ -64,10 +51,48 @@ namespace Calculator
             operand1 = double.Parse(textBlock.Text);
             textBlock.Text = "";
         }
+        //private void AppendNumber(string number)
+        //{
+        //    if (textBlock = "+"  "-" "*"  "/")
+        //    {
+        //        textBlock.Text = number;
+        //    }
+        //    else
+        //    {
+        //        textBlock.Text += number;
+        //    }
+        //}
 
-        private void Equals_Click()
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    string str = (string)((Button)e.OriginalSource).Content;
+
+        //    if (str == "AC")
+        //    {
+        //        textBlock.Text = "";
+        //        operatori = ""; // Сбрасываем исходное число
+        //    }
+        //    else if (str == "=")
+        //    {
+        //        string value = new DataTable().Compute(operatori, null).ToString(); // Вычисляем значение, используя предыдущее значение и текущее
+        //        textBlock.Text = value;
+        //        operatori = value; // Присваиваем number вычисленное значение
+        //    }
+        //    else if (str == "+"  str == "/"  str == "*"  str == "-") // Используйте || для проверки нескольких условий
+        //    {
+        //        textBlock.Text = str;
+        //    }
+        //    else
+        //    {
+        //        textBlock.Text = str;
+        //        operatori += str;
+        //    }
+
+        //}
+
+        private void Equals_Click(object sender, RoutedEventArgs e)
         {
-            double operand2 = double.Parse(textBlock.Text);
+            operand2 = double.Parse(textBlock.Text);
 
             switch (operatori)
             {
