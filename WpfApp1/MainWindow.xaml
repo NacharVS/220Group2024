@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="350
+        ">
+    <Grid Background="Coral">
+        <Label x:Name="Lb" Content="0" HorizontalAlignment="Left" Height="47" Margin="52,43,0,0" VerticalAlignment="Top" Width="260" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+        <Button x:Name="bt1" Content="1" HorizontalAlignment="Left" Height="43" Margin="52,119,0,0" VerticalAlignment="Top" Width="43" Click="bt1_Click" Background="White" />
+        <Button x:Name="bt2" Content="2" HorizontalAlignment="Left" Height="43" Margin="125,119,0,0" VerticalAlignment="Top" Width="43" Click="bt2_Click"  Background="White" />
+        <Button x:Name="bt3" Content="3" HorizontalAlignment="Left" Height="43" Margin="197,119,0,0" VerticalAlignment="Top" Width="43" Click="bt3_Click" Background="White"/>
+        <Button x:Name="btDel" Content="/" HorizontalAlignment="Left" Height="43" Margin="269,119,0,0" VerticalAlignment="Top" Width="43" Click="btDel_Click" Background="White"/>
+        <Button x:Name="bt6" Content="6" HorizontalAlignment="Left" Height="43" Margin="197,182,0,0" VerticalAlignment="Top" Width="43" Click="bt6_Click" Background="White"/>
+        <Button x:Name="btUmn" Content="*" HorizontalAlignment="Left" Height="43" Margin="269,182,0,0" VerticalAlignment="Top" Width="43" Click="btUmn_Click" Background="White"/>
+        <Button x:Name="bt4" Content="4" HorizontalAlignment="Left" Height="43" Margin="52,182,0,0" VerticalAlignment="Top" Width="43" Click="bt4_Click" Background="White"/>
+        <Button x:Name="bt5" Content="5" HorizontalAlignment="Left" Height="43" Margin="125,182,0,0" VerticalAlignment="Top" Width="43" Click="bt5_Click" Background="White"/>
+        <Button x:Name="bt8" Content="8" HorizontalAlignment="Left" Height="43" Margin="125,248,0,0" VerticalAlignment="Top" Width="43" Click="bt8_Click" Background="White"/>
+        <Button x:Name="bt9" Content="9" HorizontalAlignment="Left" Height="43" Margin="197,248,0,0" VerticalAlignment="Top" Width="43" Click="bt9_Click" Background="White"/>
+        <Button x:Name="btPlus" Content="+" HorizontalAlignment="Left" Height="43" Margin="269,248,0,0" VerticalAlignment="Top" Width="43" Click="btPlus_Click" Background="White"/>
+        <Button x:Name="bt7" Content="7" HorizontalAlignment="Left" Height="43" Margin="52,248,0,0" VerticalAlignment="Top" Width="43" Click="bt7_Click" Background="White"/>
+        <Button x:Name="btRav" Content="=" HorizontalAlignment="Left" Height="43" Margin="52,315,0,0" VerticalAlignment="Top" Width="43" Click="btRav_Click" Background="White"/>
+        <Button x:Name="bt0" Content="0" HorizontalAlignment="Left" Height="43" Margin="125,315,0,0" VerticalAlignment="Top" Width="43" Click="bt0_Click" Background="White"/>
+        <Button x:Name="btAC" Content="AC" HorizontalAlignment="Left" Height="43" Margin="197,315,0,0" VerticalAlignment="Top" Width="43" Click="btAC_Click" Background="White"/>
+        <Button x:Name="btMinus" Content="-" HorizontalAlignment="Left" Height="43" Margin="269,315,0,0" VerticalAlignment="Top" Width="43" Click="btMinus_Click" Background="White"/>
+
+    </Grid>
+</Window>
