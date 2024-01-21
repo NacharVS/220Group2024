@@ -13,7 +13,7 @@
         <TextBox Name="EmailTB" Height="30" Width="220" Margin="0 0 500 0"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="18"> Email</TextBox>
         <Button Name="AddBtn" Height="30" Width="100" Margin="0 0 500 -100"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" BorderBrush="BlueViolet" BorderThickness="2 2 2 2" Background="#d5b3f5" Click="AddBtn_Click"> Записать</Button>
 
-        <Label Name="InfoLabel" Height="200" Width="220" Margin=" 0 0 0 130" BorderBrush="BlueViolet" BorderThickness="2 0 2 0 "></Label>
+        <Label Name="InfoLabel" Height="200" Width="220" Margin=" 0 0 0 130" BorderBrush="BlueViolet" BorderThickness="2 0 2 0 " FontSize="17"><LineBreak/></Label>
 
         <ListBox Name="AddPeopleListBox" Height="350" Width="200" Margin="500 20 0 0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" FontSize="18" SelectionChanged="AddPeopleListBox_SelectionChanged"></ListBox>
 

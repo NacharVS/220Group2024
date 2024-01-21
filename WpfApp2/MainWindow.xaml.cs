@@ -30,25 +30,34 @@ namespace WpfApp2
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
-            users.Add(new User(UserNameTB.Text, SurnameTB.Text, AgeTB.Text, EmailTB.Text ));
-            ListBoxRefresh();
-            UserNameTB.Clear();
-            SurnameTB.Clear();
-            AgeTB.Clear();
-            EmailTB.Clear();
+                users.Add(new User(UserNameTB.Text, SurnameTB.Text, AgeTB.Text, EmailTB.Text));
+                ListBoxRefresh();
+                UserNameTB.Clear();
+                UserNameTB.Text = "Имя";
+                SurnameTB.Clear();
+                SurnameTB.Text = "Фамилия";
+                AgeTB.Clear();
+                AgeTB.Text = "Возраст";
+                EmailTB.Clear();
+                EmailTB.Text = "Email";
         }
 
         private void ListBoxRefresh()
         {
+            AddPeopleListBox.Items.Clear();
             foreach (var item in users)
             {
-                AddPeopleListBox.Items.Add(item.Name);
+                AddPeopleListBox.Items.Add(item);
             }
         }
 
         private void AddPeopleListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            var item = AddPeopleListBox.SelectedItem as User;
+            if (item != null)
+            {
+                InfoLabel.Content = ("Имя: " + item.Name + Environment.NewLine + "Фамилия: " + item.Surname + Environment.NewLine + "Возраст: " + item.Age + Environment.NewLine + "Email: " + item.Email);
+            }
         }
     }
 }
