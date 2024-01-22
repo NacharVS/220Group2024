@@ -8,8 +8,9 @@ namespace UnitsDrafts
 {
     internal class Peasant : Unit
     {
-        public Peasant() : base("Peasant", 30, 30,5,  8, 0)
+        public Peasant() : base("Peasant", 30, 5)
         {
+            Console.WriteLine($"{this.Name} {30} {20} {20}");
         }
     }
 }

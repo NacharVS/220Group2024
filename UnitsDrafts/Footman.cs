@@ -1,40 +1,49 @@
-﻿using System.Xml.Linq;
+﻿using UnitsDrafts.Items;
 
 namespace UnitsDrafts
 {
     internal class Footman : Unit
     {
-        private int _damage;
-        public Footman(string name, int health, int maxHealth, int damage, int speed, int defense, bool _alive = true) : base("Footman", 60, 60, 10,  9, 7, true)
+
+        public Action action;
+        public delegate void InflictDamageDelegate(Unit unit);
+        public InflictDamageDelegate infDamage;
+        private int _defence;
+        private Weapon _weapon;
+
+        public override int Health
         {
-            _damage = damage;
+            get => base.Health;
+            set => base.Health = value;
+        }
+        public int Defence
+        {
+            get { return _defence; }
+            set { _defence = value; }
         }
 
-        public int Damage
+        public Footman(string name, int maxHealth, int speed, int damage, int defence)
+            : base(name, maxHealth, speed)
         {
-            get { return _damage; }
-            set { _damage = value; }
+
+            _defence = defence;
+        }
+
+        public Footman() : base("Footman", 60, 10)
+        {
+            _defence = 2;
+            _weapon = new Axe(2, 7, 5);
         }
 
         public void InflictDamage(Unit unit)
         {
-            if (Alive == true)
-            {
-                unit.Health -= (Damage - unit.Defense);
-            }
+            infDamage(unit);
         }
-        public override void BaseInfo()
+        public override void ShowInfo()
         {
-            if (Alive == true)
-            {
-                double ragehealth = this._maxHealth * 0.4;
-                if (this.Health < ragehealth)
-                {
-                    rage(this);
-                }
-                Console.WriteLine($"Name:{Name} CurrentHealth: {Health}/{_maxHealth} Damage: {Damage} Defense: {Defense}");
-            }
+            Console.WriteLine($"Name:{Name} Health: {Health}/{MaxHealth} Damage: {_weapon.MaxDamage} Defence: {Defence}");
+            action();
         }
-
     }
+
 }
