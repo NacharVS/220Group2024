@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitsDrafts", "UnitsDrafts\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{73AEB491-60AB-4A5D-8F52-AAFB8810F155}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WphRwgistration", "WphRwgistration\WphRwgistration.csproj", "{6B43FFC6-32C1-46CC-9557-4E7A3742E719}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{73AEB491-60AB-4A5D-8F52-AAFB8810F155}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73AEB491-60AB-4A5D-8F52-AAFB8810F155}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73AEB491-60AB-4A5D-8F52-AAFB8810F155}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B43FFC6-32C1-46CC-9557-4E7A3742E719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B43FFC6-32C1-46CC-9557-4E7A3742E719}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B43FFC6-32C1-46CC-9557-4E7A3742E719}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B43FFC6-32C1-46CC-9557-4E7A3742E719}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
