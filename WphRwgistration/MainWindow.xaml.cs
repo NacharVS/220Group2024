@@ -20,15 +20,23 @@ namespace WphRwgistration
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<User> users;
         public MainWindow()
         {
             InitializeComponent();
-            users = new List<>
+            users = new List<User>();
         }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+        public void ListBoxAdd()
+        {
+            foreach (var Item in users)
+            {
+                users.Add(Item);
+            }
         }
     }
 }
