@@ -29,13 +29,15 @@ namespace WphRwgistration
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-
+            users.Add(new User(name.Text, surname.Text, phone_number.Text, E_mail.Text));
+            ListBoxAdd();
         }
         public void ListBoxAdd()
         {
-            foreach (var Item in users)
+            listbox.Items.Clear();
+            foreach (var item in users)
             {
-                users.Add(Item);
+                listbox.Items.Add(item.Name);
             }
         }
     }
