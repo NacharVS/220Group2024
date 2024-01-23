@@ -8,15 +8,15 @@
         Title="MainWindow" Height="720" Width="800">
     <Grid x:Name="listbox1">
         <TextBox x:Name="txtname" TextWrapping="Wrap" Margin="0,0,480,659"/>
-        <ListBox x:Name="employees_list" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="611,0,0,402" Loaded="ListBox_Loaded" SelectionChanged="employees_list_SelectionChanged"/>
-        <TextBox x:Name="txtage" TextWrapping="Wrap" Margin="0,50,480,609" TextChanged="txtage_TextChanged"/>
+        <ListBox x:Name="employees_list" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="611,0,0,402" SelectionChanged="employees_list_SelectionChanged"/>
+        <TextBox x:Name="txtage" TextWrapping="Wrap" Margin="0,50,480,609"/>
         <TextBox x:Name="txtmail" TextWrapping="Wrap" Margin="0,100,480,559"/>
         <TextBox x:Name="txtcity" TextWrapping="Wrap" Margin="0,150,480,509"/>
         <Button x:Name="reg_btn" Content="Registration&#xD;&#xA;" Margin="1,200,480,461" Click="reg_btn_Click"/>
-        <Label x:Name="empName" Content="Label" Margin="1,248,517,376"/>
-        <Label x:Name="empAge" Content="Label" Margin="2,328,517,296"/>
-        <Label x:Name="empMail" Content="Label" Margin="2,413,517,211"/>
-        <Label x:Name="empCity" Content="Label" Margin="0,493,517,130"/>
+        <Label x:Name="empName" Content="Name: " Margin="1,248,517,376"/>
+        <Label x:Name="empAge" Content="Age: " Margin="2,328,517,296"/>
+        <Label x:Name="empMail" Content="Mail" Margin="2,413,517,211"/>
+        <Label x:Name="empCity" Content="City" Margin="0,493,517,130"/>
 
     </Grid>
 </Window>

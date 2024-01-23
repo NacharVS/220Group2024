@@ -60,17 +60,6 @@ namespace WPFBase
         {
                 InitializeComponent();
         }
-
-        private void ListBox_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void txtage_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void reg_btn_Click(object sender, RoutedEventArgs e)
         {
             employees.Add(new Employee(txtname.Text, txtage.Text, txtmail.Text, txtcity.Text));
@@ -84,17 +73,6 @@ namespace WPFBase
                 employees_list.Items.Add(employee.Name);
             }
         }
-
-        private void employees_list_Selected(object sender, RoutedEventArgs e)
-        {
-            string sname = employees_list.SelectedValue.ToString();
-            Employee emp = employees.Find(e => e.Name == sname);
-            empName.Content = "Name: " + emp.Name;
-            empAge.Content = "Age: " + emp.Age;
-            empMail.Content = "Mail: " + emp.Mail;
-            empCity.Content = "City: " + emp.City;
-        }
-
         private void employees_list_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string sname = employees_list.SelectedValue.ToString();
