@@ -1,0 +1,19 @@
+﻿<Window x:Class="registr.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:registr"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="600" Background="#BCBCBC">
+    <Grid>
+        <TextBox x:Name="name" TextWrapping="Wrap" Text="Имя" Width="120" Height="30" Margin="75,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBox x:Name="surname" TextWrapping="Wrap" Text="Фамилия" Width="120" Height="30" Margin="75,100,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBox x:Name="otchestvo" TextWrapping="Wrap" Text="Отчество" Width="120" Height="30" Margin="75,150,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBox x:Name="phone" TextWrapping="Wrap" Text="Номер" Width="120" Height="30" Margin="75,200,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBox x:Name="email" TextWrapping="Wrap" Text="Почта" Width="120" Height="30" Margin="75,250,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Button Content="Confirm" Width="120" Height="30" Margin="75,300,0,0" VerticalAlignment="Top" Click="clck" HorizontalAlignment="Left"/>
+        <ListBox x:Name="listik" MouseDoubleClick="listik_MouseDoubleClick" Height="290" Margin="300,50,25,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

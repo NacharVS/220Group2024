@@ -1,0 +1,15 @@
+C:\Users\mrtro\source\repos\registr\registr\obj\Debug\registr.csproj.AssemblyReference.cache
+C:\Users\mrtro\source\repos\registr\registr\obj\Debug\MainWindow.g.cs
+C:\Users\mrtro\source\repos\registr\registr\obj\Debug\App.g.cs
+C:\Users\mrtro\source\repos\registr\registr\obj\Debug\registr_MarkupCompile.cache
+C:\Users\mrtro\source\repos\registr\registr\obj\Debug\registr_MarkupCompile.lref
+C:\Users\mrtro\source\repos\registr\registr\bin\Debug\registr.exe.config
+C:\Users\mrtro\source\repos\registr\registr\bin\Debug\registr.exe
+C:\Users\mrtro\source\repos\registr\registr\bin\Debug\registr.pdb
+C:\Users\mrtro\source\repos\registr\registr\obj\Debug\MainWindow.baml
+C:\Users\mrtro\source\repos\registr\registr\obj\Debug\registr.g.resources
+C:\Users\mrtro\source\repos\registr\registr\obj\Debug\registr.Properties.Resources.resources
+C:\Users\mrtro\source\repos\registr\registr\obj\Debug\registr.csproj.GenerateResource.cache
+C:\Users\mrtro\source\repos\registr\registr\obj\Debug\registr.csproj.CoreCompileInputs.cache
+C:\Users\mrtro\source\repos\registr\registr\obj\Debug\registr.exe
+C:\Users\mrtro\source\repos\registr\registr\obj\Debug\registr.pdb
