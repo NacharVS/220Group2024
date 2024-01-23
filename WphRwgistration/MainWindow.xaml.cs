@@ -40,5 +40,38 @@ namespace WphRwgistration
                 listbox.Items.Add(item.Name);
             }
         }
+
+
+        private void surname_Refresh(object sender, RoutedEventArgs e)
+        {
+            if (surname.Text == "Фамилия")
+            {
+                surname.Text = "";
+            }
+        }
+
+        private void name_Refresh(object sender, RoutedEventArgs e)
+        {
+            if (name.Text == "Имя")
+            {
+                name.Text = "";
+            }
+        }
+
+        private void phone_Refresh(object sender, RoutedEventArgs e)
+        {
+            if (phone_number.Text == "Телефон")
+            {
+                phone_number.Text = "";
+            }
+        }
+
+        private void email_Refresh(object sender, RoutedEventArgs e)
+        {
+            if (E_mail.Text == "E-mail")
+            {
+                E_mail.Text = "";
+            }
+        }
     }
 }
