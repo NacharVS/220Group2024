@@ -138,7 +138,7 @@ namespace WpfApp1
         {
             Buffer = Convert.ToInt32(lab.Content);
             Action = "Plus";
-            Buffer = 0;
+            lab.Content = 0;
         }
 
         private void Button_Click_11(object sender, RoutedEventArgs e)
