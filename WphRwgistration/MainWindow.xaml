@@ -12,7 +12,7 @@
         <TextBox x:Name="phone_number" HorizontalAlignment="Left" Height="30" Margin="50,128,0,0" TextWrapping="Wrap" Text="Телефон" VerticalAlignment="Top" Width="200" GotFocus="phone_Refresh"/>
         <TextBox x:Name="E_mail" HorizontalAlignment="Left" Height="30" Margin="50,173,0,0" TextWrapping="Wrap" Text="E-mail" VerticalAlignment="Top" Width="200" GotFocus="email_Refresh"/>
         <Button x:Name="btn1" Content="Регистрация" HorizontalAlignment="Left" Height="31" Margin="50,217,0,0" VerticalAlignment="Top" Width="200" Background="#FF151A5D" Foreground="White" Click="btn1_Click"/>
-        <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="300" Margin="555,39,0,0" VerticalAlignment="Top" Width="229" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="listbox_SelectionChanged_1"/>
+        <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="300" Margin="555,35,0,0" VerticalAlignment="Top" Width="229" d:ItemsSource="{d:SampleData ItemCount=5}" MouseDoubleClick="listbox_MouseDoubleClick" />
 
     </Grid>
 </Window>

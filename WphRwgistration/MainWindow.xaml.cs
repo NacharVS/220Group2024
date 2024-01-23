@@ -74,10 +74,12 @@ namespace WphRwgistration
             }
         }
 
-        private void listbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void listbox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            MessageBox.Show($"{users[listbox.Items.IndexOf(e.GetPosition(this)) + 1].Name} \n " +
+                $"{users[listbox.Items.IndexOf(e.GetPosition(this)) + 1].Surname} \n" +
+                $" {users[listbox.Items.IndexOf(e.GetPosition(this)) + 1].Phone_number} \n " +
+                $"{users[listbox.Items.IndexOf(e.GetPosition(this)) + 1].Email}");
         }
-
     }
 }
