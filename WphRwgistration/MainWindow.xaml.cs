@@ -73,5 +73,11 @@ namespace WphRwgistration
                 E_mail.Text = "";
             }
         }
+
+        private void listbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
     }
 }
