@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -47,17 +48,27 @@ namespace WpfApp2
             AddPeopleListBox.Items.Clear();
             foreach (var item in users)
             {
-                AddPeopleListBox.Items.Add(item);
+                AddPeopleListBox.Items.Add(item.Name);
             }
         }
 
         private void AddPeopleListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var item = AddPeopleListBox.SelectedItem as User;
-            if (item != null)
+            if (AddPeopleListBox.SelectedItem != null)
             {
-                InfoLabel.Content = ("Имя: " + item.Name + Environment.NewLine + "Фамилия: " + item.Surname + Environment.NewLine + "Возраст: " + item.Age + Environment.NewLine + "Email: " + item.Email);
+                string selectedName = AddPeopleListBox.SelectedItem.ToString();
+                User selectedUser = users.FirstOrDefault(u => u.Name == selectedName);
+                if (selectedUser != null)
+                {
+                    InfoLabel.Content = ($"Имя: {selectedUser.Name},\nФамилия: {selectedUser.Surname}, \nВозраст: {selectedUser.Age}, \nEmail: {selectedUser.Email}");
+                }
             }
+
+            //var item = AddPeopleListBox.SelectedItem as User;
+            //if (item != null)
+            //{
+            //    InfoLabel.Content = ("Имя: " + item.Name + Environment.NewLine + "Фамилия: " + item.Surname + Environment.NewLine + "Возраст: " + item.Age + Environment.NewLine + "Email: " + item.Email);
+            //}
         }
     }
 }
