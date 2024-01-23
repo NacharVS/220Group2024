@@ -29,6 +29,9 @@ namespace WPFBase
             public Employee(string name, string age, string mail, string city)
             {
                 Name = name;
+                Age = age;
+                Mail = mail;
+                City = city;
             }
 
             public string Name
@@ -84,14 +87,22 @@ namespace WPFBase
 
         private void employees_list_Selected(object sender, RoutedEventArgs e)
         {
-            string sname = employees_list.SelectedItem.ToString();
+            string sname = employees_list.SelectedValue.ToString();
             Employee emp = employees.Find(e => e.Name == sname);
-            empName.Content = emp.Name;
+            empName.Content = "Name: " + emp.Name;
+            empAge.Content = "Age: " + emp.Age;
+            empMail.Content = "Mail: " + emp.Mail;
+            empCity.Content = "City: " + emp.City;
         }
 
         private void employees_list_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            string sname = employees_list.SelectedValue.ToString();
+            Employee emp = employees.Find(e => e.Name == sname);
+            empName.Content = "Name: " + emp.Name;
+            empAge.Content = "Age: " + emp.Age;
+            empMail.Content = "Mail: " + emp.Mail;
+            empCity.Content = "City: " + emp.City;
         }
     }
 }
