@@ -76,7 +76,8 @@ namespace WpfBase1
             {
                 if (dNumber2 == 0)
                 {
-                    vvod.Text = "На 0 делить нельзя";
+                    vvod.Text = "Ошибка";
+                    MessageBox.Show("Ошибка");
                 }
                 else
                 {
