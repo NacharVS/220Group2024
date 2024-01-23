@@ -56,6 +56,7 @@ namespace WPFBase
             }
         }
         List<Employee> employees = new List<Employee> { };
+        List<Employee> employees_buffer = new List<Employee> { };
         public MainWindow()
         {
                 InitializeComponent();
@@ -63,15 +64,16 @@ namespace WPFBase
         private void reg_btn_Click(object sender, RoutedEventArgs e)
         {
             employees.Add(new Employee(txtname.Text, txtage.Text, txtmail.Text, txtcity.Text));
-            employees_list.Items.Clear();
+            employees_buffer.Add(new Employee(txtname.Text, txtage.Text, txtmail.Text, txtcity.Text));
             txtname.Clear();
             txtage.Clear();
             txtmail.Clear();
             txtcity.Clear();
-            foreach (Employee employee in employees)
+            foreach (Employee employee in employees_buffer)
             {
                 employees_list.Items.Add(employee.Name);
             }
+            employees_buffer.Clear();
         }
         private void employees_list_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
