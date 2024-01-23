@@ -76,10 +76,10 @@ namespace WphRwgistration
 
         private void listbox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show($"{users[listbox.Items.IndexOf(e.GetPosition(this)) + 1].Name} \n " +
-                $"{users[listbox.Items.IndexOf(e.GetPosition(this)) + 1].Surname} \n" +
-                $" {users[listbox.Items.IndexOf(e.GetPosition(this)) + 1].Phone_number} \n " +
-                $"{users[listbox.Items.IndexOf(e.GetPosition(this)) + 1].Email}");
+            string usname = listbox.SelectedValue.ToString();
+            User us = users.Find(usk => usk.Name == usname);
+            MessageBox.Show($"{us.Surname} \n" + $"{us.Name} \n" + $"{us.Phone_number} \n" + $"{us.Email} \n");
+
         }
     }
 }
