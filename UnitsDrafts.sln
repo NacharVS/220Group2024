@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitsDrafts", "UnitsDrafts\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{887F1F30-33B0-4A2D-8CCE-3588C6548C08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamBuilder", "TeamBuilder\TeamBuilder.csproj", "{C0821AAF-CF20-48DC-9E84-B7202D837218}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamBuilder2", "TeamBuilder2\TeamBuilder2.csproj", "{F538827E-AEFE-4694-82EB-528EB85F1550}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{887F1F30-33B0-4A2D-8CCE-3588C6548C08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{887F1F30-33B0-4A2D-8CCE-3588C6548C08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{887F1F30-33B0-4A2D-8CCE-3588C6548C08}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C0821AAF-CF20-48DC-9E84-B7202D837218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C0821AAF-CF20-48DC-9E84-B7202D837218}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C0821AAF-CF20-48DC-9E84-B7202D837218}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C0821AAF-CF20-48DC-9E84-B7202D837218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F538827E-AEFE-4694-82EB-528EB85F1550}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F538827E-AEFE-4694-82EB-528EB85F1550}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F538827E-AEFE-4694-82EB-528EB85F1550}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F538827E-AEFE-4694-82EB-528EB85F1550}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
