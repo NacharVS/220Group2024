@@ -44,11 +44,11 @@ namespace WpfApp
         {
             string theus = userListBox.SelectedValue.ToString();
             Users stroka = user.Find(e => e.Name == theus);
-            labelName.Content = stroka.Name;
-            labelSurName.Content = stroka.Surname;
-            labelAge.Content = stroka.Age;
-            labelEmail.Content = stroka.Email;
-            labelGender.Content = stroka.Gender;
+            labelName.Content = "Имя: " + stroka.Name;
+            labelSurName.Content = "Фамилия: " + stroka.Surname;
+            labelAge.Content = "Возраст: " + stroka.Age;
+            labelEmail.Content = "Email: " + stroka.Email;
+            labelGender.Content = "Пол: " + stroka.Gender;
         }
     }
     public class Users
