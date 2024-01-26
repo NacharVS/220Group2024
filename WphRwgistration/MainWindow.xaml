@@ -11,7 +11,7 @@
         <TextBox x:Name="name" HorizontalAlignment="Left" Height="30" Margin="50,84,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" Width="230" GotFocus="name_Refresh"/>
         <TextBox x:Name="phone_number" HorizontalAlignment="Left" Height="30" Margin="50,128,0,0" TextWrapping="Wrap" Text="Телефон" VerticalAlignment="Top" Width="230" GotFocus="phone_Refresh"/>
         <TextBox x:Name="E_mail" HorizontalAlignment="Left" Height="30" Margin="50,173,0,0" TextWrapping="Wrap" Text="E-mail" VerticalAlignment="Top" Width="230" GotFocus="email_Refresh"/>
-        <Button x:Name="btn1" Content="Регистрация" HorizontalAlignment="Left" Height="31" Margin="65,217,0,0" VerticalAlignment="Top" Width="200" Background="#FF151A5D" Foreground="White" Click="btn1_Click"/>
+        <Button x:Name="btn1" Content="Регистрация" HorizontalAlignment="Left" Height="31" Margin="65,217,0,0" VerticalAlignment="Top" Width="215" Background="#FF151A5D" Foreground="White" Click="btn1_Click"/>
         <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="300" Margin="513,35,0,0" VerticalAlignment="Top" Width="271" d:ItemsSource="{d:SampleData ItemCount=5}" MouseDoubleClick="listbox_MouseDoubleClick" />
 
     </Grid>
