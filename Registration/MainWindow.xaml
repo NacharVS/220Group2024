@@ -1,0 +1,28 @@
+﻿<Window x:Class="Registration.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Registration"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="Name" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Height="32" FontSize="16" Text="Имя..." Foreground="#FF8E8E8E" TextChanged="Name_TextChanged"/> 
+        <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="207" Margin="400,10,0,0" VerticalAlignment="Top" Width="169" d:ItemsSource="{d:SampleData ItemCount=5}" Background="#FF1E276D" Foreground="White" MouseDoubleClick="listbox_MouseDoubleClick"/>
+        <TextBox x:Name="Surname" HorizontalAlignment="Left" Height="32" Margin="10,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" FontSize="16" Text="Фамилия..." Foreground="#FF8E8E8E"/> 
+        <TextBox x:Name="Age" HorizontalAlignment="Left" Height="32" Margin="10,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" FontSize="16" Text="Возраст..." Foreground="#FF8E8E8E"/>
+        <TextBox x:Name="Email" HorizontalAlignment="Left" Height="32" Margin="10,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" FontSize="16" Text="Почта..." Foreground="#FF8E8E8E"/>
+        
+        <Button x:Name="regestration" HorizontalAlignment="Left" Margin="55,165,0,0" VerticalAlignment="Top" Height="52" Width="240" Content="Регистрация" Foreground="White" FontSize="24" >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Stroke="#FF281D77" StrokeThickness="20" Fill="#FF281D77"></Ellipse>
+                        <ContentPresenter HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+           </Button.Template>
+        </Button>
+        <Label Content="" Margin="590,10,25,217"/>
+    </Grid>
+</Window>
