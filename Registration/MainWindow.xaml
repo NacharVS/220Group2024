@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="Name" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Height="32" FontSize="16" Text="Имя..." Foreground="#FF8E8E8E" TextChanged="Name_TextChanged"/> 
-        <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="207" Margin="400,10,0,0" VerticalAlignment="Top" Width="169" d:ItemsSource="{d:SampleData ItemCount=5}" Background="#FF1E276D" Foreground="White" MouseDoubleClick="listbox_MouseDoubleClick"/>
-        <TextBox x:Name="Surname" HorizontalAlignment="Left" Height="32" Margin="10,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" FontSize="16" Text="Фамилия..." Foreground="#FF8E8E8E"/> 
-        <TextBox x:Name="Age" HorizontalAlignment="Left" Height="32" Margin="10,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" FontSize="16" Text="Возраст..." Foreground="#FF8E8E8E"/>
-        <TextBox x:Name="Email" HorizontalAlignment="Left" Height="32" Margin="10,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" FontSize="16" Text="Почта..." Foreground="#FF8E8E8E"/>
+        <TextBox x:Name="Name" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Height="32" FontSize="16" Foreground="#FF8E8E8E" Tag="Имя..."/> 
+        <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="207" Margin="400,10,0,0" VerticalAlignment="Top" Width="169" d:ItemsSource="{d:SampleData ItemCount=5}" Background="#FF1E276D" Foreground="White" SelectionChanged="listbox_SelectionChanged_1"/>
+        <TextBox x:Name="Surname" HorizontalAlignment="Left" Height="32" Margin="10,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" FontSize="16"  Foreground="#FF8E8E8E" Tag="Фамилия..."/>
+        <TextBox x:Name="Age" HorizontalAlignment="Left" Height="32" Margin="10,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" FontSize="16"  Foreground="#FF8E8E8E" Tag="Возраст..."/>
+        <TextBox x:Name="Email" HorizontalAlignment="Left" Height="32" Margin="10,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" FontSize="16"  Foreground="#FF8E8E8E" Tag="Почта..."/>
         
-        <Button x:Name="regestration" HorizontalAlignment="Left" Margin="55,165,0,0" VerticalAlignment="Top" Height="52" Width="240" Content="Регистрация" Foreground="White" FontSize="24" >
+        <Button x:Name="regestration" HorizontalAlignment="Left" Margin="55,165,0,0" VerticalAlignment="Top" Height="52" Width="240" Content="Регистрация" Foreground="White" FontSize="24" Click="regestration_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
@@ -23,6 +23,6 @@
                 </ControlTemplate>
            </Button.Template>
         </Button>
-        <Label Content="" Margin="590,10,25,217"/>
+        <Label x:Name="label" Content="" Margin="590,10,25,217"/>
     </Grid>
 </Window>

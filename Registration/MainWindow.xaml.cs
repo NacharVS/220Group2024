@@ -28,28 +28,53 @@ namespace Registration
     {
         List<User> users;
 
+
         public MainWindow()
         {
             InitializeComponent();
             users = new List<User>();
+            Name.GotFocus += RemoveText;
+            Name.LostFocus += AddText;
+            Name.Text = "Имя...";
+
+            Surname.GotFocus += RemoveText;
+            Surname.LostFocus += AddText;
+            Surname.Text = "Фамилия...";
+
+            Age.GotFocus += RemoveText;
+            Age.LostFocus += AddText;
+            Age.Text = "Возраст...";
+
+            Email.GotFocus += RemoveText;
+            Email.LostFocus += AddText;
+            Email.Text = "Почта...";
+
+            
+
             //var globalNames = Name.Text;
             //var globalSurnames = Surname.Text;
             //var globalEmail = Email.Text;
         }
 
-        private void regestratoin_Click(object sender, RoutedEventArgs e)
+        private void RemoveText(object sender, RoutedEventArgs e)
         {
-            users.Add(new User(Name.Text, Surname.Text, Age.Text, Email.Text));
-            ListBoxRefresh();
-            Name.Clear();
-            Name.Text = "Имя";
-            Surname.Clear();
-            Surname.Text = "Фамилия";
-            Age.Clear();
-            Age.Text = "Возраст";
-            Email.Clear();
-            Email.Text = "Почта";
+            // Удаляем текст-подсказку при фокусировке текстового поля
+            TextBox textBox = (TextBox)sender;
+            if (textBox.Text == textBox.Tag as string)
+            {
+                textBox.Text = "";
+            }
         }
+        private void AddText(object sender, RoutedEventArgs e)
+        {
+            // Добавляем текст-подсказку обратно, если поле пустое
+            TextBox textBox = (TextBox)sender;
+            if (string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                textBox.Text = textBox.Tag as string;
+            }
+        }
+
         private void ListBoxRefresh()
         {
             listbox.Items.Clear();
@@ -58,22 +83,34 @@ namespace Registration
                 listbox.Items.Add(item.Name);
             }
         }
-        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (listBox.SelectedItem != null)
-            {
-                string selectedName = listBox.SelectedItem.ToString();
-                User selectedUser = users.FirstOrDefault(u => u.Name == selectedName);
-            }
-            if (selectedUser != null)
-            {
-                Label.Content = ($"Имя: {selectedUser.Name},\nФамилия: {selectedUser.Surname}, \nВозраст: {selectedUser.Age}, \nEmail: {selectedUser.Email}");
-                
-            }   
-        }
-        private void listbox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
+        
 
+        private void listbox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            if (listbox.SelectedItem != null)
+            {
+                User selectedUser = users.FirstOrDefault(u => u.Name == listbox.SelectedItem.ToString());
+
+                // После получения выбранного пользователя вы можете отобразить его данные
+                if (selectedUser != null)
+                {
+                   label.Content = $"Имя: {selectedUser.Name},\nФамилия: {selectedUser.Surname},\nВозраст: {selectedUser.Age},\nEmail: {selectedUser.Email}";
+                }
+            }
+        }
+
+        private void regestration_Click(object sender, RoutedEventArgs e)
+        {
+            users.Add(new User(Name.Text, Surname.Text, Age.Text, Email.Text));
+            ListBoxRefresh();
+            Name.Clear();
+            Name.Text = "Имя...";
+            Surname.Clear();
+            Surname.Text = "Фамилия...";
+            Age.Clear();
+            Age.Text = "Возраст...";
+            Email.Clear();
+            Email.Text = "Почта...";
         }
 
     }
