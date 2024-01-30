@@ -49,11 +49,10 @@ namespace Registration
             Email.LostFocus += AddText;
             Email.Text = "Почта...";
 
-            
+
 
             //var globalNames = Name.Text;
-            //var globalSurnames = Surname.Text;
-            //var globalEmail = Email.Text;
+            //var globalSuk Email.Text;
         }
 
         private void RemoveText(object sender, RoutedEventArgs e)
@@ -62,7 +61,8 @@ namespace Registration
             TextBox textBox = (TextBox)sender;
             if (textBox.Text == textBox.Tag as string)
             {
-                textBox.Text = "";
+                textBox.Text = ""; 
+                textBox.Foreground = Brushes.Black;          
             }
         }
         private void AddText(object sender, RoutedEventArgs e)
@@ -72,6 +72,7 @@ namespace Registration
             if (string.IsNullOrWhiteSpace(textBox.Text))
             {
                 textBox.Text = textBox.Tag as string;
+                textBox.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF8E8E8E")); ;
             }
         }
 
@@ -94,7 +95,7 @@ namespace Registration
                 // После получения выбранного пользователя вы можете отобразить его данные
                 if (selectedUser != null)
                 {
-                   label.Content = $"Имя: {selectedUser.Name},\nФамилия: {selectedUser.Surname},\nВозраст: {selectedUser.Age},\nEmail: {selectedUser.Email}";
+                   label.Content = $"Имя: {selectedUser.Name} \nФамилия: {selectedUser.Surname} \nВозраст: {selectedUser.Age} \nEmail: {selectedUser.Email}";
                 }
             }
         }
@@ -105,12 +106,16 @@ namespace Registration
             ListBoxRefresh();
             Name.Clear();
             Name.Text = "Имя...";
+            Name.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF8E8E8E"));
             Surname.Clear();
             Surname.Text = "Фамилия...";
+            Surname.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF8E8E8E"));
             Age.Clear();
             Age.Text = "Возраст...";
+            Age.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF8E8E8E"));
             Email.Clear();
             Email.Text = "Почта...";
+            Email.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF8E8E8E"));
         }
 
     }
