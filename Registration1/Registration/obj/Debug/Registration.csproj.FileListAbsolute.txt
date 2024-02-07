@@ -1,0 +1,15 @@
+C:\Users\User\source\repos\Registration\Registration\bin\Debug\Registration.exe.config
+C:\Users\User\source\repos\Registration\Registration\bin\Debug\Registration.exe
+C:\Users\User\source\repos\Registration\Registration\bin\Debug\Registration.pdb
+C:\Users\User\source\repos\Registration\Registration\obj\Debug\Registration.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Registration\Registration\obj\Debug\MainWindow.g.cs
+C:\Users\User\source\repos\Registration\Registration\obj\Debug\App.g.cs
+C:\Users\User\source\repos\Registration\Registration\obj\Debug\Registration_MarkupCompile.cache
+C:\Users\User\source\repos\Registration\Registration\obj\Debug\Registration_MarkupCompile.lref
+C:\Users\User\source\repos\Registration\Registration\obj\Debug\MainWindow.baml
+C:\Users\User\source\repos\Registration\Registration\obj\Debug\Registration.g.resources
+C:\Users\User\source\repos\Registration\Registration\obj\Debug\Registration.Properties.Resources.resources
+C:\Users\User\source\repos\Registration\Registration\obj\Debug\Registration.csproj.GenerateResource.cache
+C:\Users\User\source\repos\Registration\Registration\obj\Debug\Registration.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Registration\Registration\obj\Debug\Registration.exe
+C:\Users\User\source\repos\Registration\Registration\obj\Debug\Registration.pdb

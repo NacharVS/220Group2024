@@ -1,0 +1,18 @@
+﻿<Window x:Class="Registration.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Registration"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Height="30" Margin="108,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.489,0.465" Tag="Имя"/>
+        <TextBox x:Name="surname" HorizontalAlignment="Left" Height="30" Margin="108,124,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.489,0.465" Tag="Фамилия"/>
+        <TextBox x:Name="phone__number" HorizontalAlignment="Left" Height="30" Margin="108,178,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.489,0.465" Tag="Телефон"/>
+        <TextBox x:Name="email" HorizontalAlignment="Left" Height="30" Margin="108,227,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.489,0.465" Tag="Почта"/>
+        <Button Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="108,281,0,0" VerticalAlignment="Top" Width="165" Height="26" Click="Button_Click"/>
+        <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="237" Margin="445,70,0,0" VerticalAlignment="Top" Width="250" SelectionChanged="listbox_SelectionChanged"/>
+
+    </Grid>
+</Window>
