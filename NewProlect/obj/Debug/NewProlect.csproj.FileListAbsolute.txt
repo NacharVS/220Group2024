@@ -1,6 +1,0 @@
-C:\Users\User\Documents\GitHub\220Group2024\NewProlect\bin\Debug\NewProlect.exe
-C:\Users\User\Documents\GitHub\220Group2024\NewProlect\bin\Debug\NewProlect.pdb
-C:\Users\User\Documents\GitHub\220Group2024\NewProlect\obj\Debug\NewProlect.csproj.AssemblyReference.cache
-C:\Users\User\Documents\GitHub\220Group2024\NewProlect\obj\Debug\NewProlect.csproj.CoreCompileInputs.cache
-C:\Users\User\Documents\GitHub\220Group2024\NewProlect\obj\Debug\NewProlect.exe
-C:\Users\User\Documents\GitHub\220Group2024\NewProlect\obj\Debug\NewProlect.pdb

@@ -1,9 +1,0 @@
-﻿namespace NewProlect
-{
-    internal class Program
-    {
-        public static void Main(string[] args)
-        {
-        }
-    }
-}
