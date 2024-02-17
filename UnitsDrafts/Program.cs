@@ -1,41 +1,24 @@
 ﻿using UnitsDrafts;
 
-
-
-static ((int,int), string) Method33()
+Task task1 = new Task(() =>
 {
-    return ((4, 6), "qq");
-}
-
-
-static void WeaponInfo(WeaponDamage weapon)
-{
-    switch (weapon)
+    for (int i = 0; i < 10; i++)
     {
-        case WeaponDamage.Lance: Console.WriteLine($"{WeaponDamage.Lance} - {(int)WeaponDamage.Lance}");
-            break;
-        case WeaponDamage.LongSword: Console.WriteLine($"{WeaponDamage.LongSword} - {(int)WeaponDamage.LongSword}");
-            break;
-            default: Console.WriteLine("OtherWeapon");
-            break;
-
+        Thread.Sleep(600); 
+        Console.WriteLine($"task: {i}");
     }
-}
+});
 
+task1.Start();
 
-
-
-enum WeaponDamage
+for (int i = 0; i < 10; i++)
 {
-    LongSword = 10,
-    ShortSword = 7,
-    SmallAxe = 8,
-    TwoHandedAxe = 15,
-    Spear = 6,
-    Lance = 22,
-    ShortBow,
-    LongWarBow
+    Thread.Sleep(500);
+    Console.WriteLine($"main: {i}"); 
 }
+task1.Wait();
+
+
 
 
 
