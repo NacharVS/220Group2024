@@ -1,0 +1,15 @@
+C:\Users\202217\source\repos\multithreading\multithreading\bin\Debug\net6.0\multithreading.exe
+C:\Users\202217\source\repos\multithreading\multithreading\bin\Debug\net6.0\multithreading.deps.json
+C:\Users\202217\source\repos\multithreading\multithreading\bin\Debug\net6.0\multithreading.runtimeconfig.json
+C:\Users\202217\source\repos\multithreading\multithreading\bin\Debug\net6.0\multithreading.dll
+C:\Users\202217\source\repos\multithreading\multithreading\bin\Debug\net6.0\multithreading.pdb
+C:\Users\202217\source\repos\multithreading\multithreading\obj\Debug\net6.0\multithreading.csproj.AssemblyReference.cache
+C:\Users\202217\source\repos\multithreading\multithreading\obj\Debug\net6.0\multithreading.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\202217\source\repos\multithreading\multithreading\obj\Debug\net6.0\multithreading.AssemblyInfoInputs.cache
+C:\Users\202217\source\repos\multithreading\multithreading\obj\Debug\net6.0\multithreading.AssemblyInfo.cs
+C:\Users\202217\source\repos\multithreading\multithreading\obj\Debug\net6.0\multithreading.csproj.CoreCompileInputs.cache
+C:\Users\202217\source\repos\multithreading\multithreading\obj\Debug\net6.0\multithreading.dll
+C:\Users\202217\source\repos\multithreading\multithreading\obj\Debug\net6.0\refint\multithreading.dll
+C:\Users\202217\source\repos\multithreading\multithreading\obj\Debug\net6.0\multithreading.pdb
+C:\Users\202217\source\repos\multithreading\multithreading\obj\Debug\net6.0\multithreading.genruntimeconfig.cache
+C:\Users\202217\source\repos\multithreading\multithreading\obj\Debug\net6.0\ref\multithreading.dll
