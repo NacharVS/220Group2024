@@ -11,6 +11,7 @@
         <ListBox x:Name="listbox1" HorizontalAlignment="Left" Height="373" Margin="569,10,0,0" VerticalAlignment="Top" Width="169" d:ItemsSource="{d:SampleData ItemCount=5}" Loaded="listbox1_Loaded"/>
         <TextBox x:Name="txtAge" HorizontalAlignment="Left" Height="32" Margin="10,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330"/>
         <Button x:Name="btn1" Content="REGISTRATION" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" Height="85" Width="330" FontSize="50" Click="btn1_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="136,279,0,0" VerticalAlignment="Top" Click="Button_Click"/>
 
     </Grid>
 </Window>

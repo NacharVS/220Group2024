@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,18 @@ namespace WPFBase
     public partial class MainWindow : Window
     {
         List<User> users;
+
+        async void Method()
+        {
+            await Task.Run(() =>
+            {
+                while (File.Exists(@"C:\Users\Vadim.Nacharov\Desktop\testdoc.txt"))
+                {
+
+                }
+                MessageBox.Show("File deleted or changed");
+            });
+        }
         public MainWindow()
         {
             InitializeComponent();
@@ -56,6 +69,11 @@ namespace WPFBase
             {
                 listbox1.Items.Add(item.Name);
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Method();
         }
     }
 }
