@@ -1,20 +1,12 @@
-<<<<<<< Updated upstream
-﻿namespace UnitsDrafts
-{
-    internal class Footman : Unit
-    {
-     public Action action;
-        public delegate void InflictDamageDelegate(Unit unit);
-        public InflictDamageDelegate infDamage;
-=======
-﻿using UnitsDrafts.items;
+
+using UnitsDrafts.items;
 
 namespace UnitsDrafts
 {
     internal class Footman : Unit
     {
         private int _damage;
->>>>>>> Stashed changes
+
         private int _defence;
 
         public override int Health 

@@ -1,27 +1,35 @@
-﻿int[] arr1 = new int[10];
-int[] arr2 = new int[10];
-int[] result = new int[10];
+﻿int[,] arr1 = new int[5, 5];
+int[,] arr2 = new int[5, 5];
+int[,] result = new int[5, 5];
 Task task1 = new Task(() =>
 {
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 5; i++)
     {
-        Thread.Sleep(500);
-        arr1[i] = new Random().Next(1, 10000);
-        Console.WriteLine($"{arr1}");
+        for (int j = 0; j < 5; j++)
+        {
+            arr1[i, j] = new Random().Next(1, 20);
+        }
     }
 });
 Task task2 = new Task(() =>
 {
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 5; i++)
     {
-        Thread.Sleep(500);
-        arr2[i] = new Random().Next(1, 10000);
-        Console.WriteLine($"{arr2}");
+        for (int j = 0; j < 5; j++)
+        {
+            arr2[i, j] = new Random().Next(1, 20);
+        }
     }
 });
-for (int i = 0; i < 10; i++)
+task1.Start();
+task2.Start();
+for (int i = 0; i < 5; i++)
 {
-    Thread.Sleep(500);
-    result[i] = arr1[i]+arr2[i];
-    Console.WriteLine($"{result}");
+    Console.WriteLine();
+    for (int j = 0; j < 5; j++)
+    {
+        result[i, j] = arr1[i, j] + arr2[i, j];
+        Console.Write($"{result[i, j]} ");
+    }
 }
+
