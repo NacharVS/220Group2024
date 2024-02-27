@@ -24,7 +24,7 @@ Task task2 = new Task(() =>
 });
 task.Start();
 task2.Start();
-Thread.Sleep(100);
+Thread.Sleep(1);
 for (int i = 0; i < 5; i++)
 {
     for (int j = 0; j < 3; j++)
