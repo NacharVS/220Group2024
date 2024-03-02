@@ -23,16 +23,13 @@ namespace WPFBase
     {
         List<User> users;
 
-        async void Method()
+        string Method()
         {
-            await Task.Run(() =>
+            while (File.Exists(@"C:\Users\Vadim.Nacharov\Desktop\testdoc.txt"))
             {
-                while (File.Exists(@"C:\Users\Vadim.Nacharov\Desktop\testdoc.txt"))
-                {
-
-                }
-                MessageBox.Show("File deleted or changed");
-            });
+                
+            }
+            return "File changed";
         }
         public MainWindow()
         {
@@ -71,9 +68,9 @@ namespace WPFBase
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            Method();
+            lbl1.Content = await Task.Run(() => Method());
         }
     }
 }
